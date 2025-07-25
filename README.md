@@ -1,69 +1,162 @@
-Quiero crear un portafolio narrativo basado en un terminal moderno estilo hacker-retrofuturista, usando Astro como framework principal. El objetivo es que cada sección de la web parezca una terminal de comunicación con diferentes entidades simbólicas (personajes que admiro como Lex Luthor, Barbara Gordon, etc.), y que al hacer clic sobre cada personaje, se abra un modal tipo “transmisión en vivo” o “mensaje confidencial”.
+# 🖥️ LEXCORP Terminal - Portfolio Interactivo
 
-🖥️ Estructura general:
-- Diseño inspirado en terminal retro (línea de comandos, colores neón, fuente monospace).
-- Paleta de colores principal:
-    - Fondo: `#0D2F2B`
-    - Texto: `#33FF66`
-    - Acentos: `#33FC2`
-- Tipografía: `IBM Plex Mono` o `Fira Code`
-- Animaciones de escritura tipo terminal (efecto de typing lento, como si el mensaje se escribiera en tiempo real).
+<div align="center">
 
-📁 Secciones del terminal:
-1. **Home / Boot**:
-    - Animación tipo "sistema iniciando"
-    - Texto estilo:
-        ```
-        > Initializing system...
-        > Connecting to nodes...
-        > Entities detected [LEXCORP] [ORACLE LINK] [WAYNE TECH]
-        ```
-    - Luego aparecen íconos o avatars de los personajes.
+![Terminal Demo](https://img.shields.io/badge/Status-Live-green?style=for-the-badge)
+![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-2. **Personajes (Íconos interactivos)**:
-    - Al hacer clic en un personaje, abrir un modal o consola flotante que simula un mensaje cifrado.
-    - Ejemplo:
-        - `LEXCORP Uplink Established`
-        - Texto escrito en tiempo real (carta de Lex, por ejemplo)
-        - Modal con fondo borroso, visual de terminal segura (como SSH)
+**Portfolio interactivo de Andrés Almeida - Full Stack Developer & Data Analyst**
 
-3. **Archivos / Proyectos / Repos**:
-    - Listado de proyectos personales tipo:
-        ```
-        > access ./proyectos
-        - [x] shiny_dashboards.R
-        - [x] etl_indicadores.py
-        - [x] lexterminal.web
-        ```
+[🚀 Demo en Vivo](https://andresalmeida.com) • [💼 Portfolio](https://andresalmeida.com/portafolio) • [📧 Contacto](mailto:almeidaandres12@gmail.com)
 
-4. **Visión / Manifiesto**:
-    - Muestra una carta tipo manifiesto personal como si fuera un archivo .txt dentro del sistema.
-    - Comando para acceder: `> ./vision.txt`
+</div>
 
-5. **Memoria** (timeline):
-    - Visual tipo git log:
-        ```
-        2021-03 - [Comencé la U]
-        2022-06 - [Primer script en R]
-        2025-07 - [LexCorp idea founded]
-        ```
+## ✨ Características Principales
 
-📦 Tecnologías a usar:
-- Astro (base del proyecto)
-- TailwindCSS (para estilos rápidos, tipografía, colores)
-- React integrado para los modales (mensajes interactivos)
-- `react-typewriter-effect` o efecto typing en Astro
-- Posiblemente `framer-motion` para transiciones suaves
+### 🤖 **IA Conversacional**
+- **Chat interactivo** con personajes únicos (Lex Luthor, Oracle, Sue Storm)
+- **Personalidades distintas** con contexto específico
+- **Google Gemini AI** integrado para conversaciones naturales
+- **Historial de chat** persistente durante la sesión
 
-🔐 Extras:
-- Todos los modales deben simular "comunicaciones encriptadas"
-- Cada uno con su “marca”:
-    - LEXCORP (rojo oscuro / glitch)
-    - ORACLE LINK (azul / púrpura / líneas limpias)
-    - WAYNE TECH (gris oscuro / HUD estilo militar)
+### 🖥️ **Terminal Auténtico**
+- **Interfaz de línea de comandos** completamente funcional
+- **20+ comandos útiles** (`whoami`, `help`, `uptime`, `version`, etc.)
+- **Auto-completado con Tab** y navegación con flechas
+- **Animaciones de typing** realistas en tiempo real
 
-🧪 Objetivo final:
-Un sitio web tipo terminal de acceso confidencial, que sirve como:
-- Portafolio técnico
-- Archivo narrativo personal
-- Carta de presentación única y poderosa
+### 💼 **Portfolio Profesional**
+- **Sección dedicada** con información técnica completa
+- **Habilidades organizadas** por categorías (Frontend, Backend, Data Science)
+- **Experiencia profesional** detallada con logros específicos
+- **Proyectos con tecnologías** y enlaces directos
+
+### 🎨 **Diseño Retrofuturista**
+- **Estética hacker terminal** con colores neón personalizados
+- **Paleta coherente** (`#0D2F2B`, `#33FF66`, `#33FC2`)
+- **Tipografía monospace** (IBM Plex Mono)
+- **Responsive design** optimizado para todos los dispositivos
+
+## 🛠️ Stack Tecnológico
+
+| Frontend | Backend | Styling | IA/APIs |
+|----------|---------|---------|---------|
+| Astro 4.x | Node.js | Tailwind CSS | Google Gemini |
+| React 18 | API Routes | Custom Colors | Environment Variables |
+| TypeScript | RESTful APIs | CSS Animations | Real-time Chat |
+| Framer Motion | Server-side Rendering | Responsive Design | Error Handling |
+
+## 🚀 Ejecución Local
+
+### Prerrequisitos
+- Node.js 18+ 
+- npm o yarn
+- API Key de Google Gemini ([Obtener aquí](https://aistudio.google.com/app/apikey))
+
+### Instalación
+
+```bash
+# Clonar repositorio
+git clone https://github.com/andresalmeida/lexcorp-terminal.git
+cd lexcorp-terminal
+
+# Instalar dependencias
+npm install
+
+# Configurar variables de entorno
+cp .env.example .env.local
+# Editar .env.local con tu GEMINI_API_KEY
+
+# Ejecutar en desarrollo
+npm run dev
+```
+
+### Variables de Entorno
+
+```env
+# .env.local
+GEMINI_API_KEY=tu_google_gemini_api_key_aqui
+```
+
+## 🎮 Comandos Disponibles
+
+### Terminal Principal (`/`)
+```bash
+help              # Ver todos los comandos
+./portafolio.txt  # Ir al portfolio profesional
+whoami           # Información personal
+date             # Fecha y hora actual
+uptime           # Tiempo de actividad
+version          # Info del sistema
+clear            # Limpiar terminal
+```
+
+### Portfolio Terminal (`/portafolio`)
+```bash
+./skills      # Habilidades técnicas
+./experience  # Experiencia profesional
+./projects    # Proyectos y repositorios
+./contact     # Información de contacto
+./home        # Volver al terminal principal
+```
+
+## 🌟 Características Técnicas
+
+### 🔧 **Desarrollo**
+- **SSR (Server-Side Rendering)** con Astro
+- **Componentes híbridos** React en Astro
+- **API Routes** para integración con IA
+- **TypeScript** para type safety
+
+### 🎨 **UX/UI**
+- **Animaciones fluidas** con Framer Motion
+- **Estados de loading** y manejo de errores
+- **Auto-scroll** en chats y secciones
+- **Indicadores visuales** de estado
+
+### 🔒 **Seguridad**
+- **Variables de entorno** protegidas
+- **Rate limiting** en API calls
+- **Validación de inputs** en frontend y backend
+- **Error handling** robusto
+
+### 📈 **SEO & Performance**
+- **Meta tags optimizados** para redes sociales
+- **Open Graph** para previews atractivos
+- **Schema.org JSON-LD** para rich results
+- **Sitemap automático** y robots.txt
+
+## 👨‍💻 Sobre el Desarrollador
+
+**Andrés Almeida Jara**  
+Full Stack Developer & Data Analyst  
+📍 Quito, Ecuador  
+
+### 🎯 Especialidades
+- **Frontend:** React, Astro, TypeScript, Tailwind CSS
+- **Backend:** Python, R, Node.js, FastAPI, REST APIs
+- **Data Science:** ETL Pipelines, Shiny, Power BI, Análisis Geoespacial
+- **Herramientas:** Git, Docker, AWS, Firebase, ArcGIS
+
+### 📞 Contacto
+- 📧 Email: [almeidaandres12@gmail.com](mailto:almeidaandres12@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/andres-almeida-jara](https://linkedin.com/in/andres-almeida-jara/)
+- 🐙 GitHub: [github.com/andresalmeida](https://github.com/andresalmeida)
+- 📱 WhatsApp: [+593 99 054 5539](https://wa.me/593990545539)
+
+## 📄 Licencia
+
+MIT License - libre para usar, modificar y distribuir.
+
+---
+
+<div align="center">
+
+**⭐ ¿Te gustó el proyecto? ¡Dale una estrella!**
+
+*Desarrollado con ❤️ y ☕ en Quito, Ecuador*
+
+</div>
