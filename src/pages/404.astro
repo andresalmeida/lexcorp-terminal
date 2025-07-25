@@ -1,0 +1,117 @@
+---
+import '@fontsource/ibm-plex-mono';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/lexcorp-logo.svg?v=1" />
+		<meta name="viewport" content="width=device-width" />
+		<title>404 - Página No Encontrada | Andrés Almeida</title>
+		<meta name="description" content="Error 404 - La página que buscas no existe. Regresa al terminal principal del portfolio de Andrés Almeida." />
+		<meta name="robots" content="noindex, nofollow" />
+		
+		<!-- Open Graph -->
+		<meta property="og:title" content="404 - Página No Encontrada" />
+		<meta property="og:description" content="Error 404 - La página solicitada no fue encontrada." />
+		<meta property="og:type" content="website" />
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-terminal-bg text-terminal-text font-mono min-h-screen">
+		<div class="min-h-screen p-4 flex flex-col max-w-7xl mx-auto">
+			<!-- Terminal Header -->
+			<div class="bg-terminal-bg border-b border-terminal-accent/30 p-4 flex justify-between items-center mb-6">
+				<div class="flex items-center space-x-3">
+					<div class="w-3 h-3 bg-red-500 rounded-full"></div>
+					<div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+					<div class="w-3 h-3 bg-green-500 rounded-full"></div>
+					<span class="ml-4 text-terminal-accent font-semibold">ERROR TERMINAL</span>
+				</div>
+				<div class="flex items-center space-x-4">
+					<span class="text-terminal-accent/80">Sistema v2.4.1</span>
+					<div class="bg-terminal-accent/20 px-3 py-1 rounded border border-terminal-accent/40">
+						<span id="error-time">--:--:--</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- 404 Content -->
+			<div class="flex-1 flex flex-col justify-center items-center text-center space-y-6">
+				<!-- ASCII Art -->
+				<div class="text-terminal-accent text-xs font-mono leading-tight">
+					<pre>
+ ██╗  ██╗ ██████╗ ██╗  ██╗
+ ██║  ██║██╔═████╗██║  ██║
+ ███████║██║██╔██║███████║
+ ╚════██║████╔╝██║╚════██║
+      ██║╚██████╔╝     ██║
+      ╚═╝ ╚═════╝      ╚═╝
+					</pre>
+				</div>
+
+				<!-- Error Message -->
+				<div class="border border-terminal-accent/30 bg-terminal-accent/5 p-6 rounded max-w-2xl">
+					<div class="text-terminal-accent text-xl font-semibold mb-4">
+						>> ERROR: PÁGINA NO ENCONTRADA
+					</div>
+					<div class="text-terminal-text/90 space-y-3">
+						<p>La página solicitada no existe en este sistema.</p>
+						<p>Verifica la URL o regresa al terminal principal.</p>
+					</div>
+				</div>
+
+				<!-- Terminal Output -->
+				<div class="bg-terminal-bg border border-terminal-accent/30 rounded p-4 max-w-2xl text-left">
+					<div class="text-terminal-accent mb-2">
+						root@portafolio:~$ ls -la /pages/
+					</div>
+					<div class="text-terminal-text/80 text-sm space-y-1">
+						<div>total 2</div>
+						<div>drwxr-xr-x  2 andres andres 4096 Dec 15 12:34 .</div>
+						<div>drwxr-xr-x  3 andres andres 4096 Dec 15 12:34 ..</div>
+						<div>-rw-r--r--  1 andres andres 1024 Dec 15 12:34 index.astro</div>
+						<div>-rw-r--r--  1 andres andres  512 Dec 15 12:34 portafolio.astro</div>
+					</div>
+					<div class="text-terminal-accent mt-3">
+						root@portafolio:~$ <span class="animate-blink">█</span>
+					</div>
+				</div>
+
+				<!-- Navigation Buttons -->
+				<div class="flex space-x-4">
+					<a href="/" 
+					   class="bg-terminal-accent/20 border border-terminal-accent/40 px-6 py-3 rounded hover:bg-terminal-accent/30 transition-colors text-terminal-accent font-semibold">
+						← Volver al Terminal Principal
+					</a>
+					<a href="/portafolio" 
+					   class="bg-terminal-accent/10 border border-terminal-accent/30 px-6 py-3 rounded hover:bg-terminal-accent/20 transition-colors text-terminal-text">
+						Ver Portafolio →
+					</a>
+				</div>
+
+				<!-- Help Text -->
+				<div class="text-terminal-accent/60 text-sm">
+					<p>Tip: Usa los comandos <code class="bg-terminal-accent/20 px-2 py-1 rounded">help</code> en cualquier terminal para ver las opciones disponibles.</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// Update time
+			function updateErrorTime() {
+				const now = new Date();
+				const timeString = now.toLocaleTimeString([], { hour12: false });
+				const timeElement = document.getElementById('error-time');
+				if (timeElement) {
+					timeElement.textContent = timeString;
+				}
+			}
+
+			updateErrorTime();
+			setInterval(updateErrorTime, 1000);
+		</script>
+	</body>
+</html> 
