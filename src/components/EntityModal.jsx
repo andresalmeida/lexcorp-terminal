@@ -14,7 +14,7 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
   const [isAiMode, setIsAiMode] = useState(false);
   const [aiResponse, setAiResponse] = useState('');
   const [isAiLoading, setIsAiLoading] = useState(false);
-  const [remainingMessages, setRemainingMessages] = useState(25);
+  const [remainingMessages, setRemainingMessages] = useState(8);
   
   // Estados para historial de chat
   const [chatHistory, setChatHistory] = useState([]);

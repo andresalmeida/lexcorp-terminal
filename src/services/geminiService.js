@@ -3,7 +3,7 @@ class GeminiChatService {
   constructor() {
     this.conversationHistory = new Map(); // Historial por entidad
     this.messageCount = new Map(); // Contador de mensajes por sesión
-    this.maxMessagesPerSession = 25; // Límite optimizado para uso personal
+    this.maxMessagesPerSession = 8; // Límite por personaje para experiencia equilibrada
   }
 
   // Verificar si se puede enviar más mensajes
@@ -26,7 +26,7 @@ class GeminiChatService {
         return {
           success: false,
           error: 'LIMIT_EXCEEDED',
-          message: `Has alcanzado el límite de ${this.maxMessagesPerSession} mensajes con este personaje. ¡Vuelve mañana para más conversaciones!`
+          message: `Has alcanzado el límite de ${this.maxMessagesPerSession} mensajes con este personaje. ¡Prueba con otro personaje o vuelve más tarde!`
         };
       }
 
