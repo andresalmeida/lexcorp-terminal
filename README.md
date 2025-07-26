@@ -10,7 +10,7 @@
 
 **Portfolio interactivo de Andrés Almeida - Full Stack Developer & Data Analyst**
 
-[🚀 Demo en Vivo](https://lexcorp-terminal.vercel.app/) • [💼 Portfolio](https://lexcorp-terminal.vercel.app/portafolio) • [📧 Contacto](mailto:almeidaandres12@gmail.com)
+[🚀 Demo en Vivo](https://www.adaghost.me/chat-dc) • [💼 Portfolio](http://adaghost.me/) • [📧 Contacto](mailto:almeidaandres12@gmail.com)
 
 </div>
 
@@ -144,8 +144,6 @@ Full Stack Developer & Data Analyst
 ### 📞 Contacto
 - 📧 Email: [almeidaandres12@gmail.com](mailto:almeidaandres12@gmail.com)
 - 💼 LinkedIn: [linkedin.com/in/andres-almeida-jara](https://linkedin.com/in/andres-almeida-jara/)
-- 🐙 GitHub: [github.com/andresalmeida](https://github.com/andresalmeida)
-- 📱 WhatsApp: [+593 99 054 5539](https://wa.me/593990545539)
 
 ## 📄 Licencia
 
