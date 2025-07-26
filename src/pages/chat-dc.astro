@@ -71,16 +71,17 @@ import CommandInterface from '../components/CommandInterface.jsx';
 	</head>
 	<body class="bg-gray-900 text-terminal-text font-mono min-h-screen">
 		<!-- Terminal Container -->
-		<div class="min-h-screen p-4 flex flex-col max-w-7xl mx-auto">
+		<div class="min-h-screen p-2 sm:p-4 flex flex-col max-w-7xl mx-auto">
 			<!-- Terminal Header -->
-			<div class="flex items-center justify-between mb-4 border-b border-terminal-text/30 pb-2">
-				<div class="flex items-center space-x-2">
-					<div class="w-3 h-3 rounded-full bg-red-500"></div>
-					<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-					<div class="w-3 h-3 rounded-full bg-green-500"></div>
+			<div class="flex items-center justify-between mb-2 sm:mb-4 border-b border-terminal-text/30 pb-2">
+				<div class="flex items-center space-x-1 sm:space-x-2">
+					<div class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
+					<div class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
+					<div class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>
 				</div>
-				<div class="text-terminal-text/70 text-sm">
-					DC_TERMINAL v1.0.0 // WAYNE_TECH_NETWORK
+				<div class="text-terminal-text/70 text-xs sm:text-sm text-center flex-1 mx-2">
+					<span class="hidden sm:inline">DC_TERMINAL v1.0.0 // WAYNE_TECH_NETWORK</span>
+					<span class="sm:hidden">DC_TERMINAL</span>
 				</div>
 				<div class="text-terminal-text/50 text-xs">
 					<span id="current-time"></span>
@@ -88,7 +89,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 			</div>
 
 			<!-- Boot Sequence -->
-			<div id="boot-sequence" class="space-y-2 mb-8">
+			<div id="boot-sequence" class="space-y-1 sm:space-y-2 mb-4 sm:mb-8">
 				<div class="typing-line opacity-0">
 					<span class="text-terminal-accent">></span> Initializing DC Terminal System...
 				</div>
@@ -115,19 +116,19 @@ import CommandInterface from '../components/CommandInterface.jsx';
 			<!-- Main Terminal Content -->
 			<div id="main-content" class="flex-1 opacity-0">
 				<!-- Command Prompt -->
-				<div class="mb-6">
-					<div class="flex items-center">
+				<div class="mb-4 sm:mb-6">
+					<div class="flex items-center text-sm sm:text-base">
 						<span class="text-terminal-accent">adaghost@terminal:~$</span>
 						<span class="ml-2 text-terminal-text">access --entities</span>
 					</div>
 				</div>
 
 				<!-- Character Selection Grid -->
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 mb-4 sm:mb-8">
 					<!-- LEXCORP Entity -->
 					<div id="lexcorp-entity" class="entity-card transition-all duration-500 cursor-pointer group">
 						<!-- Image Section -->
-						<div class="relative h-80 rounded-t-lg overflow-hidden border-2 border-terminal-lexcorp-primary/50 group-hover:border-terminal-lexcorp-glow transition-all duration-500 mb-1">
+						<div class="relative h-64 sm:h-80 rounded-t-lg overflow-hidden border-2 border-terminal-lexcorp-primary/50 group-hover:border-terminal-lexcorp-glow transition-all duration-500 mb-1">
 							<!-- Background Image -->
 							<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/lex-luthor.jpg')"></div>
 							
@@ -158,7 +159,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 						</div>
 						
 						<!-- Info Box Section -->
-						<div class="bg-gray-800/90 border-2 border-terminal-lexcorp-primary/50 group-hover:border-terminal-lexcorp-glow rounded-lg p-4 transition-all duration-500 shadow-lg">
+						<div class="bg-gray-800/90 border-2 border-terminal-lexcorp-primary/50 group-hover:border-terminal-lexcorp-glow rounded-lg p-3 sm:p-4 transition-all duration-500 shadow-lg">
 							<h3 class="text-terminal-lexcorp-glow font-bold text-lg mb-1">LEXCORP</h3>
 							<p class="text-terminal-text text-sm mb-2">Corporate Communications</p>
 							<div class="text-xs text-terminal-text/60 italic mb-2">Chat sobre: Tecnología empresarial, liderazgo, desarrollo profesional</div>
@@ -171,7 +172,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 					<!-- ORACLE LINK Entity -->
 					<div id="oracle-entity" class="entity-card transition-all duration-500 cursor-pointer group">
 						<!-- Image Section -->
-						<div class="relative h-80 rounded-t-lg overflow-hidden border-2 border-terminal-oracle-primary/50 group-hover:border-terminal-oracle-glow transition-all duration-500 mb-1">
+						<div class="relative h-64 sm:h-80 rounded-t-lg overflow-hidden border-2 border-terminal-oracle-primary/50 group-hover:border-terminal-oracle-glow transition-all duration-500 mb-1">
 							<!-- Background Image -->
 							<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/oracle-barbara.jpg')"></div>
 							
@@ -205,7 +206,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 						</div>
 						
 						<!-- Info Box Section -->
-						<div class="bg-gray-800/90 border-2 border-terminal-oracle-primary/50 group-hover:border-terminal-oracle-glow rounded-lg p-4 transition-all duration-500 shadow-lg">
+						<div class="bg-gray-800/90 border-2 border-terminal-oracle-primary/50 group-hover:border-terminal-oracle-glow rounded-lg p-3 sm:p-4 transition-all duration-500 shadow-lg">
 							<h3 class="text-terminal-oracle-glow font-bold text-lg mb-1">ORACLE LINK</h3>
 							<p class="text-terminal-text text-sm mb-2">Intelligence Network</p>
 							<div class="text-xs text-terminal-text/60 italic mb-2">Chat sobre: Programación, seguridad, análisis de datos, problem-solving</div>
@@ -218,7 +219,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 					<!-- SUPERMAN Entity -->
 					<div id="superman-entity" class="entity-card transition-all duration-500 cursor-pointer group">
 						<!-- Image Section -->
-						<div class="relative h-80 rounded-t-lg overflow-hidden border-2 border-blue-500/50 group-hover:border-blue-400 transition-all duration-500 mb-1">
+						<div class="relative h-64 sm:h-80 rounded-t-lg overflow-hidden border-2 border-blue-500/50 group-hover:border-blue-400 transition-all duration-500 mb-1">
 							<!-- Background Image -->
 							<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/superman.jpg')"></div>
 							
@@ -248,7 +249,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 						</div>
 						
 						<!-- Info Box Section -->
-						<div class="bg-gray-800/90 border-2 border-blue-500/50 group-hover:border-blue-400 rounded-lg p-4 transition-all duration-500 shadow-lg">
+						<div class="bg-gray-800/90 border-2 border-blue-500/50 group-hover:border-blue-400 rounded-lg p-3 sm:p-4 transition-all duration-500 shadow-lg">
 							<h3 class="text-blue-400 font-bold text-lg mb-1">SUPERMAN</h3>
 							<p class="text-terminal-text text-sm mb-2">Man of Steel (2025)</p>
 							<div class="text-xs text-terminal-text/60 italic mb-2">Chat sobre: Esperanza, liderazgo, valores, inspiración, superación</div>

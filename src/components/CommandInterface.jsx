@@ -382,19 +382,19 @@ Dejar el mundo un poco mejor de como lo encontré.
           Escribe "exit" para regresar al terminal principal
         </div>
         {/* Command Input for exit */}
-        <div className="flex items-center space-x-2">
-          <span className="text-terminal-accent text-sm font-mono">adaghost@terminal:~/projects$</span>
+        <div className="flex items-center space-x-1 sm:space-x-2">
+          <span className="text-terminal-accent text-xs sm:text-sm font-mono whitespace-nowrap">adaghost@terminal:~/projects$</span>
           <input
             ref={inputRef}
             type="text"
             value={currentCommand}
             onChange={(e) => setCurrentCommand(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 bg-transparent text-terminal-text font-mono text-sm outline-none border-none"
-            placeholder="Escribe 'exit' para volver"
+            className="flex-1 bg-transparent text-terminal-text font-mono text-xs sm:text-sm outline-none border-none min-w-0"
+            placeholder="'exit' para volver"
             autoComplete="off"
           />
-          <span className="text-terminal-accent animate-blink font-mono">|</span>
+          <span className="text-terminal-accent animate-blink font-mono text-xs sm:text-sm">|</span>
         </div>
       </div>
     );
@@ -408,19 +408,19 @@ Dejar el mundo un poco mejor de como lo encontré.
           Escribe "exit" para regresar al terminal principal
         </div>
         {/* Command Input for exit */}
-        <div className="flex items-center space-x-2">
-          <span className="text-terminal-accent text-sm font-mono">adaghost@terminal:~/vision$</span>
+        <div className="flex items-center space-x-1 sm:space-x-2">
+          <span className="text-terminal-accent text-xs sm:text-sm font-mono whitespace-nowrap">adaghost@terminal:~/vision$</span>
           <input
             ref={inputRef}
             type="text"
             value={currentCommand}
             onChange={(e) => setCurrentCommand(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 bg-transparent text-terminal-text font-mono text-sm outline-none border-none"
-            placeholder="Escribe 'exit' para volver"
+            className="flex-1 bg-transparent text-terminal-text font-mono text-xs sm:text-sm outline-none border-none min-w-0"
+            placeholder="'exit' para volver"
             autoComplete="off"
           />
-          <span className="text-terminal-accent animate-blink font-mono">|</span>
+          <span className="text-terminal-accent animate-blink font-mono text-xs sm:text-sm">|</span>
         </div>
       </div>
     );
@@ -434,19 +434,19 @@ Dejar el mundo un poco mejor de como lo encontré.
           Escribe "exit" para regresar al terminal principal
         </div>
         {/* Command Input for exit */}
-        <div className="flex items-center space-x-2">
-          <span className="text-terminal-accent text-sm font-mono">adaghost@terminal:~/timeline$</span>
+        <div className="flex items-center space-x-1 sm:space-x-2">
+          <span className="text-terminal-accent text-xs sm:text-sm font-mono whitespace-nowrap">adaghost@terminal:~/timeline$</span>
           <input
             ref={inputRef}
             type="text"
             value={currentCommand}
             onChange={(e) => setCurrentCommand(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 bg-transparent text-terminal-text font-mono text-sm outline-none border-none"
-            placeholder="Escribe 'exit' para volver"
+            className="flex-1 bg-transparent text-terminal-text font-mono text-xs sm:text-sm outline-none border-none min-w-0"
+            placeholder="'exit' para volver"
             autoComplete="off"
           />
-          <span className="text-terminal-accent animate-blink font-mono">|</span>
+          <span className="text-terminal-accent animate-blink font-mono text-xs sm:text-sm">|</span>
         </div>
       </div>
     );
@@ -457,7 +457,7 @@ Dejar el mundo un poco mejor de como lo encontré.
       {/* Command Output */}
       <div className="space-y-1">
         {output.map((line, index) => (
-          <div key={index} className="text-terminal-text text-sm font-mono">
+          <div key={index} className="text-terminal-text text-xs sm:text-sm font-mono break-words">
             {line.startsWith('adaghost@terminal:~$') ? (
               <span className="text-terminal-accent">{line}</span>
             ) : line.startsWith('bash:') ? (
@@ -472,24 +472,24 @@ Dejar el mundo un poco mejor de como lo encontré.
       </div>
 
       {/* Command Input */}
-      <div className="flex items-center space-x-2">
-        <span className="text-terminal-accent text-sm font-mono">adaghost@terminal:~$</span>
+      <div className="flex items-center space-x-1 sm:space-x-2">
+        <span className="text-terminal-accent text-xs sm:text-sm font-mono whitespace-nowrap">adaghost@terminal:~$</span>
         <input
           ref={inputRef}
           type="text"
           value={currentCommand}
           onChange={(e) => setCurrentCommand(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="flex-1 bg-transparent text-terminal-text font-mono text-sm outline-none border-none"
-          placeholder="Escribe un comando (ej: help, date, ./projects)"
+          className="flex-1 bg-transparent text-terminal-text font-mono text-xs sm:text-sm outline-none border-none min-w-0"
+          placeholder="Comando..."
           autoComplete="off"
         />
-        <span className="text-terminal-accent animate-blink font-mono">|</span>
+        <span className="text-terminal-accent animate-blink font-mono text-xs sm:text-sm">|</span>
       </div>
 
       {/* Help hint */}
       {output.length === 0 && (
-        <div className="text-terminal-text/50 text-xs mt-4">
+        <div className="text-terminal-text/50 text-xs mt-4 px-1">
           💡 Tip: Escribe "help" para ver todos los comandos disponibles
         </div>
       )}

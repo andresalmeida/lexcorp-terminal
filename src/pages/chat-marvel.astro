@@ -71,16 +71,17 @@ import CommandInterface from '../components/CommandInterface.jsx';
 	</head>
 	<body class="bg-red-950 text-terminal-text font-mono min-h-screen">
 		<!-- Terminal Container -->
-		<div class="min-h-screen p-4 flex flex-col max-w-7xl mx-auto">
+		<div class="min-h-screen p-2 sm:p-4 flex flex-col max-w-7xl mx-auto">
 			<!-- Terminal Header -->
-			<div class="flex items-center justify-between mb-4 border-b border-terminal-text/30 pb-2">
-				<div class="flex items-center space-x-2">
-					<div class="w-3 h-3 rounded-full bg-red-500"></div>
-					<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-					<div class="w-3 h-3 rounded-full bg-green-500"></div>
+			<div class="flex items-center justify-between mb-2 sm:mb-4 border-b border-terminal-text/30 pb-2">
+				<div class="flex items-center space-x-1 sm:space-x-2">
+					<div class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
+					<div class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
+					<div class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>
 				</div>
-				<div class="text-terminal-text/70 text-sm">
-					MARVEL_TERMINAL v2.0.0 // STARK_INDUSTRIES_NETWORK
+				<div class="text-terminal-text/70 text-xs sm:text-sm text-center flex-1 mx-2">
+					<span class="hidden sm:inline">MARVEL_TERMINAL v2.0.0 // STARK_INDUSTRIES_NETWORK</span>
+					<span class="sm:hidden">MARVEL_TERMINAL</span>
 				</div>
 				<div class="text-terminal-text/50 text-xs">
 					<span id="current-time"></span>
@@ -88,7 +89,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 			</div>
 
 			<!-- Boot Sequence -->
-			<div id="boot-sequence" class="space-y-2 mb-8">
+			<div id="boot-sequence" class="space-y-1 sm:space-y-2 mb-4 sm:mb-8">
 				<div class="typing-line opacity-0">
 					<span class="text-terminal-accent">></span> Initializing Marvel Heroes Terminal...
 				</div>
@@ -115,19 +116,19 @@ import CommandInterface from '../components/CommandInterface.jsx';
 			<!-- Main Terminal Content -->
 			<div id="main-content" class="flex-1 opacity-0">
 				<!-- Command Prompt -->
-				<div class="mb-6">
-					<div class="flex items-center">
+				<div class="mb-4 sm:mb-6">
+					<div class="flex items-center text-sm sm:text-base">
 						<span class="text-terminal-accent">adaghost@terminal:~$</span>
 						<span class="ml-2 text-terminal-text">access --heroes</span>
 					</div>
 				</div>
 
 				<!-- Character Selection Grid -->
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 mb-4 sm:mb-8">
 					<!-- INVISIBLE WOMAN (Sue Storm) -->
 					<div id="sue-entity" class="entity-card transition-all duration-500 cursor-pointer group">
 						<!-- Image Section -->
-						<div class="relative h-80 rounded-lg overflow-hidden border-2 border-terminal-sue-primary/50 group-hover:border-terminal-sue-glow transition-all duration-500 mb-1">
+						<div class="relative h-64 sm:h-80 rounded-lg overflow-hidden border-2 border-terminal-sue-primary/50 group-hover:border-terminal-sue-glow transition-all duration-500 mb-1">
 							<!-- Background Image -->
 							<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/sue-storm.jpg')"></div>
 							
@@ -149,7 +150,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 						</div>
 						
 						<!-- Info Box Section -->
-						<div class="bg-red-900/90 border-2 border-terminal-sue-primary/50 group-hover:border-terminal-sue-glow rounded-lg p-4 transition-all duration-500 shadow-lg">
+						<div class="bg-red-900/90 border-2 border-terminal-sue-primary/50 group-hover:border-terminal-sue-glow rounded-lg p-3 sm:p-4 transition-all duration-500 shadow-lg">
 							<h3 class="text-terminal-sue-glow font-bold text-lg mb-1">INVISIBLE WOMAN</h3>
 							<p class="text-terminal-text text-sm mb-2">Sue Storm</p>
 							<div class="text-xs text-terminal-text/60 italic mb-2">Chat sobre: Creatividad, innovación, trabajo en equipo, liderazgo</div>
@@ -162,7 +163,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 					<!-- IRON MAN (Tony Stark) -->
 					<div id="ironman-entity" class="entity-card transition-all duration-500 cursor-pointer group">
 						<!-- Image Section -->
-						<div class="relative h-80 rounded-lg overflow-hidden border-2 border-yellow-500/50 group-hover:border-yellow-400 transition-all duration-500 mb-1">
+						<div class="relative h-64 sm:h-80 rounded-lg overflow-hidden border-2 border-yellow-500/50 group-hover:border-yellow-400 transition-all duration-500 mb-1">
 							<!-- Background Image -->
 							<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/iron-man.jpg')"></div>
 							
@@ -190,7 +191,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 						</div>
 						
 						<!-- Info Box Section -->
-						<div class="bg-red-900/90 border-2 border-yellow-500/50 group-hover:border-yellow-400 rounded-lg p-4 transition-all duration-500 shadow-lg">
+						<div class="bg-red-900/90 border-2 border-yellow-500/50 group-hover:border-yellow-400 rounded-lg p-3 sm:p-4 transition-all duration-500 shadow-lg">
 							<h3 class="text-yellow-400 font-bold text-lg mb-1">IRON MAN</h3>
 							<p class="text-terminal-text text-sm mb-2">Tony Stark</p>
 							<div class="text-xs text-terminal-text/60 italic mb-2">Chat sobre: Tecnología, innovación, emprendimiento, ingeniería</div>
@@ -203,7 +204,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 					<!-- CAPTAIN MARVEL (Carol Danvers) -->
 					<div id="captainmarvel-entity" class="entity-card transition-all duration-500 cursor-pointer group">
 						<!-- Image Section -->
-						<div class="relative h-80 rounded-lg overflow-hidden border-2 border-blue-500/50 group-hover:border-blue-400 transition-all duration-500 mb-1">
+						<div class="relative h-64 sm:h-80 rounded-lg overflow-hidden border-2 border-blue-500/50 group-hover:border-blue-400 transition-all duration-500 mb-1">
 							<!-- Background Image -->
 							<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/captain-marvel.jpg')"></div>
 							
@@ -234,7 +235,7 @@ import CommandInterface from '../components/CommandInterface.jsx';
 						</div>
 						
 						<!-- Info Box Section -->
-						<div class="bg-red-900/90 border-2 border-blue-500/50 group-hover:border-blue-400 rounded-lg p-4 transition-all duration-500 shadow-lg">
+						<div class="bg-red-900/90 border-2 border-blue-500/50 group-hover:border-blue-400 rounded-lg p-3 sm:p-4 transition-all duration-500 shadow-lg">
 							<h3 class="text-blue-400 font-bold text-lg mb-1">CAPTAIN MARVEL</h3>
 							<p class="text-terminal-text text-sm mb-2">Carol Danvers</p>
 							<div class="text-xs text-terminal-text/60 italic mb-2">Chat sobre: Liderazgo, determinación, superación, valentía</div>

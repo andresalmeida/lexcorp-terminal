@@ -702,7 +702,7 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
           transition={{ type: "spring", duration: 0.5 }}
                       className={`
             bg-terminal-bg ${theme.border} ${theme.glow} ${theme.bg}
-            border-2 rounded-lg w-full max-w-4xl max-h-[80vh] overflow-hidden
+            border-2 rounded-lg w-full max-w-4xl max-h-[85vh] sm:max-h-[80vh] overflow-hidden mx-2 sm:mx-0
             ${isLexAngry ? 'animate-glitch border-4 border-red-500 shadow-red-500/50' : ''}
           `}
           onClick={(e) => e.stopPropagation()}
@@ -737,7 +737,7 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
           </div>
 
           {/* Modal Body */}
-          <div className="p-6 overflow-y-auto max-h-[60vh]">
+          <div className="p-3 sm:p-6 overflow-y-auto max-h-[55vh] sm:max-h-[60vh]">
             {/* Mensaje inicial o historial de chat */}
             {showInitialMessage && !isShowingFarewell ? (
               <div className={`font-mono leading-relaxed ${isLexAngry ? 'text-red-400' : 'text-terminal-text'}`}>
@@ -807,7 +807,7 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
                     {remainingMessages} mensajes restantes
                   </span>
                 </div>
-                <form onSubmit={handleChatSubmit} className="flex space-x-2">
+                <form onSubmit={handleChatSubmit} className="flex space-x-1 sm:space-x-2">
                   <input
                     type="text"
                     value={chatInput}
@@ -817,7 +817,7 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
                     className={`
                       flex-1 bg-terminal-bg border ${theme.border} 
                       ${theme.accent} placeholder-terminal-text/50 
-                      px-3 py-2 rounded font-mono text-sm
+                      px-2 sm:px-3 py-2 rounded font-mono text-xs sm:text-sm min-w-0
                       focus:outline-none focus:ring-2 focus:ring-${currentEntity.theme === 'lexcorp' ? 'terminal-lexcorp-glow' : currentEntity.theme === 'oracle' ? 'terminal-oracle-glow' : 'terminal-sue-glow'}/50
                       ${(isAiLoading || remainingMessages === 0) ? 'opacity-50 cursor-not-allowed' : ''}
                     `}
@@ -827,13 +827,14 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
                     type="submit"
                     disabled={isAiLoading || remainingMessages === 0 || !chatInput.trim()}
                     className={`
-                      px-4 py-2 ${theme.border} border ${theme.accent} 
+                      px-2 sm:px-4 py-2 ${theme.border} border ${theme.accent} 
                       hover:bg-${currentEntity.theme === 'lexcorp' ? 'terminal-lexcorp-glow' : currentEntity.theme === 'oracle' ? 'terminal-oracle-glow' : 'terminal-sue-glow'}/10 
-                      rounded font-mono text-sm transition-colors
+                      rounded font-mono text-xs sm:text-sm transition-colors whitespace-nowrap
                       ${(isAiLoading || remainingMessages === 0 || !chatInput.trim()) ? 'opacity-50 cursor-not-allowed' : ''}
                     `}
                   >
-                    {isAiLoading ? 'ENVIANDO...' : 'ENVIAR'}
+                    <span className="hidden sm:inline">{isAiLoading ? 'ENVIANDO...' : 'ENVIAR'}</span>
+                    <span className="sm:hidden">{isAiLoading ? '...' : '↵'}</span>
                   </button>
                 </form>
                 <div className="text-xs text-terminal-text/40 mt-2">
