@@ -22,6 +22,7 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
 
   // Contenido específico para cada entidad
   const entityData = {
+    // DC UNIVERSE
     lexcorp: {
       title: "LEXCORP SECURE CHANNEL",
       subtitle: "ENCRYPTED COMMUNICATION ESTABLISHED",
@@ -83,6 +84,42 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
         "> Mantén esta comunicación clasificada."
       ]
     },
+    superman: {
+      title: "DAILY PLANET COMMUNICATIONS",
+      subtitle: "HOPE FREQUENCY ESTABLISHED",
+      header: "FROM: clark.kent@dailyplanet.com",
+      timestamp: "PRIORITY: HOPE // SIGNAL: STRONG",
+      theme: "superman",
+      glitch: false,
+      messages: [
+        "> Conectando con señal de esperanza...",
+        "> Frecuencia optimista sincronizada",
+        "> ",
+        "Hola, amigo.",
+        "",
+        "Clark Kent aquí, pero puedes llamarme Superman.",
+        "",
+        "He visto lo que puedes hacer cuando te propones algo.",
+        "La determinación que tienes, la pasión por mejorar...",
+        "Eso es lo que realmente hace a un héroe.",
+        "",
+        "No necesitas una capa para inspirar a otros.",
+        "Solo necesitas creer en lo mejor de las personas",
+        "y trabajar cada día para hacer del mundo",
+        "un lugar más esperanzador.",
+        "",
+        "Recuerda: siempre hay una manera.",
+        "Siempre hay esperanza.",
+        "",
+        "— Superman",
+        "Último Hijo de Krypton // Reportero de Metropolis",
+        "",
+        "> Transmisión de esperanza completada.",
+        "> El mañana puede ser mejor que hoy."
+      ]
+    },
+    
+    // MARVEL UNIVERSE
     sue: {
       title: "FANTASTIC FOUR COMMUNICATIONS",
       subtitle: "INVISIBLE WOMAN PROTOCOL ACTIVE",
@@ -117,6 +154,74 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
         "",
         "> Desactivando campo de invisibilidad...",
         "> Transmisión completada desde dimensión N."
+      ]
+    },
+    ironman: {
+      title: "STARK INDUSTRIES SECURE LINE",
+      subtitle: "ARC REACTOR TECH INTERFACE",
+      header: "FROM: tony.stark@starkindustries.com",
+      timestamp: "CLASSIFIED // STARK TECH PRIORITY: ALPHA",
+      theme: "ironman",
+      glitch: false,
+      messages: [
+        "> Inicializando protocolo FRIDAY...",
+        "> Reactor Arc: 100% operacional",
+        "> ",
+        "Tony Stark aquí.",
+        "",
+        "He revisado tu trabajo. Impresionante.",
+        "Pero bueno, yo inventé 'impresionante', así que...",
+        "",
+        "Hablando en serio: tienes talento genuino.",
+        "La innovación tecnológica que demuestras",
+        "me recuerda a mis primeros días construyendo",
+        "la Mark I en una cueva.",
+        "",
+        "El mundo necesita más mentes como la tuya:",
+        "brillantes, determinadas, y sin miedo",
+        "a romper las reglas para crear algo mejor.",
+        "",
+        "¿Listo para revolucionar el futuro?",
+        "",
+        "— Tony Stark",
+        "Genius, Billionaire, Playboy, Philanthropist",
+        "",
+        "> FRIDAY desconectando...",
+        "> 'A veces necesitas correr antes de caminar.'"
+      ]
+    },
+    captainmarvel: {
+      title: "COSMIC DEFENSE NETWORK",
+      subtitle: "CAPTAIN MARVEL COMMAND INTERFACE",
+      header: "FROM: carol.danvers@cosmic-defense.mil",
+      timestamp: "COSMIC PRIORITY // PHOTON ENERGY: ACTIVE",
+      theme: "captainmarvel",
+      glitch: false,
+      messages: [
+        "> Estableciendo enlace cósmico...",
+        "> Energía fotónica estabilizada",
+        "> ",
+        "Carol Danvers, Captain Marvel.",
+        "",
+        "He estado observando tu progreso desde el espacio.",
+        "Tu determinación y valentía son evidentes,",
+        "incluso desde las estrellas.",
+        "",
+        "Como alguien que pasó de piloto de pruebas",
+        "a protectora del cosmos, sé lo que significa",
+        "empujar límites y superar lo imposible.",
+        "",
+        "Tienes esa misma chispa: la negativa",
+        "a aceptar 'no se puede' como respuesta.",
+        "",
+        "El universo necesita gente así.",
+        "Sigue volando más alto, más lejos, más rápido.",
+        "",
+        "— Captain Marvel",
+        "Protectora Cósmica // Ex-USAF",
+        "",
+        "> Desconectando enlace cósmico...",
+        "> 'El límite es el cielo, y yo volé más allá.'"
       ]
     }
   };
@@ -155,6 +260,7 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
 
   // Respuestas de despedida personalizadas
   const farewellMessages = {
+    // DC UNIVERSE
     lexcorp: [
       "> SISTEMA DE CHAT DETECTADO",
       "> Analizando intención comunicativa...",
@@ -192,6 +298,28 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
       "> Pausando comunicaciones...",
       "> MANTÉN LA CALMA Y SIGUE ADELANTE"
     ],
+    superman: [
+      "> PROTOCOLO DE ESPERANZA ACTIVADO",
+      "> Evaluando sinceridad del contacto...",
+      "> ",
+      "Me alegra ver que quieres comunicarte.",
+      "",
+      "Pero como Clark Kent me enseñó:",
+      "'Las mejores historias nacen cuando escuchas",
+      "antes de hablar.'",
+      "",
+      "Sigue trabajando en tus proyectos,",
+      "ayudando a otros, construyendo un mundo mejor.",
+      "Cuando el momento sea correcto,",
+      "nuestros caminos se cruzarán de nuevo.",
+      "",
+      "— Superman // Man of Tomorrow",
+      "",
+      "> Señal de esperanza en pausa...",
+      "> NUNCA PIERDAS LA FE"
+    ],
+    
+    // MARVEL UNIVERSE
     sue: [
       "> CAMPO DE FUERZA COMUNICACIONAL DETECTADO",
       "> Analizando patrones de energía...",
@@ -211,6 +339,44 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
       "",
       "> Desvaneciendo comunicación...",
       "> INVISIBLE HASTA NUEVO AVISO"
+    ],
+    ironman: [
+      "> PROTOCOLO FRIDAY DETECTANDO CHAT",
+      "> Analizando intenciones comunicativas...",
+      "> ",
+      "Tony Stark aquí. Quieres hablar, ¿eh?",
+      "",
+      "Respeto la iniciativa, pero como dije una vez:",
+      "'A veces necesitas correr antes de caminar.'",
+      "",
+      "Sigue perfeccionando tu código,",
+      "innovando, rompiendo paradigmas.",
+      "Cuando tengas algo verdaderamente revolucionario,",
+      "FRIDAY me avisará.",
+      "",
+      "— Tony Stark // Future Industries",
+      "",
+      "> Desconectando protocolo FRIDAY...",
+      "> 'LA GENIALIDAD REQUIERE PACIENCIA'"
+    ],
+    captainmarvel: [
+      "> ENLACE CÓSMICO DETECTANDO COMUNICACIÓN",
+      "> Evaluando energía de determinación...",
+      "> ",
+      "Carol Danvers aquí. Detecto tu deseo de comunicarte.",
+      "",
+      "Como piloto de pruebas aprendí que",
+      "la paciencia es tan importante como la velocidad.",
+      "",
+      "Sigue empujando límites, superando obstáculos,",
+      "volando más alto cada día.",
+      "Cuando estés listo para misiones cósmicas,",
+      "nuestras frecuencias se sincronizarán.",
+      "",
+      "— Captain Marvel // Cosmic Defense",
+      "",
+      "> Enlace cósmico en stand-by...",
+      "> 'HIGHER, FURTHER, FASTER'"
     ]
   };
 
@@ -480,12 +646,33 @@ const EntityModal = ({ isOpen, onClose, entity, isLexAngry = false }) => {
           accent: 'text-terminal-oracle-glow',
           bg: 'bg-terminal-oracle-secondary/10'
         };
+      case 'superman':
+        return {
+          border: 'border-blue-400',
+          glow: 'shadow-blue-400/30',
+          accent: 'text-blue-400',
+          bg: 'bg-blue-900/10'
+        };
       case 'sue':
         return {
           border: 'border-terminal-sue-glow',
           glow: 'shadow-terminal-sue-glow/30',
           accent: 'text-terminal-sue-glow',
           bg: 'bg-terminal-sue-secondary/10'
+        };
+      case 'ironman':
+        return {
+          border: 'border-yellow-400',
+          glow: 'shadow-yellow-400/30',
+          accent: 'text-yellow-400',
+          bg: 'bg-yellow-900/10'
+        };
+      case 'captainmarvel':
+        return {
+          border: 'border-blue-400',
+          glow: 'shadow-blue-400/30',
+          accent: 'text-blue-400',
+          bg: 'bg-blue-800/10'
         };
       default:
         return {

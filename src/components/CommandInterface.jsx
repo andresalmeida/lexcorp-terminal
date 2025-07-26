@@ -16,19 +16,21 @@ const CommandInterface = () => {
       description: 'Mostrar comandos disponibles',
       execute: () => {
         return [
-          '> LEXCORP Terminal - Comandos Disponibles:',
+          '> Terminal adaghost - Comandos Disponibles:',
           '',
+          '  ./home          - Ir al portfolio principal',
+          '  ./dc-chat       - Acceder al chat DC Universe',
+          '  ./marvel-chat   - Acceder al chat Marvel Universe',
           '  ./projects      - Acceder al repositorio de proyectos',
-          '  ./vision.txt    - Leer manifiesto personal',
           '  ./timeline      - Ver historial de desarrollo',
-          '  ./portafolio.txt - Abrir portafolio profesional',
+          // '  ./vision.txt    - Leer manifiesto personal',
           '  help           - Mostrar esta ayuda',
           '  clear          - Limpiar terminal',
           '  whoami         - Información del usuario',
           '  date           - Mostrar fecha y hora actual',
           '  uptime         - Tiempo de actividad del sistema',
           '  version        - Información del sistema',
-          '  exit           - Cerrar sección actual',
+          '  exit           - Cerrar sección actual',          
           '',
           'Tip: Usa las flechas ↑↓ para navegar por el historial'
         ];
@@ -71,16 +73,42 @@ const CommandInterface = () => {
       }
     },
 
-    './portafolio.txt': {
-      description: 'Abrir portafolio profesional',
+    './home': {
+      description: 'Ir al portfolio principal',
       execute: () => {
         return [
-          '> Accediendo al portafolio profesional...',
-          '> Estableciendo conexión segura...',
-          '> Redirigiendo a terminal de portafolio...'
+          '> Accediendo al portfolio principal...',
+          '> Estableciendo conexión...',
+          '> Redirigiendo a página principal...'
         ];
       },
-      redirect: '/portafolio'
+      redirect: '/'
+    },
+
+    './dc-chat': {
+      description: 'Acceder al chat DC Universe',
+      execute: () => {
+        return [
+          '> Conectando con DC Universe...',
+          '> Estableciendo enlace con Oracle...',
+          '> Activando protocolo LexCorp...',
+          '> Redirigiendo a terminal DC...'
+        ];
+      },
+      redirect: '/chat-dc'
+    },
+
+    './marvel-chat': {
+      description: 'Acceder al chat Marvel Universe',
+      execute: () => {
+        return [
+          '> Conectando con Baxter Building...',
+          '> Activando red de Los 4 Fantásticos...',
+          '> Estableciendo comunicación cósmica...',
+          '> Redirigiendo a terminal Marvel...'
+        ];
+      },
+      redirect: '/chat-marvel'
     },
 
     clear: {
@@ -146,7 +174,7 @@ const CommandInterface = () => {
             : `${seconds}s`;
             
         return [
-          `> LEXCORP Terminal ha estado activo durante: ${uptimeStr}`,
+          `> Terminal adaghost ha estado activo durante: ${uptimeStr}`,
           `> Inicio de sesión: ${new Date(pageStartTime).toLocaleTimeString('es-ES')}`,
           `> Estado del sistema: OPERATIVO`,
           `> Conexiones IA: ESTABLES`,
@@ -159,7 +187,7 @@ const CommandInterface = () => {
       description: 'Información del sistema',
       execute: () => {
         return [
-          '> LEXCORP Terminal v2.4.1',
+          '> Terminal adaghost v2.4.1',
           '> Sistema operativo: Web Browser Environment',
           '> Framework: Astro + React 18',
           '> Styling: Tailwind CSS v3.x',
@@ -191,7 +219,7 @@ const CommandInterface = () => {
     setHistoryIndex(-1);
 
     // Agregar comando al output
-    setOutput(prev => [...prev, `root@lexcorp-terminal:~$ ${trimmedCmd}`]);
+    setOutput(prev => [...prev, `adaghost@terminal:~$ ${trimmedCmd}`]);
 
     // Ejecutar comando
     const command = commands[trimmedCmd];
@@ -316,7 +344,7 @@ Dejar el mundo un poco mejor de como lo encontré.
       </div>
       <div className="text-terminal-text text-sm space-y-3">
         {[
-          { date: '2025-01-15', hash: 'a7f5c92', message: 'feat: Implementing LEXCORP Terminal portfolio system', author: 'Developer' },
+          { date: '2025-01-15', hash: 'a7f5c92', message: 'feat: Implementing adaghost Terminal portfolio system', author: 'Developer' },
           { date: '2024-12-15', hash: 'b3e8d41', message: 'feat: Advanced Shiny dashboards with real-time analytics', author: 'Developer' },
           { date: '2024-11-28', hash: 'c9a2f56', message: 'feat: ETL pipeline optimization - 300% performance boost', author: 'Developer' },
           { date: '2024-10-15', hash: 'd4b7e12', message: 'feat: ML pipeline with automated model deployment', author: 'Developer' },
@@ -355,7 +383,7 @@ Dejar el mundo un poco mejor de como lo encontré.
         </div>
         {/* Command Input for exit */}
         <div className="flex items-center space-x-2">
-          <span className="text-terminal-accent text-sm font-mono">root@lexcorp-terminal:~/projects$</span>
+          <span className="text-terminal-accent text-sm font-mono">adaghost@terminal:~/projects$</span>
           <input
             ref={inputRef}
             type="text"
@@ -381,7 +409,7 @@ Dejar el mundo un poco mejor de como lo encontré.
         </div>
         {/* Command Input for exit */}
         <div className="flex items-center space-x-2">
-          <span className="text-terminal-accent text-sm font-mono">root@lexcorp-terminal:~/vision$</span>
+          <span className="text-terminal-accent text-sm font-mono">adaghost@terminal:~/vision$</span>
           <input
             ref={inputRef}
             type="text"
@@ -407,7 +435,7 @@ Dejar el mundo un poco mejor de como lo encontré.
         </div>
         {/* Command Input for exit */}
         <div className="flex items-center space-x-2">
-          <span className="text-terminal-accent text-sm font-mono">root@lexcorp-terminal:~/timeline$</span>
+          <span className="text-terminal-accent text-sm font-mono">adaghost@terminal:~/timeline$</span>
           <input
             ref={inputRef}
             type="text"
@@ -430,7 +458,7 @@ Dejar el mundo un poco mejor de como lo encontré.
       <div className="space-y-1">
         {output.map((line, index) => (
           <div key={index} className="text-terminal-text text-sm font-mono">
-            {line.startsWith('root@lexcorp-terminal:~$') ? (
+            {line.startsWith('adaghost@terminal:~$') ? (
               <span className="text-terminal-accent">{line}</span>
             ) : line.startsWith('bash:') ? (
               <span className="text-red-400">{line}</span>
@@ -445,7 +473,7 @@ Dejar el mundo un poco mejor de como lo encontré.
 
       {/* Command Input */}
       <div className="flex items-center space-x-2">
-        <span className="text-terminal-accent text-sm font-mono">root@lexcorp-terminal:~$</span>
+        <span className="text-terminal-accent text-sm font-mono">adaghost@terminal:~$</span>
         <input
           ref={inputRef}
           type="text"
@@ -453,7 +481,7 @@ Dejar el mundo un poco mejor de como lo encontré.
           onChange={(e) => setCurrentCommand(e.target.value)}
           onKeyDown={handleKeyDown}
           className="flex-1 bg-transparent text-terminal-text font-mono text-sm outline-none border-none"
-          placeholder="Escribe un comando (ej: help, ./projects, ./vision.txt)"
+          placeholder="Escribe un comando (ej: help, date, ./projects)"
           autoComplete="off"
         />
         <span className="text-terminal-accent animate-blink font-mono">|</span>

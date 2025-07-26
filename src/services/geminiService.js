@@ -88,9 +88,15 @@ class GeminiChatService {
   // Respuestas de emergencia cuando falla la API
   getFallbackResponse(entity) {
     const fallbacks = {
+      // DC Universe
       lexcorp: "Sistema temporalmente fuera de línea. Los ingenieros de LexCorp están trabajando en una solución. — Sistema Automatizado",
       oracle: "Red de comunicaciones en mantenimiento. Sistemas de respaldo activados. — Oracle Network",
-      sue: "Campo de fuerza temporal activo. Restableciendo comunicaciones... — Sue Storm"
+      superman: "Los sistemas de comunicación están experimentando interferencias. Mantén la esperanza, volveré pronto. — Superman",
+      
+      // Marvel Universe
+      sue: "Campo de fuerza temporal activo. Restableciendo comunicaciones... — Sue Storm",
+      ironman: "FRIDAY está realizando actualizaciones del sistema. Volveré con mejores respuestas. — Tony Stark",
+      captainmarvel: "Señal perdida temporalmente. Regresando de misión cósmica. — Carol Danvers"
     };
 
     return fallbacks[entity] || "Sistema temporalmente no disponible.";
@@ -111,7 +117,8 @@ class GeminiChatService {
   // Obtener estadísticas de uso
   getUsageStats() {
     const stats = {};
-    ['lexcorp', 'oracle', 'sue'].forEach(entity => {
+    // Incluir todos los personajes disponibles
+    ['lexcorp', 'oracle', 'superman', 'sue', 'ironman', 'captainmarvel'].forEach(entity => {
       stats[entity] = {
         messagesUsed: this.messageCount.get(entity) || 0,
         messagesRemaining: this.getRemainingMessages(entity),
@@ -119,6 +126,25 @@ class GeminiChatService {
       };
     });
     return stats;
+  }
+
+  // Obtener personajes por universo
+  getDCCharacters() {
+    return ['lexcorp', 'oracle', 'superman'];
+  }
+
+  getMarvelCharacters() {
+    return ['sue', 'ironman', 'captainmarvel'];
+  }
+
+  // Verificar si una entidad pertenece a un universo específico
+  isFromUniverse(entity, universe) {
+    const dcChars = this.getDCCharacters();
+    const marvelChars = this.getMarvelCharacters();
+    
+    if (universe === 'dc') return dcChars.includes(entity);
+    if (universe === 'marvel') return marvelChars.includes(entity);
+    return false;
   }
 }
 

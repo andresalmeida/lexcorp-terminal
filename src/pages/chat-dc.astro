@@ -1,0 +1,335 @@
+---
+import '@fontsource/ibm-plex-mono';
+import ModalManager from '../components/ModalManager.jsx';
+import CommandInterface from '../components/CommandInterface.jsx';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/lexcorp-logo.svg?v=1" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Primary Meta Tags -->
+		<title>DC Universe Chat | Andrés Almeida - Terminal Interactivo</title>
+		<meta name="title" content="DC Universe Chat | Andrés Almeida - Terminal Interactivo" />
+		<meta name="description" content="Chatea con personajes del universo DC: Lex Luthor (LexCorp), Oracle y Superman. Terminal interactivo con IA para discutir tecnología, liderazgo y programación." />
+		<meta name="keywords" content="DC Universe, Chat IA, Lex Luthor, Oracle, Superman, Terminal, Portfolio Interactivo, Full Stack Developer" />
+		<meta name="author" content="Andrés Almeida Jara" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://andresalmeida.com/chat-dc" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://andresalmeida.com/chat-dc" />
+		<meta property="og:title" content="DC Universe Chat | Terminal Interactivo" />
+		<meta property="og:description" content="Chatea con personajes del universo DC en un terminal interactivo. Experiencia única con IA para discutir tecnología y desarrollo." />
+		<meta property="og:image" content="https://andresalmeida.com/og-image-dc.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:site_name" content="Andrés Almeida Portfolio" />
+		<meta property="og:locale" content="es_ES" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://andresalmeida.com/chat-dc" />
+		<meta property="twitter:title" content="DC Universe Chat | Terminal Interactivo" />
+		<meta property="twitter:description" content="Chatea con Lex Luthor, Oracle y Superman en un terminal interactivo único. ¡Experiencia inmersiva con IA!" />
+		<meta property="twitter:image" content="https://andresalmeida.com/og-image-dc.jpg" />
+		<meta property="twitter:creator" content="@andresalmeida" />
+
+		<!-- Additional Meta -->
+		<meta name="theme-color" content="#1a1a2e" />
+		<meta name="color-scheme" content="dark" />
+		<meta name="format-detection" content="telephone=no" />
+		
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+		<!-- JSON-LD Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name": "DC Universe Chat Terminal",
+			"description": "Terminal interactivo para chatear con personajes del universo DC usando inteligencia artificial.",
+			"url": "https://andresalmeida.com/chat-dc",
+			"author": {
+				"@type": "Person",
+				"name": "Andrés Almeida Jara"
+			},
+			"isPartOf": {
+				"@type": "WebSite",
+				"name": "Andrés Almeida Portfolio",
+				"url": "https://andresalmeida.com"
+			}
+		}
+		</script>
+	</head>
+	<body class="bg-gray-900 text-terminal-text font-mono min-h-screen">
+		<!-- Terminal Container -->
+		<div class="min-h-screen p-4 flex flex-col max-w-7xl mx-auto">
+			<!-- Terminal Header -->
+			<div class="flex items-center justify-between mb-4 border-b border-terminal-text/30 pb-2">
+				<div class="flex items-center space-x-2">
+					<div class="w-3 h-3 rounded-full bg-red-500"></div>
+					<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+					<div class="w-3 h-3 rounded-full bg-green-500"></div>
+				</div>
+				<div class="text-terminal-text/70 text-sm">
+					DC_TERMINAL v1.0.0 // WAYNE_TECH_NETWORK
+				</div>
+				<div class="text-terminal-text/50 text-xs">
+					<span id="current-time"></span>
+				</div>
+			</div>
+
+			<!-- Boot Sequence -->
+			<div id="boot-sequence" class="space-y-2 mb-8">
+				<div class="typing-line opacity-0">
+					<span class="text-terminal-accent">></span> Initializing DC Terminal System...
+				</div>
+				<div class="typing-line opacity-0">
+					<span class="text-terminal-accent">></span> Loading Wayne Tech protocols...
+				</div>
+				<div class="typing-line opacity-0">
+					<span class="text-terminal-accent">></span> Establishing encrypted channels...
+				</div>
+				<div class="typing-line opacity-0">
+					<span class="text-terminal-accent">></span> Scanning for available entities...
+				</div>
+				<div class="typing-line opacity-0">
+					<span class="text-green-400">></span> Connection successful. Welcome to DC Universe.
+				</div>
+				<div class="typing-line opacity-0">
+					<span class="text-terminal-accent">></span> Available entities: <span class="text-terminal-lexcorp-glow">[LEXCORP]</span> <span class="text-terminal-oracle-glow">[ORACLE LINK]</span> <span class="text-blue-400">[SUPERMAN]</span>
+				</div>
+				<div class="typing-line opacity-0">
+					<span class="text-green-400">></span> Boot sequence complete. Welcome back, Operator.
+				  </div>
+			</div>
+
+			<!-- Main Terminal Content -->
+			<div id="main-content" class="flex-1 opacity-0">
+				<!-- Command Prompt -->
+				<div class="mb-6">
+					<div class="flex items-center">
+						<span class="text-terminal-accent">adaghost@terminal:~$</span>
+						<span class="ml-2 text-terminal-text">access --entities</span>
+					</div>
+				</div>
+
+				<!-- Character Selection Grid -->
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+					<!-- LEXCORP Entity -->
+					<div id="lexcorp-entity" class="entity-card transition-all duration-500 cursor-pointer group">
+						<!-- Image Section -->
+						<div class="relative h-80 rounded-t-lg overflow-hidden border-2 border-terminal-lexcorp-primary/50 group-hover:border-terminal-lexcorp-glow transition-all duration-500 mb-1">
+							<!-- Background Image -->
+							<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/lex-luthor.jpg')"></div>
+							
+							<!-- Terminal Green Overlay -->
+							<div class="absolute inset-0 bg-terminal-text/30 group-hover:bg-terminal-text/20 transition-all duration-500"></div>
+							
+							<!-- Lexcorp Red Overlay -->
+							<div class="absolute inset-0 bg-terminal-lexcorp-primary/30 group-hover:bg-terminal-lexcorp-glow/50 transition-all duration-500"></div>
+							
+							<!-- Glitch Effect on Hover -->
+							<div class="absolute inset-0 bg-gradient-to-r from-transparent via-terminal-lexcorp-glow/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
+							
+							<!-- Character Icon -->
+							<div class="relative z-10 h-full flex items-center justify-center">
+								<div class="text-6xl text-terminal-lexcorp-glow drop-shadow-lg filter group-hover:scale-110 transition-transform duration-300">⬢</div>
+							</div>
+							
+							<!-- LexCorp Tech Particles -->
+							<div class="absolute inset-0 opacity-0 group-hover:opacity-60 transition-all duration-500 pointer-events-none">
+								<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 border-2 border-terminal-lexcorp-glow rounded-full animate-ping"></div>
+								<div class="absolute top-1/4 right-1/4 w-1 h-1 bg-terminal-lexcorp-glow rounded-full animate-pulse"></div>
+								<div class="absolute bottom-1/4 left-1/4 w-2 h-2 bg-red-500 rounded-full animate-bounce"></div>
+								<div class="absolute top-3/4 right-1/3 w-1 h-1 bg-terminal-lexcorp-glow rounded-full animate-ping"></div>
+							</div>
+							
+							<!-- Corporate Dominance Stream -->
+							<div class="absolute inset-0 bg-gradient-to-br from-transparent via-terminal-lexcorp-glow/15 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
+						</div>
+						
+						<!-- Info Box Section -->
+						<div class="bg-gray-800/90 border-2 border-terminal-lexcorp-primary/50 group-hover:border-terminal-lexcorp-glow rounded-lg p-4 transition-all duration-500 shadow-lg">
+							<h3 class="text-terminal-lexcorp-glow font-bold text-lg mb-1">LEXCORP</h3>
+							<p class="text-terminal-text text-sm mb-2">Corporate Communications</p>
+							<div class="text-xs text-terminal-text/60 italic mb-2">Chat sobre: Tecnología empresarial, liderazgo, desarrollo profesional</div>
+							<div class="text-xs text-terminal-text/80">
+								Status: <span class="text-terminal-lexcorp-glow animate-pulse font-semibold">ONLINE</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- ORACLE LINK Entity -->
+					<div id="oracle-entity" class="entity-card transition-all duration-500 cursor-pointer group">
+						<!-- Image Section -->
+						<div class="relative h-80 rounded-t-lg overflow-hidden border-2 border-terminal-oracle-primary/50 group-hover:border-terminal-oracle-glow transition-all duration-500 mb-1">
+							<!-- Background Image -->
+							<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/oracle-barbara.jpg')"></div>
+							
+							<!-- Terminal Green Overlay -->
+							<div class="absolute inset-0 bg-terminal-text/30 group-hover:bg-terminal-text/20 transition-all duration-500"></div>
+							
+							<!-- Oracle Purple Overlay -->
+							<div class="absolute inset-0 bg-terminal-oracle-primary/30 group-hover:bg-terminal-oracle-glow/50 transition-all duration-500"></div>
+							
+							<!-- Data Stream Effect on Hover -->
+							<div class="absolute inset-0 bg-gradient-to-t from-transparent via-terminal-oracle-glow/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+							
+							<!-- Character Icon -->
+							<div class="relative z-10 h-full flex items-center justify-center">
+								<div class="text-6xl text-terminal-oracle-glow drop-shadow-lg filter group-hover:scale-110 transition-transform duration-300">◉</div>
+							</div>
+							
+							<!-- Oracle Network Pulse -->
+							<div class="absolute inset-0 opacity-0 group-hover:opacity-60 transition-all duration-500 pointer-events-none">
+								<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-30 h-30 border-2 border-terminal-oracle-glow rounded-full animate-ping"></div>
+								<div class="absolute top-1/4 right-1/4 w-1 h-1 bg-terminal-oracle-glow rounded-full animate-pulse"></div>
+								<div class="absolute bottom-1/4 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce"></div>
+								<div class="absolute top-3/4 right-1/3 w-1 h-1 bg-terminal-oracle-glow rounded-full animate-ping"></div>
+							</div>
+							
+							<!-- Network Grid Effect -->
+							<div class="absolute inset-0 opacity-0 group-hover:opacity-30 transition-all duration-500 pointer-events-none" style="background-image: radial-gradient(circle at 1px 1px, rgba(109, 40, 217, 0.3) 1px, transparent 0); background-size: 20px 20px;"></div>
+							
+							<!-- Intelligence Stream -->
+							<div class="absolute inset-0 bg-gradient-to-l from-transparent via-terminal-oracle-glow/15 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
+						</div>
+						
+						<!-- Info Box Section -->
+						<div class="bg-gray-800/90 border-2 border-terminal-oracle-primary/50 group-hover:border-terminal-oracle-glow rounded-lg p-4 transition-all duration-500 shadow-lg">
+							<h3 class="text-terminal-oracle-glow font-bold text-lg mb-1">ORACLE LINK</h3>
+							<p class="text-terminal-text text-sm mb-2">Intelligence Network</p>
+							<div class="text-xs text-terminal-text/60 italic mb-2">Chat sobre: Programación, seguridad, análisis de datos, problem-solving</div>
+							<div class="text-xs text-terminal-text/80">
+								Status: <span class="text-terminal-oracle-glow animate-pulse font-semibold">SECURED</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- SUPERMAN Entity -->
+					<div id="superman-entity" class="entity-card transition-all duration-500 cursor-pointer group">
+						<!-- Image Section -->
+						<div class="relative h-80 rounded-t-lg overflow-hidden border-2 border-blue-500/50 group-hover:border-blue-400 transition-all duration-500 mb-1">
+							<!-- Background Image -->
+							<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/superman.jpg')"></div>
+							
+							<!-- Terminal Green Overlay -->
+							<div class="absolute inset-0 bg-terminal-text/30 group-hover:bg-terminal-text/20 transition-all duration-500"></div>
+							
+							<!-- Superman Color Overlay -->
+							<div class="absolute inset-0 bg-blue-600/30 group-hover:bg-blue-400/50 transition-all duration-500"></div>
+							
+							<!-- Hope Effect on Hover -->
+							<div class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+							
+							<!-- Character Icon -->
+							<div class="relative z-10 h-full flex items-center justify-center">
+								<div class="text-6xl text-blue-400 drop-shadow-lg filter group-hover:scale-110 transition-transform duration-300">⭐</div>
+							</div>
+							
+							<!-- Hope Aura Effect -->
+							<div class="absolute inset-0 opacity-0 group-hover:opacity-40 transition-all duration-500 pointer-events-none">
+								<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-2 border-blue-400 rounded-full animate-ping"></div>
+								<div class="absolute top-1/4 right-1/4 w-1 h-1 bg-red-400 rounded-full animate-pulse"></div>
+								<div class="absolute bottom-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
+							</div>
+							
+							<!-- Inspiration Stream Effect -->
+							<div class="absolute inset-0 bg-gradient-to-t from-transparent via-blue-400/15 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
+						</div>
+						
+						<!-- Info Box Section -->
+						<div class="bg-gray-800/90 border-2 border-blue-500/50 group-hover:border-blue-400 rounded-lg p-4 transition-all duration-500 shadow-lg">
+							<h3 class="text-blue-400 font-bold text-lg mb-1">SUPERMAN</h3>
+							<p class="text-terminal-text text-sm mb-2">Man of Steel (2025)</p>
+							<div class="text-xs text-terminal-text/60 italic mb-2">Chat sobre: Esperanza, liderazgo, valores, inspiración, superación</div>
+							<div class="text-xs text-terminal-text/80">
+								Status: <span class="text-blue-400 animate-pulse font-semibold">HOPEFUL</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Interactive Command Interface -->
+				<CommandInterface client:load />
+			</div>
+		</div>
+
+		<!-- React Component for Entity Modals -->
+		<ModalManager client:load />
+
+		<!-- JavaScript for Terminal Effects -->
+		<script>
+			// Update time
+			function updateTime() {
+				const now = new Date();
+				const timeString = now.toLocaleString([], { 
+					hour12: false
+				});
+				const element = document.getElementById('current-time');
+				if (element) {
+					element.textContent = timeString;
+				}
+			}
+			
+			setInterval(updateTime, 1000);
+			updateTime();
+
+			// Boot sequence animation
+			const lines = document.querySelectorAll('.typing-line');
+			const mainContent = document.getElementById('main-content') as HTMLElement;
+			
+			lines.forEach((line, index) => {
+				const element = line as HTMLElement;
+				setTimeout(() => {
+					element.style.opacity = '1';
+					element.style.animation = 'typing 1s steps(30, end)';
+				}, (index + 1) * 800);
+			});
+
+			// Show main content after boot sequence
+			setTimeout(() => {
+				if (mainContent) {
+					mainContent.style.opacity = '1';
+					mainContent.style.animation = 'fadeIn 1s ease-in';
+				}
+			}, (lines.length + 1) * 800);
+
+			// Entity click effects - dispatch events for React modal
+			document.getElementById('lexcorp-entity')?.addEventListener('click', () => {
+				window.dispatchEvent(new CustomEvent('openEntityModal', { detail: { entity: 'lexcorp' } }));
+			});
+			
+			document.getElementById('oracle-entity')?.addEventListener('click', () => {
+				window.dispatchEvent(new CustomEvent('openEntityModal', { detail: { entity: 'oracle' } }));
+			});
+			
+			document.getElementById('superman-entity')?.addEventListener('click', () => {
+				window.dispatchEvent(new CustomEvent('openEntityModal', { detail: { entity: 'superman' } }));
+			});
+		</script>
+
+		<style>
+			@keyframes fadeIn {
+				from { opacity: 0; transform: translateY(10px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+			
+			.typing-line {
+				white-space: nowrap;
+				overflow: hidden;
+				border-right: 2px solid #33FF66;
+				animation: blink 1s step-end infinite;
+			}
+		</style>
+	</body>
+</html> 
