@@ -16,7 +16,7 @@ const ContactSection = () => {
     contact: {
       email: 'almeidaandres12@gmail.com',
       phone: '+593 99 054 5539',
-      website: 'www.andresalmeida.com',
+      website: 'www.adaghost.me',
       linkedin: 'linkedin.com/in/andres-almeida-jara/',
       github: 'github.com/andresalmeida'
     },

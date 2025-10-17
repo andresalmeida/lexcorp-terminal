@@ -1,7 +1,5 @@
 ---
-import '@fontsource/orbitron/400.css';
-import '@fontsource/orbitron/500.css';
-import '@fontsource/orbitron/700.css';
+// Importamos solo Space Mono para el body
 import '@fontsource/space-mono/400.css';
 import '@fontsource/space-mono/700.css';
 ---
@@ -13,20 +11,20 @@ import '@fontsource/space-mono/700.css';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
-    <title>Andrés Almeida Jara | Full Stack Developer & Data Analyst - Portfolio</title>
-    <meta name="title" content="Andrés Almeida | Full Stack Developer & Data Analyst - Portfolio" />
-    <meta name="description" content="Portfolio de Andrés Almeida. Especialista en React, Python, R y análisis de datos. Desarrollador Full Stack con experiencia en proyectos innovadores desde Quito, Ecuador." />
-    <meta name="keywords" content="Full Stack Developer, Data Analyst, React, Python, R, Shiny, Portfolio, Ecuador, Quito, Desarrollador, Ciencia de Datos" />
+    <title>Andrés Almeida Jara | Developer & Data Analyst</title>
+    <meta name="title" content="Andrés Almeida Jara | Developer | Data Analyst | Geospatial Explorer | Future Scientist" />
+    <meta name="description" content="Andrés Almeida Jara | Developer & Data Analyst. Desarrollo soluciones digitales basadas en datos, transformando información en decisiones efectivas." />
+    <meta name="keywords" content="Full Stack Developer, Data Analyst, React, Python, R, Shiny, Portfolio, Ecuador, Quito, Desarrollador, Ciencia de Datos, Geospatial, GIS" />
     <meta name="author" content="Andrés Almeida Jara" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://andresalmeida.com/" />
+    <link rel="canonical" href="https://adaghost.me/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://andresalmeida.com/" />
-    <meta property="og:title" content="Andrés Almeida Jara | Full Stack Developer & Data Analyst" />
-    <meta property="og:description" content="Portfolio de desarrollador Full Stack especializado en React, Python, R y análisis de datos. Experiencia en proyectos innovadores desde Ecuador." />
-    <meta property="og:image" content="https://andresalmeida.com/og-image.jpg" />
+    <meta property="og:url" content="https://adaghost.me/" />
+    <meta property="og:title" content="Andrés Almeida Jara | Developer | Data Analyst | Geospatial Explorer | Future Scientist" />
+    <meta property="og:description" content="Desarrollo soluciones digitales basadas en datos, transformando información en decisiones efectivas." />
+    <meta property="og:image" content="https://adaghost.me/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Andrés Almeida Portfolio" />
@@ -34,13 +32,18 @@ import '@fontsource/space-mono/700.css';
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://adaghost.me/" />
-    <meta property="twitter:title" content="Andrés Almeida Jara | Full Stack Developer & Data Analyst" />
-    <meta property="twitter:description" content="Portfolio de desarrollador Full Stack. Especialista en React, Python, R y análisis de datos 🚀" />
-    <meta property="twitter:image" content="https://andresalmeida.com/og-image.jpg" />
+    <meta property="twitter:title" content="Andrés Almeida Jara | Developer | Data Analyst | Geospatial Explorer | Future Scientist" />
+    <meta property="twitter:description" content="Desarrollo soluciones digitales basadas en datos, transformando información en decisiones efectivas." />
+    <meta property="twitter:image" content="https://adaghost.me/og-image.jpg" />
 
     <!-- Additional Meta -->
-    <meta name="theme-color" content="#10367D" />
+    <meta name="theme-color" content="#0A0A0A" />
     <link rel="icon" type="image/svg+xml" href="/lexcorp-logo.svg?v=1" />
+    
+    <!-- Fuentes Google Fonts - Street Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -74,119 +77,144 @@ import '@fontsource/space-mono/700.css';
     </script>
   </head>
   
-  <body class="bg-retro-dark text-retro-light font-sans">
+  <body class="bg-street-black text-street-white font-body">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-retro-primary/90 backdrop-blur-sm border-b border-retro-accent/20">
+    <nav class="fixed top-0 w-full z-50 bg-street-black/95 backdrop-blur-md border-b-2 border-street-ferxxo/30">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
+        <div class="flex justify-between items-center h-20">
           <!-- Logo -->
-          <div class="flex items-center space-x-2">
-            <div class="text-retro-accent text-2xl font-mono">🧠</div>
-            <span class="text-retro-light font-semibold text-lg">Andrés Almeida Jara</span>
+          <div class="flex items-center space-x-3 group">
+            <div class="text-street-ferxxo text-3xl group-hover:animate-street-float transition-all">👻</div>
+            <span class="text-street-white font-display text-2xl tracking-wider group-hover:text-street-ferxxo transition-colors duration-300">AdaGhost</span>
           </div>
           
           <!-- Navigation Links -->
           <div class="hidden md:flex items-center space-x-8">
-            <a href="#about" class="text-retro-light hover:text-retro-accent transition-colors duration-300">Acerca</a>
-            <a href="#skills" class="text-retro-light hover:text-retro-accent transition-colors duration-300">Habilidades</a>
-            <a href="#experience" class="text-retro-light hover:text-retro-accent transition-colors duration-300">Experiencia</a>
-            <a href="#projects" class="text-retro-light hover:text-retro-accent transition-colors duration-300">Proyectos</a>
-            <a href="#education" class="text-retro-light hover:text-retro-accent transition-colors duration-300">Educación</a>
-            <a href="#contact" class="text-retro-light hover:text-retro-accent transition-colors duration-300">Contacto</a>
-          </div>
-          
-          <!-- Chat Links -->
-          <div class="flex items-center space-x-4">
-            <a href="/chat-dc" class="px-3 py-1 bg-retro-secondary hover:bg-retro-accent/20 text-retro-light border border-retro-accent/30 rounded-lg transition-all duration-300 text-sm">DC Chat</a>
-            <a href="/chat-marvel" class="px-3 py-1 bg-retro-secondary hover:bg-retro-accent/20 text-retro-light border border-retro-accent/30 rounded-lg transition-all duration-300 text-sm">Marvel Chat</a>
+            <a href="#about" class="text-street-white hover:text-street-ferxxo transition-colors duration-300 font-medium uppercase text-sm tracking-wide">Yo</a>
+            <a href="#skills" class="text-street-white hover:text-street-ferxxo transition-colors duration-300 font-medium uppercase text-sm tracking-wide">Skills</a>
+            <a href="#experience" class="text-street-white hover:text-street-purple transition-colors duration-300 font-medium uppercase text-sm tracking-wide">Xp</a>
+            <a href="#projects" class="text-street-white hover:text-street-purple transition-colors duration-300 font-medium uppercase text-sm tracking-wide">Proyectos</a>
+            <a href="#contact" class="px-6 py-2 bg-street-ferxxo/20 border-2 border-street-ferxxo text-street-ferxxo hover:bg-street-ferxxo hover:text-street-black transition-all duration-300 rounded font-bold uppercase text-sm">Hit Me</a>
           </div>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <!-- Background Pattern -->
-      <div class="absolute inset-0 bg-space-gradient"></div>
-      <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, rgba(116, 180, 218, 0.3) 1px, transparent 0); background-size: 50px 50px;"></div>
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <!-- Background Pattern Urbano -->
+      <div class="absolute inset-0 bg-street-gradient"></div>
+      <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, #39FF14 2px, #39FF14 4px); background-size: 100% 50px;"></div>
+      
+      <!-- Elementos Decorativos Urbanos -->
+      <div class="absolute top-40 right-20 text-street-ferxxo/20 text-9xl font-display animate-street-float">★</div>
+      <div class="absolute bottom-40 left-20 text-street-purple/20 text-7xl font-display animate-street-float" style="animation-delay: 1s;">✦</div>
+      <div class="absolute top-1/3 left-1/4 text-street-ferxxo/10 text-6xl font-graffiti animate-street-float" style="animation-delay: 2s;">~</div>
       
       <!-- Content -->
-      <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+      <div class="relative z-10 text-center max-w-6xl mx-auto px-4">
+        <!-- Etiqueta Superior -->
+        <div class="mb-6 inline-block">
+          <span class="px-4 py-2 bg-street-ferxxo/10 border-2 border-street-ferxxo text-street-ferxxo font-mono text-sm uppercase tracking-widest">
+            🇪🇨 Quito, Ecuador
+          </span>
+        </div>
+        
+        <!-- Nombre Principal -->
         <div class="mb-8">
-          <h1 class="text-5xl md:text-7xl font-bold text-retro-light mb-4 animate-float">
-            Andrés <span class="text-retro-accent">Almeida Jara</span>
+          <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-street-white mb-4 leading-none">
+            ANDRÉS
           </h1>
-          <p class="text-xl md:text-2xl text-retro-light/80 mb-8">
-            Full Stack Developer & Data Analyst
-          </p>
-          <div class="flex flex-wrap justify-center gap-4 mb-8">
-            <span class="px-4 py-2 bg-retro-primary/50 text-retro-accent border border-retro-accent/30 rounded-full text-sm font-mono">React</span>
-            <span class="px-4 py-2 bg-retro-primary/50 text-retro-accent border border-retro-accent/30 rounded-full text-sm font-mono">Python</span>
-			<span class="px-4 py-2 bg-retro-primary/50 text-retro-accent border border-retro-accent/30 rounded-full text-sm font-mono">Astro</span>
-            <span class="px-4 py-2 bg-retro-primary/50 text-retro-accent border border-retro-accent/30 rounded-full text-sm font-mono">R</span>
+          <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display mb-6 leading-none bg-neon-gradient bg-clip-text text-transparent animate-neon-pulse opacity-75">
+            ALMEIDA
+          </h1>
+          
+          <!-- Subtítulo Street -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <span class="text-2xl md:text-3xl font-graffiti text-street-ferxxo">Full Stack Dev</span>
+            <span class="text-street-ferxxo text-3xl hidden sm:block">×</span>
+            <span class="text-2xl md:text-3xl font-graffiti text-street-purple">Data Analyst</span>
+          </div>
+          
+          <!-- Tags de Skills -->
+          <div class="flex flex-wrap justify-center gap-3 mb-10">
+            <span class="px-4 py-2 bg-street-surface border-2 border-street-ferxxo/50 text-street-ferxxo font-mono text-xs uppercase hover:bg-street-ferxxo/20 transition-all">React</span>
+            <span class="px-4 py-2 bg-street-surface border-2 border-street-purple/50 text-street-purple font-mono text-xs uppercase hover:bg-street-purple/20 transition-all">Python</span>
+            <span class="px-4 py-2 bg-street-surface border-2 border-street-ferxxo/50 text-street-ferxxo font-mono text-xs uppercase hover:bg-street-ferxxo/20 transition-all">Astro</span>
+            <span class="px-4 py-2 bg-street-surface border-2 border-street-purple/50 text-street-purple font-mono text-xs uppercase hover:bg-street-purple/20 transition-all">R</span>
+            <span class="px-4 py-2 bg-street-surface border-2 border-street-ferxxo/50 text-street-ferxxo font-mono text-xs uppercase hover:bg-street-ferxxo/20 transition-all">Node.js</span>
           </div>
         </div>
         
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#projects" class="px-8 py-3 bg-retro-accent text-retro-dark font-semibold rounded-lg hover:animate-glow transition-all duration-300">
-            Ver Proyectos
+          <a href="#projects" class="group px-10 py-4 bg-street-ferxxo text-street-black font-display text-xl uppercase tracking-wider hover:shadow-neon-green transition-all duration-300 relative overflow-hidden">
+            <span class="relative z-10">Ver Proyectos</span>
+            <div class="absolute inset-0 bg-street-purple transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
           </a>
-          <a href="#contact" class="px-8 py-3 border-2 border-retro-accent text-retro-accent hover:bg-retro-accent hover:text-retro-dark transition-all duration-300 rounded-lg">
-            Contactar
+          <a href="#contact" class="px-10 py-4 border-3 border-street-purple text-street-purple font-display text-xl uppercase tracking-wider hover:bg-street-purple hover:text-street-black transition-all duration-300">
+            Hablemos
           </a>
         </div>
+        
+        <!-- Quote Street -->
+        <div class="mt-12">
+          <p class="text-street-white/60 font-mono text-sm italic">
+            "Tech with feeling, data with meaning." 💻✨
+          </p>
+        </div>
       </div>
-      
-      <!-- Floating Elements -->
-      <div class="absolute top-20 left-10 text-retro-accent/30 text-6xl animate-float">◇</div>
-      <div class="absolute bottom-20 right-10 text-retro-accent/30 text-4xl animate-float" style="animation-delay: 1s;">⬢</div>
-      <div class="absolute top-1/2 left-20 text-retro-accent/30 text-3xl animate-float" style="animation-delay: 2s;">◉</div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-retro-primary/10">
+    <section id="about" class="py-20 bg-street-surface/50 border-t-2 border-street-ferxxo/20">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-retro-light mb-12 text-center">
-          Acerca de <span class="text-retro-accent">Mí</span>
+        <h2 class="text-5xl md:text-6xl font-display text-street-white mb-4 text-center uppercase">
+          Quién Soy
         </h2>
+        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-12"></div>
         
         <div class="grid md:grid-cols-2 gap-12 items-center">
 			<!-- Text Content -->
 			<div class="space-y-6">
-				<p class="text-lg text-retro-light/90 leading-relaxed">
-				Soy un desarrollador con enfoque Full Stack, especializado en análisis de datos y visualización geoespacial. 
-				Tengo experiencia creando dashboards interactivos, procesos ETL y plataformas web usando herramientas como React, Python, R y Shiny.
-				</p>
-				<p class="text-lg text-retro-light/90 leading-relaxed">
-				Me interesa construir soluciones útiles y accesibles que conecten datos complejos con usuarios reales. 
-				Combino el diseño funcional con el análisis técnico para desarrollar aplicaciones claras, interactivas y con propósito.
-				</p>
-			</div>
+            <p class="text-lg text-street-white/90 leading-relaxed">
+              Soy un ingeniero en software que ve el código como una forma de crear impacto real. Me mueve la ciencia de datos, la inteligencia artificial y la visualización geoespacial — no solo por la técnica, sino por lo que pueden revelar del mundo.
+              He construido desde dashboards interactivos hasta plataformas web completas, pero más allá de las herramientas, me enfoco en diseñar sistemas que comuniquen, que transformen información en algo que la gente realmente pueda entender y usar.
+            </p>
+            <p class="text-lg text-street-white/90 leading-relaxed">
+              Creo en unir la tecnología con la sensibilidad humana: escribir código con propósito, analizar datos con criterio y crear experiencias digitales que dejen huella.
+            </p>
   
             <!-- Stats -->
-            <div class="grid grid-cols-3 gap-6 mt-8">
-              <div class="text-center">
-                <div class="text-3xl font-bold text-retro-accent mb-2">3+</div>
-                <div class="text-sm text-retro-light/70">Años Experiencia</div>
+            <div class="grid grid-cols-3 gap-4 mt-8">
+              <div class="text-center p-4 bg-street-black border-2 border-street-ferxxo/30 hover:border-street-ferxxo transition-all">
+                <div class="text-4xl font-display text-street-ferxxo mb-2">3+</div>
+                <div class="text-xs text-street-white/70 uppercase font-mono">Años XP</div>
               </div>
-              <div class="text-center">
-                <div class="text-3xl font-bold text-retro-accent mb-2">20+</div>
-                <div class="text-sm text-retro-light/70">Proyectos</div>
+              <div class="text-center p-4 bg-street-black border-2 border-street-purple/30 hover:border-street-purple transition-all">
+                <div class="text-4xl font-display text-street-purple mb-2">20+</div>
+                <div class="text-xs text-street-white/70 uppercase font-mono">Proyectos</div>
               </div>
-              <div class="text-center">
-                <div class="text-3xl font-bold text-retro-accent mb-2">5+</div>
-                <div class="text-sm text-retro-light/70">Tecnologías</div>
+              <div class="text-center p-4 bg-street-black border-2 border-street-ferxxo/30 hover:border-street-ferxxo transition-all">
+                <div class="text-4xl font-display text-street-ferxxo mb-2">5+</div>
+                <div class="text-xs text-street-white/70 uppercase font-mono">Tecnologías</div>
               </div>
             </div>
           </div>
           
           <!-- Visual Element -->
           <div class="relative">
-            <div class="w-80 h-80 mx-auto bg-tech-gradient rounded-full relative overflow-hidden">
-              <div class="absolute inset-4 bg-retro-dark rounded-full flex items-center justify-center">
-                <div class="text-6xl text-retro-accent animate-pulse">⚡</div>
+            <div class="w-80 h-80 mx-auto relative">
+              <!-- Círculo exterior con efecto neón -->
+              <div class="absolute inset-0 bg-purple-gradient rounded-full animate-pulse opacity-30 blur-xl"></div>
+              <div class="absolute inset-0 border-4 border-street-ferxxo rounded-full"></div>
+              <div class="absolute inset-4 border-4 border-street-purple rounded-full"></div>
+              <div class="absolute inset-8 bg-street-black rounded-full flex items-center justify-center">
+                <div class="text-7xl animate-street-float">💀</div>
               </div>
+              <!-- Decoración adicional -->
+              <div class="absolute -top-4 -right-4 text-street-ferxxo text-4xl font-display">★</div>
+              <div class="absolute -bottom-4 -left-4 text-street-purple text-4xl font-display">✦</div>
             </div>
           </div>
         </div>
@@ -194,72 +222,76 @@ import '@fontsource/space-mono/700.css';
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20">
+    <section id="skills" class="py-20 bg-street-black">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-retro-light mb-12 text-center">
-          Habilidades <span class="text-retro-accent">Técnicas</span>
+        <h2 class="text-5xl md:text-6xl font-display text-street-white mb-4 text-center uppercase">
+          Skills
         </h2>
+        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-12"></div>
         
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Frontend -->
-          <div class="bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-            <div class="text-3xl text-retro-accent mb-4">🎨</div>
-            <h3 class="text-xl font-semibold text-retro-light mb-4">Frontend</h3>
-            <ul class="space-y-2 text-retro-light/80">
-              <li>• React & Astro</li>
-              <li>• TypeScript & JavaScript</li>
-              <li>• Tailwind CSS</li>
-			  <li>• ASP.NET Core</li>
+          <div class="group bg-street-surface p-6 border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300">
+            <div class="text-4xl mb-4 group-hover:animate-bounce">🎨</div>
+            <h3 class="text-2xl font-display text-street-ferxxo mb-4 uppercase">Frontend</h3>
+            <ul class="space-y-2 text-street-white/80 font-mono text-sm">
+              <li>→ React & Astro</li>
+              <li>→ TypeScript & JavaScript</li>
+              <li>→ Tailwind CSS</li>
+              <li>→ ASP.NET Core</li>
             </ul>
           </div>
           
           <!-- Backend -->
-          <div class="bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-            <div class="text-3xl text-retro-accent mb-4">⚙️</div>
-            <h3 class="text-xl font-semibold text-retro-light mb-4">Backend</h3>
-            <ul class="space-y-2 text-retro-light/80">
-              <li>• Python & FastAPI</li>
-              <li>• Node.js & Express</li>
-              <li>• PostgreSQL, MySQL, SQL Server</li>
-              <li>• RESTful & SOAP APIs</li>
+          <div class="group bg-street-surface p-6 border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300">
+            <div class="text-4xl mb-4 group-hover:animate-bounce">⚙️</div>
+            <h3 class="text-2xl font-display text-street-purple mb-4 uppercase">Backend</h3>
+            <ul class="space-y-2 text-street-white/80 font-mono text-sm">
+              <li>→ Python & FastAPI</li>
+              <li>→ Node.js & Express</li>
+              <li>→ PostgreSQL, MySQL, SQL Server</li>
+              <li>→ RESTful & SOAP APIs</li>
             </ul>
           </div>
           
           <!-- Data Science -->
-          <div class="bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-            <div class="text-3xl text-retro-accent mb-4">📊</div>
-            <h3 class="text-xl font-semibold text-retro-light mb-4">Data Science</h3>
-            <ul class="space-y-2 text-retro-light/80">
-              <li>• R & Shiny</li>
-              <li>• Python</li>
-			  <li>• SQL</li>
-			  <li>• Power BI</li>
-              <li>• ETL Pipelines</li>
-              <li>• Análisis Geoespacial</li>
+          <div class="group bg-street-surface p-6 border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300">
+            <div class="text-4xl mb-4 group-hover:animate-bounce">📊</div>
+            <h3 class="text-2xl font-display text-street-ferxxo mb-4 uppercase">Data Science</h3>
+            <ul class="space-y-2 text-street-white/80 font-mono text-sm">
+              <li>→ R & Shiny</li>
+              <li>→ Python</li>
+              <li>→ SQL</li>
+              <li>→ Power BI</li>
+              <li>→ ETL Pipelines</li>
+              <li>→ Análisis Geoespacial</li>
             </ul>
           </div>
+          
 		    <!-- Cloud -->
-			<div class="bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-				<div class="text-3xl text-retro-accent mb-4">☁️</div>
-				<h3 class="text-xl font-semibold text-retro-light mb-4">Cloud & Infraestructura</h3>
-				<ul class="space-y-2 text-retro-light/80">
-				  <li>• Docker</li>
-				  <li>• Vercel & Firebase Hosting</li>
-				  <li>• AWS RDS / S3, EC2</li>
-				  <li>• Azure</li>
-				  <li>• GitHub Actions</li>
+          <div class="group bg-street-surface p-6 border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300">
+            <div class="text-4xl mb-4 group-hover:animate-bounce">☁️</div>
+            <h3 class="text-2xl font-display text-street-purple mb-4 uppercase">Cloud</h3>
+            <ul class="space-y-2 text-street-white/80 font-mono text-sm">
+              <li>→ Docker</li>
+              <li>→ Vercel & Firebase</li>
+              <li>→ AWS (RDS, S3, EC2)</li>
+              <li>→ Azure</li>
+              <li>→ GitHub Actions</li>
 				</ul>
 			  </div>
 		  
-			  <!-- BPMN & Procesos -->
-			  <div class="bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-				<div class="text-3xl text-retro-accent mb-4">📈</div>
-				<h3 class="text-xl font-semibold text-retro-light mb-4">Procesos & BPMN</h3>
-				<ul class="space-y-2 text-retro-light/80">
-				  <li>• Modelado BPMN</li>
-				  <li>• Automatización de procesos</li>
-				  <li>• Diagramación en Bizagi & Draw.io</li>
-				  <li>• Gestión institucional de flujos</li>
+          <!-- Gestión & Marcos de Referencia -->
+          <div class="group bg-street-surface p-6 border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300">
+            <div class="text-4xl mb-4 group-hover:animate-bounce">📋</div>
+            <h3 class="text-2xl font-display text-street-ferxxo mb-4 uppercase">Gestión y Marcos de Referencia</h3>
+            <ul class="space-y-2 text-street-white/80 font-mono text-sm">
+              <li>→ BPMN & BCM</li>
+              <li>→ AVARCIBER</li>
+              <li>→ Análisis de procesos</li>
+              <li>→ Documentación técnica</li>
+              <li>→ Mejora continua</li>
+              <li>→ Bizagi & Draw.io</li>
 				</ul>
 			  </div>
         </div>
@@ -267,44 +299,77 @@ import '@fontsource/space-mono/700.css';
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-retro-primary/10">
+    <section id="experience" class="py-20 bg-street-surface/50 border-t-2 border-street-purple/20">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-retro-light mb-12 text-center">
-          Experiencia <span class="text-retro-accent">Profesional</span>
+        <h2 class="text-5xl md:text-6xl font-display text-street-white mb-4 text-center uppercase">
+          Experiencia
         </h2>
+        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-12"></div>
         
-        <div class="space-y-8">
-          <!-- Experience 1 -->
-          <div class="bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
+        <div class="space-y-6">
+          <!-- Experience 1 - Primesys (Actual) -->
+          <div class="group bg-street-black p-8 border-l-4 border-street-ferxxo hover:border-l-8 transition-all duration-300">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <div>
-                <h3 class="text-xl font-semibold text-retro-light">Pasante Analista de Sistemas de Información</h3>
-                <p class="text-retro-accent">Ministerio del Ambiente, Agua y Transición Ecológica (MAATE)</p>
+                <h3 class="text-2xl font-display text-street-white mb-2">JR. DATA ANALYST & WEB DEVELOPER</h3>
+                <p class="text-street-ferxxo font-bold text-lg">Primesys 📊</p>
               </div>
-              <div class="text-retro-light/70 font-mono">2024</div>
+              <div class="text-street-white/70 font-mono text-sm bg-street-ferxxo/20 px-4 py-2 mt-2 md:mt-0">Oct 2023 - Presente</div>
             </div>
-            <ul class="space-y-2 text-retro-light/80">
-              <li>• Desarrollo de aplicaciones web con R Shiny para análisis geoespacial</li>
-              <li>• Creación de pipelines ETL para procesamiento de datos ambientales</li>
-              <li>• Análisis estadístico y visualización de datos de biodiversidad</li>
-              <li>• Colaboración en proyectos de conservación y monitoreo ambiental</li>
+            <ul class="space-y-2 text-street-white/80 text-sm">
+              <li>→ Desarrollo de dashboards y visualizaciones (Shiny, Power BI)</li>
+              <li>→ Análisis y procesamiento de datos con Python y R</li>
+              <li>→ Implementación de soluciones web y despliegue en Docker/CPanel</li>
+              <li>→ Construcción de prototipos tecnológicos para clientes iniciales</li>
             </ul>
           </div>
 
-          <!-- Experience 2 -->
-          <div class="bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
+          <!-- Experience 2 - MAATE -->
+          <div class="group bg-street-black p-8 border-l-4 border-street-purple hover:border-l-8 transition-all duration-300">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <div>
-                <h3 class="text-xl font-semibold text-retro-light">Desarrollador Full Stack</h3>
-                <p class="text-retro-accent">Proyectos Independientes</p>
+                <h3 class="text-2xl font-display text-street-white mb-2">PASANTE ANALISTA EN SISTEMAS DE INFORMACIÓN</h3>
+                <p class="text-street-purple font-bold text-lg">Ministerio del Ambiente, Agua y Transición Ecológica 🇪🇨</p>
               </div>
-              <div class="text-retro-light/70 font-mono">2020 - Presente</div>
+              <div class="text-street-white/70 font-mono text-sm bg-street-purple/20 px-4 py-2 mt-2 md:mt-0">Jun 2024 - Sept 2024</div>
             </div>
-            <ul class="space-y-2 text-retro-light/80">
-              <li>• Desarrollo de aplicaciones web con Astro, React y TypeScript</li>
-              <li>• Creación de APIs REST & SOAP con Python, Node.js y ASP.NET Core</li>
-              <li>• Implementación de bases de datos PostgreSQL, MySQL, SQL Server</li>
-              <li>• Despliegue en plataformas cloud (Vercel, AWS, Azure)</li>
+            <ul class="space-y-2 text-street-white/80 text-sm">
+              <li>→ Dashboards interactivos en Power BI para indicadores ambientales</li>
+              <li>→ Pipelines de limpieza de datos con Python</li>
+              <li>→ Documentación técnica estandarizada</li>
+              <li>→ Soporte en protección y confidencialidad de datos adoptados por la institución</li>
+            </ul>
+          </div>
+
+          <!-- Experience 3 - LatinCrypt -->
+          <div class="group bg-street-black p-8 border-l-4 border-street-ferxxo hover:border-l-8 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <div>
+                <h3 class="text-2xl font-display text-street-white mb-2">WEBMASTER WORDPRESS</h3>
+                <p class="text-street-ferxxo font-bold text-lg">LatinCrypt Event Ecuador 🔐</p>
+              </div>
+              <div class="text-street-white/70 font-mono text-sm bg-street-ferxxo/20 px-4 py-2 mt-2 md:mt-0">Sept 2023 - Oct 2023</div>
+            </div>
+            <ul class="space-y-2 text-street-white/80 text-sm">
+              <li>→ Desarrollo, actualización y mejora de accesibilidad de la web del evento LatinCrypt 2023</li>
+              <li>→ Implementación de mejoras en accesibilidad y usabilidad usando WordPress y JavaScript</li>
+            </ul>
+          </div>
+
+          <!-- Experience 4 - Proyectos Independientes -->
+          <div class="group bg-street-black p-8 border-l-4 border-street-purple hover:border-l-8 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <div>
+                <h3 class="text-2xl font-display text-street-white mb-2">FULL STACK DEVELOPER</h3>
+                <p class="text-street-purple font-bold text-lg">Proyectos Independientes 💻</p>
+              </div>
+              <div class="text-street-white/70 font-mono text-sm bg-street-purple/20 px-4 py-2 mt-2 md:mt-0">2020 - Presente</div>
+            </div>
+            <ul class="space-y-2 text-street-white/80 text-sm">
+              <li>→ Apps web con Astro, React y TypeScript</li>
+              <li>→ APIs REST & SOAP con Python, Node.js y ASP.NET Core</li>
+              <li>→ Bases de datos PostgreSQL, MySQL, SQL Server</li>
+              <li>→ Deploy en cloud (Vercel, AWS, Azure)</li>
             </ul>
           </div>
         </div>
@@ -312,133 +377,179 @@ import '@fontsource/space-mono/700.css';
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20">
+    <section id="projects" class="py-20 bg-street-black">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-retro-light mb-12 text-center">
-          Proyectos <span class="text-retro-accent">Destacados</span>
+        <h2 class="text-5xl md:text-6xl font-display text-street-white mb-4 text-center uppercase">
+          Proyectos
         </h2>
+        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-4"></div>
+        <p class="text-center text-street-white/60 font-mono text-sm mb-12">{"// Cosas que he construido"}</p>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Proyecto 1 -->
-		  <div class="bg-retro-primary/20 rounded-xl overflow-hidden border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300 group">
-			<div class="h-48 bg-tech-gradient relative overflow-hidden">
-			  <div class="absolute inset-0 bg-retro-dark/20 group-hover:bg-retro-dark/10 transition-all duration-300"></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Proyecto 1 - Gestión Ambiental-->
+          <div class="group bg-street-surface border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300 overflow-hidden">
+            <div class="h-48 bg-street-gradient relative overflow-hidden">
+              <div class="absolute inset-0 bg-street-ferxxo/10 group-hover:bg-street-ferxxo/20 transition-all"></div>
 			  <div class="absolute inset-0 flex items-center justify-center">
-				<div class="text-4xl text-retro-light">🌐</div>
+                <div class="text-6xl group-hover:scale-110 transition-transform">🌿</div>
 			  </div>
 			</div>
 			<div class="p-6">
-			  <h3 class="text-xl font-semibold text-retro-light mb-2">Página Web DCCO ESPE</h3>
-			  <p class="text-retro-light/70 mb-4">
-				Desarrollo y mantenimiento del sitio oficial del DCCO, usando WordPress. <br><br>Proyecto archivado.
+              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Gestión Indicadores Ambientales</h3>
+              <p class="text-street-white/70 mb-4 text-sm">
+                Prototipo para automatizar procesamiento y visualización de indicadores ambientales (Huella Humana, Bosques Riparios).
 			  </p>
-			  <div class="flex gap-2 flex-wrap">
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">React</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">CMS</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Web Development</span>
+			  <div class="flex gap-2 flex-wrap mb-4">
+                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Python</span>
+                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">R</span>
+                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Shiny</span>
+                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">React</span>
 			  </div>
+              <div class="pt-3 border-t border-street-ferxxo/20">
+                <span class="text-street-white/50 text-xs font-mono italic">
+                  🏛️ Siendo validado por los top globales del Ministerio
+                </span>
+              </div>
 			</div>
 		  </div>
 		  
           
-          <!-- Proyecto 2 -->
-          <div class="bg-retro-primary/20 rounded-xl overflow-hidden border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300 group">
-            <div class="h-48 bg-tech-gradient relative overflow-hidden">
-              <div class="absolute inset-0 bg-retro-dark/20 group-hover:bg-retro-dark/10 transition-all duration-300"></div>
+          <!-- Proyecto 2 - Dashboard -->
+          <div class="group bg-street-surface border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300 overflow-hidden">
+            <div class="h-48 bg-purple-gradient relative overflow-hidden">
+              <div class="absolute inset-0 bg-street-purple/10 group-hover:bg-street-purple/20 transition-all"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-4xl text-retro-light">📊</div>
+                <div class="text-6xl group-hover:scale-110 transition-transform">📊</div>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-retro-light mb-2">Dashboard Importaciones</h3>
-              <p class="text-retro-light/70 mb-4">Análisis de importaciones bajo el régimen general en Ecuador</p>
-              <div class="flex gap-2">
-                <span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">SQL</span>
-                <span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Power BI</span>              </div>
+              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Dashboard Importaciones</h3>
+              <p class="text-street-white/70 mb-4 text-sm">
+                Análisis de importaciones bajo el régimen general en Ecuador.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">SQL</span>
+                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">Power BI</span>
+              </div>
+              <div class="pt-3 border-t border-street-purple/20">
+                <a href="https://www.primesys-ec.com/nuestro-trabajo" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 text-street-purple hover:text-street-white text-xs font-mono transition-colors group">
+                  <span>Ver en Primesys</span>
+                  <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
             </div>
           </div>
           
-          <!-- Proyecto 3 -->
-		  <div class="bg-retro-primary/20 rounded-xl overflow-hidden border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300 group">
-			<div class="h-48 bg-tech-gradient relative overflow-hidden">
-			  <div class="absolute inset-0 bg-retro-dark/20 group-hover:bg-retro-dark/10 transition-all duration-300"></div>
+          <!-- Proyecto 3 - Kasaychi -->
+          <div class="group bg-street-surface border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300 overflow-hidden">
+            <div class="h-48 bg-street-gradient relative overflow-hidden">
+              <div class="absolute inset-0 bg-street-ferxxo/10 group-hover:bg-street-ferxxo/20 transition-all"></div>
 			  <div class="absolute inset-0 flex items-center justify-center">
-				<div class="text-4xl text-retro-light">🤝</div>
+                <div class="text-6xl group-hover:scale-110 transition-transform">🤝</div>
 			  </div>
 			</div>
 			<div class="p-6">
-			  <h3 class="text-xl font-semibold text-retro-light mb-2">Kasaychi - Proyecto de Vinculación</h3>
-			  <p class="text-retro-light/70 mb-4">
-				Plataforma y gestión para trabajo comunitario con enfoque en desarrollo sostenible y participación social.
+              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Kasaychi</h3>
+              <p class="text-street-white/70 mb-4 text-sm">
+                Plataforma de vinculación comunitaria con enfoque en desarrollo sostenible.
 			  </p>
-			  <div class="flex gap-2 flex-wrap">
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">React</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Node.js</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Firebase</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Express</span>
+			  <div class="flex gap-2 flex-wrap mb-4">
+                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">React</span>
+                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Node.js</span>
+                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Firebase</span>
 			  </div>
+              <div class="pt-3 border-t border-street-ferxxo/20">
+                <a href="https://kasaychi.org/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 text-street-ferxxo hover:text-street-white text-xs font-mono transition-colors group">
+                  <span>Visitar Kasaychi</span>
+                  <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
 			</div>
 		  </div>		  
 
-          <!-- Proyecto 4 -->
-          <div class="bg-retro-primary/20 rounded-xl overflow-hidden border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300 group">
-            <div class="h-48 bg-tech-gradient relative overflow-hidden">
-              <div class="absolute inset-0 bg-retro-dark/20 group-hover:bg-retro-dark/10 transition-all duration-300"></div>
+          <!-- Proyecto 4 - Chat IA -->
+          <div class="group bg-street-surface border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300 overflow-hidden">
+            <div class="h-48 bg-purple-gradient relative overflow-hidden">
+              <div class="absolute inset-0 bg-street-purple/10 group-hover:bg-street-purple/20 transition-all"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-4xl text-retro-light">🤖</div>
+                <div class="text-6xl group-hover:scale-110 transition-transform">🤖</div>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold text-retro-light mb-2">Chatbot IA</h3>
-              <p class="text-retro-light/70 mb-4">Sistema de chat inteligente con múltiples personalidades</p>
-              <div class="flex gap-2">
-                <span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">GeminiAI</span>
-                <span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Astro</span>
+              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Chatbot IA</h3>
+              <p class="text-street-white/70 mb-4 text-sm">
+                Sistema de chat con múltiples personalidades de superhéroes.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">Gemini AI</span>
+                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">Astro</span>
+              </div>
+              <div class="pt-3 border-t border-street-purple/20">
+                <span class="text-street-white/50 text-xs font-mono italic">
+                  💾 Check it on GitHub
+                </span>
               </div>
             </div>
           </div>
 
-		  <!-- Proyecto 5 -->
-		  <div class="bg-retro-primary/20 rounded-xl overflow-hidden border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300 group">
-			<div class="h-48 bg-tech-gradient relative overflow-hidden">
-			  <div class="absolute inset-0 bg-retro-dark/20 group-hover:bg-retro-dark/10 transition-all duration-300"></div>
+          <!-- Proyecto 5 - Apps Móviles -->
+          <div class="group bg-street-surface border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300 overflow-hidden">
+            <div class="h-48 bg-street-gradient relative overflow-hidden">
+              <div class="absolute inset-0 bg-street-ferxxo/10 group-hover:bg-street-ferxxo/20 transition-all"></div>
 			  <div class="absolute inset-0 flex items-center justify-center">
-				<div class="text-4xl text-retro-light">📱</div>
+                <div class="text-6xl group-hover:scale-110 transition-transform">📱</div>
 			  </div>
 			</div>
 			<div class="p-6">
-			  <h3 class="text-xl font-semibold text-retro-light mb-2">Apps Móviles</h3>
-			  <p class="text-retro-light/70 mb-4">
-				Desarrollo de aplicaciones móviles multiplataforma con enfoque en usabilidad y rendimiento.
-			  </p>
-			  <div class="flex gap-2 flex-wrap">
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Flutter</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Mobile Development</span>
+              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Apps Móviles</h3>
+              <p class="text-street-white/70 mb-4 text-sm">
+                Desarrollo de apps multiplataforma con enfoque en usabilidad.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Flutter</span>
+                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Mobile Dev</span>
 			  </div>
+              <div class="pt-3 border-t border-street-ferxxo/20">
+                <span class="text-street-white/50 text-xs font-mono italic">
+                  💾 Check it on GitHub
+                </span>
+              </div>
 			</div>
 		  </div>				
 
-          <!-- Proyecto 6 -->
-		  <div class="bg-retro-primary/20 rounded-xl overflow-hidden border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300 group">
-			<div class="h-48 bg-tech-gradient relative overflow-hidden">
-			  <div class="absolute inset-0 bg-retro-dark/20 group-hover:bg-retro-dark/10 transition-all duration-300"></div>
+          <!-- Proyecto 6 - DCCO Web -->
+          <div class="group bg-street-surface border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300 overflow-hidden relative">
+            <!-- Badge Archivado -->
+            <div class="absolute top-3 right-3 z-10">
+              <span class="px-3 py-1 bg-street-white/90 text-street-black font-display text-xs uppercase backdrop-blur-sm">
+                ⊗ Archivado
+              </span>
+            </div>
+            
+            <div class="h-48 bg-purple-gradient relative overflow-hidden">
+              <div class="absolute inset-0 bg-street-purple/10 group-hover:bg-street-purple/20 transition-all"></div>
 			  <div class="absolute inset-0 flex items-center justify-center">
-				<div class="text-4xl text-retro-light">🌿</div>
+                <div class="text-6xl group-hover:scale-110 transition-transform">🌐</div>
 			  </div>
 			</div>
 			<div class="p-6">
-			  <h3 class="text-xl font-semibold text-retro-light mb-2">Gestión de Indicadores Ambientales</h3>
-			  <p class="text-retro-light/70 mb-4">
-				Prototipo para automatizar el procesamiento y visualización de indicadores ambientales de Huella Humana y Bosques Riparios, embebido en una plataforma web moderna.
-			  </p>
-			  <div class="flex gap-2 flex-wrap">
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Python</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">R</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Shiny</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">React</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">Dashboards</span>
-				<span class="px-2 py-1 bg-retro-accent/20 text-retro-accent text-xs rounded">ETL</span>
+              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Web DCCO ESPE</h3>
+              <p class="text-street-white/70 mb-4 text-sm">
+                Sitio oficial del DCCO usando WordPress.
+              </p>
+              <div class="flex gap-2 mb-4">
+                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">WordPress</span>
+                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">CMS</span>
 			  </div>
+              <div class="pt-3 border-t border-street-purple/20">
+                <a href="https://dcco.espe.edu.ec/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 text-street-purple hover:text-street-white text-xs font-mono transition-colors group">
+                  <span>Visitar sitio</span>
+                  <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
 			</div>
 		  </div>		  
         </div>
@@ -446,44 +557,51 @@ import '@fontsource/space-mono/700.css';
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-20 bg-retro-primary/10">
+    <section id="education" class="py-20 bg-street-surface/50 border-t-2 border-street-ferxxo/20">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-retro-light mb-12 text-center">
-          Educación <span class="text-retro-accent">& Certificaciones</span>
+        <h2 class="text-5xl md:text-6xl font-display text-street-white mb-4 text-center uppercase">
+          Educación
         </h2>
+        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-12"></div>
         
         <div class="grid md:grid-cols-2 gap-8">
           <!-- Education -->
-          <div class="bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-            <div class="flex items-center mb-4">
-              <div class="text-3xl text-retro-accent mr-4">🎓</div>
+          <div class="bg-street-black p-8 border-2 border-street-ferxxo/30 hover:border-street-ferxxo transition-all duration-300 relative overflow-hidden">
+            <!-- Badge Graduado -->
+            <div class="absolute top-4 right-4">
+              <span class="px-3 py-1 bg-street-ferxxo text-street-black font-display text-xs uppercase animate-pulse">
+                ✓ Graduado
+              </span>
+            </div>
+            
+            <div class="flex items-center mb-6">
+              <div class="text-5xl mr-4">🎓</div>
               <div>
-                <h3 class="text-xl font-semibold text-retro-light">Ingeniería de Software</h3>
-                <p class="text-retro-accent">Universidad de las Fuerzas Armadas ESPE</p>
-                <p class="text-retro-light/70 font-mono text-sm">2021 - 2025 (En curso)</p>
+                <h3 class="text-2xl font-display text-street-white uppercase">Ingeniería de Software</h3>
+                <p class="text-street-ferxxo font-bold">Universidad ESPE 🇪🇨</p>
+                <p class="text-street-white/70 font-mono text-sm">2021 - 2025</p>
               </div>
             </div>
-            <p class="text-retro-light/80">
-				Formación integral en desarrollo de software, análisis de datos, y metodologías ágiles. <br>
-				Experiencia en proyectos de automatización y visualización de indicadores, gestión de procesos y desarrollo full-stack.
+            <p class="text-street-white/80 text-sm leading-relaxed">
+              Formación integral en desarrollo de software, análisis de datos, y metodologías ágiles. 
+              Experiencia en proyectos de automatización, visualización de indicadores, gestión de procesos y desarrollo full-stack.
             </p>
           </div>
 
           <!-- Certifications -->
-          <div class="bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-            <div class="flex items-center mb-4">
-              <div class="text-3xl text-retro-accent mr-4">📜</div>
+          <div class="bg-street-black p-8 border-2 border-street-purple/30 hover:border-street-purple transition-all duration-300">
+            <div class="flex items-center mb-6">
+              <div class="text-5xl mr-4">📜</div>
               <div>
-                <h3 class="text-xl font-semibold text-retro-light">Certificaciones</h3>
-                <p class="text-retro-accent">Desarrollo Profesional Continuo</p>
+                <h3 class="text-2xl font-display text-street-white uppercase">Certificaciones</h3>
+                <p class="text-street-purple font-bold">Desarrollo Continuo</p>
               </div>
             </div>
-            <ul class="space-y-2 text-retro-light/80">
-              <li>• Digital Transformation - Santander Open Academy</li>
-              <!-- <li>• Python for Data Science</li>
-              <li>• R Programming Specialization</li>
-              <li>• AWS Cloud Practitioner</li>
-              <li>• Google Analytics Certified</li> -->
+            <ul class="space-y-3 text-street-white/80 text-sm">
+              <li class="flex items-center">
+                <span class="text-street-ferxxo mr-2">→</span>
+                Digital Transformation - Santander Open Academy
+              </li>
             </ul>
           </div>
         </div>
@@ -491,57 +609,65 @@ import '@fontsource/space-mono/700.css';
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold text-retro-light mb-8">
-          ¿Trabajamos <span class="text-retro-accent">Juntos</span>?
+    <section id="contact" class="py-20 bg-street-black relative overflow-hidden">
+      <!-- Elementos decorativos -->
+      <div class="absolute top-10 right-10 text-street-ferxxo/10 text-9xl font-display">@</div>
+      <div class="absolute bottom-10 left-10 text-street-purple/10 text-8xl font-display">#</div>
+      
+      <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+        <h2 class="text-5xl md:text-7xl font-display text-street-white mb-6 uppercase">
+          Hablemos
         </h2>
+        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-8"></div>
         
-        <p class="text-xl text-retro-light/80 mb-12">
-          Estoy disponible para nuevos proyectos y oportunidades
+        <p class="text-xl text-street-white/80 mb-12 font-graffiti">
+          Disponible para proyectos y colaboraciones 🚀
         </p>
         
-        <div class="grid md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <!-- Email -->
-          <a href="mailto:almeidaandres12@gmail.com" class="group bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-            <div class="text-3xl text-retro-accent mb-3 group-hover:animate-bounce">📧</div>
-            <div class="text-retro-light font-semibold">Email</div>
+          <a href="mailto:almeidaandres12@gmail.com" class="group bg-street-surface p-6 border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300">
+            <div class="text-4xl mb-3 group-hover:animate-bounce">📧</div>
+            <div class="text-street-white font-display text-sm uppercase">Email</div>
           </a>
           
           <!-- WhatsApp -->
-          <a href="https://wa.me/593990545539" target="_blank" class="group bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-            <div class="text-3xl text-retro-accent mb-3 group-hover:animate-bounce">📱</div>
-            <div class="text-retro-light font-semibold">WhatsApp</div>
+          <a href="https://wa.me/593990545539" target="_blank" class="group bg-street-surface p-6 border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300">
+            <div class="text-4xl mb-3 group-hover:animate-bounce">📱</div>
+            <div class="text-street-white font-display text-sm uppercase">WhatsApp</div>
           </a>
           
           <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/andres-almeida-jara/" target="_blank" class="group bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-            <div class="text-3xl text-retro-accent mb-3 group-hover:animate-bounce">💼</div>
-            <div class="text-retro-light font-semibold">LinkedIn</div>
+          <a href="https://linkedin.com/in/andres-almeida-jara/" target="_blank" class="group bg-street-surface p-6 border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300">
+            <div class="text-4xl mb-3 group-hover:animate-bounce">💼</div>
+            <div class="text-street-white font-display text-sm uppercase">LinkedIn</div>
           </a>
           
           <!-- GitHub -->
-          <a href="https://github.com/andresalmeida" target="_blank" class="group bg-retro-primary/20 rounded-xl p-6 border border-retro-accent/20 hover:border-retro-accent/50 transition-all duration-300">
-            <div class="text-3xl text-retro-accent mb-3 group-hover:animate-bounce">🐙</div>
-            <div class="text-retro-light font-semibold">GitHub</div>
+          <a href="https://github.com/andresalmeida" target="_blank" class="group bg-street-surface p-6 border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300">
+            <div class="text-4xl mb-3 group-hover:animate-bounce">💻</div>
+            <div class="text-street-white font-display text-sm uppercase">GitHub</div>
           </a>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-retro-primary/20 border-t border-retro-accent/20">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <div class="flex justify-center items-center space-x-2 mb-4">
-          <div class="text-retro-accent text-2xl font-mono">🧠</div>
-          <span class="text-retro-light font-semibold text-lg">Andrés Almeida Jara</span>
+    <footer class="py-12 bg-street-surface border-t-2 border-street-ferxxo/20">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex items-center space-x-3 mb-4 md:mb-0">
+            <div class="text-street-ferxxo text-3xl">👻</div>
+            <span class="text-street-white font-display text-xl tracking-wider">ANDRÉS ALMEIDA</span>
+          </div>
+          <p class="text-street-white/60 font-mono text-sm">
+            Esto no es un footer, es el after. 💥
+          </p>
         </div>
-        <p class="text-retro-light/60 mb-4">
-          Desarrollado con ❤️ y ☕ en Quito, Ecuador
+        <div class="mt-6 pt-6 border-t border-street-white/10 text-center">
+          <p class="text-street-white/40 font-mono text-xs">
+            © 2025 Andrés Almeida Jara. All rights reserved.
         </p>
-        <div class="flex justify-center space-x-6">
-          <!-- <a href="/chat-dc" class="text-retro-accent hover:text-retro-light transition-colors">DC Universe</a>
-          <a href="/chat-marvel" class="text-retro-accent hover:text-retro-light transition-colors">Marvel Universe</a> -->
         </div>
       </div>
     </footer>

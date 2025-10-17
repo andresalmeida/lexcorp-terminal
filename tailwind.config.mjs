@@ -4,21 +4,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Nueva paleta retrofuturista principal (inspirada en tech espacial)
+        // Paleta Street Urbana - Ferxxo Flow
+        street: {
+          black: '#0A0A0A',       // Negro profundo
+          ferxxo: '#39FF14',      // Verde neón ferxxo
+          purple: '#9D4EDD',      // Morado urbano
+          purpleDark: '#5A189A',  // Morado profundo
+          white: '#F0F0F0',       // Blanco
+          surface: '#1A1A1A',     // Superficies/cards
+          gray: '#2A2A2A',        // Gris medio
+        },
+        // Legacy paleta (mantener para 404)
         retro: {
-          primary: '#10367D',    // Azul espacial profundo
-          accent: '#74B4DA',     // Azul claro elegante
-          secondary: '#1B4F9E',  // Azul medio espacial
-          dark: '#0A1A3A',       // Azul muy oscuro espacial
-          light: '#EBEBEB',      // Gris tech claro
-          surface: '#1A2744',    // Superficie azul oscuro
-          border: '#2A4A7D',     // Bordes azul medio
+          primary: '#10367D',
+          accent: '#74B4DA',
+          secondary: '#1B4F9E',
+          dark: '#0A1A3A',
+          light: '#EBEBEB',
+          surface: '#1A2744',
+          border: '#2A4A7D',
         },
         // Paleta de terminal legacy (para chats)
         terminal: {
           bg: '#0D2F2B',
           text: '#33FF66',
-          accent: '#33FC2',
+          accent: '#33FFC2',
           lexcorp: {
             primary: '#B22222',
             secondary: '#8B0000',
@@ -44,7 +54,12 @@ export default {
         }
       },
       fontFamily: {
+        // Fuentes Street/Urbanas
+        display: ['Bebas Neue', 'Impact', 'sans-serif'],      // Títulos grandes
+        graffiti: ['Permanent Marker', 'cursive'],            // Acentos graffiti
+        body: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'], // Texto legible
         mono: ['Space Mono', 'IBM Plex Mono', 'monospace'],
+        // Legacy
         sans: ['Orbitron', 'system-ui', 'sans-serif'],
         tech: ['Orbitron', 'sans-serif'],
       },
@@ -58,6 +73,8 @@ export default {
           'tech-glow': 'tech-glow 3s ease-in-out infinite alternate',
           'scan-line': 'scan-line 2s linear infinite',
           'data-flow': 'data-flow 4s linear infinite',
+          'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
+          'street-float': 'street-float 3s ease-in-out infinite',
         },
               keyframes: {
           typing: {
@@ -103,12 +120,36 @@ export default {
             '10%': { opacity: '1' },
             '90%': { opacity: '1' },
             '100%': { transform: 'translateY(-100vh)', opacity: '0' }
+          },
+          'neon-pulse': {
+            '0%, 100%': { 
+              textShadow: '0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14',
+              filter: 'brightness(1)'
+            },
+            '50%': { 
+              textShadow: '0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14',
+              filter: 'brightness(1.2)'
+            }
+          },
+          'street-float': {
+            '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+            '50%': { transform: 'translateY(-15px) rotate(2deg)' }
           }
         },
       backgroundImage: {
+        // Gradientes Street
+        'street-gradient': 'linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #2A2A2A 100%)',
+        'neon-gradient': 'linear-gradient(90deg, #39FF14 0%, #9D4EDD 100%)',
+        'purple-gradient': 'linear-gradient(135deg, #5A189A 0%, #9D4EDD 100%)',
+        // Legacy
         'tech-gradient': 'linear-gradient(135deg, #10367D 0%, #1B4F9E 50%, #74B4DA 100%)',
         'space-gradient': 'radial-gradient(ellipse at center, #10367D 0%, #0A1A3A 70%)',
         'terminal-glow': 'linear-gradient(90deg, transparent, #74B4DA, transparent)',
+      },
+      boxShadow: {
+        'neon-green': '0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14',
+        'neon-purple': '0 0 10px #9D4EDD, 0 0 20px #9D4EDD, 0 0 30px #9D4EDD',
+        'street': '0 4px 20px rgba(57, 255, 20, 0.3)',
       }
     },
   },
