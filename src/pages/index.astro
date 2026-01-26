@@ -61,13 +61,21 @@ import '../styles/global.css';
     <nav class="fixed top-0 w-full z-50 bg-waystar-navy/90 backdrop-blur-lg border-b border-white/10">
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex justify-between items-center h-16">
-          <a href="#" class="text-white font-medium tracking-tight">Andrés Almeida</a>
+          <a href="#" class="text-white font-medium tracking-tight">Andrés Almeida Jara</a>
           
           <div class="hidden md:flex items-center space-x-10">
-            <a href="#about" class="text-white/60 hover:text-waystar-lime transition-colors text-sm">Sobre mí</a>
-            <a href="#experience" class="text-white/60 hover:text-waystar-lime transition-colors text-sm">Experiencia</a>
-            <a href="#projects" class="text-white/60 hover:text-waystar-lime transition-colors text-sm">Proyectos</a>
-            <a href="#contact" class="text-waystar-lime font-medium text-sm">Contacto</a>
+            <a href="#about" class="text-white/60 hover:text-waystar-lime transition-colors text-sm" data-es="Sobre mí" data-en="About">Sobre mí</a>
+            <a href="#experience" class="text-white/60 hover:text-waystar-lime transition-colors text-sm" data-es="Experiencia" data-en="Experience">Experiencia</a>
+            <a href="#projects" class="text-white/60 hover:text-waystar-lime transition-colors text-sm" data-es="Proyectos" data-en="Projects">Proyectos</a>
+            <a href="#contact" class="text-waystar-lime font-medium text-sm" data-es="Contacto" data-en="Contact">Contacto</a>
+            
+            <!-- Language Toggle -->
+            <button id="lang-toggle" class="text-white/60 hover:text-waystar-lime transition-colors text-sm font-medium flex items-center gap-1">
+              <span id="current-lang">ES</span>
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m5 8 6 6 6-6"/>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -83,16 +91,16 @@ import '../styles/global.css';
             Andrés<br/>Almeida
           </h1>
           
-          <p class="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl leading-relaxed font-light">
+          <p class="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl leading-relaxed font-light" data-es="Full Stack Developer & Data Analyst.<br/>Transformo datos en decisiones, código en impacto." data-en="Full Stack Developer & Data Analyst.<br/>Transforming data into decisions, code into impact.">
             Full Stack Developer & Data Analyst.<br/>
             Transformo datos en decisiones, código en impacto.
           </p>
           
           <div class="flex flex-wrap gap-4">
-            <a href="#projects" class="px-8 py-4 bg-waystar-lime text-waystar-navy font-semibold hover:bg-white transition-all">
+            <a href="#projects" class="px-8 py-4 bg-waystar-lime text-waystar-navy font-semibold hover:bg-white transition-all" data-es="Ver proyectos" data-en="View projects">
               Ver proyectos
             </a>
-            <a href="#contact" class="px-8 py-4 border border-white/30 text-white font-medium hover:bg-white/10 transition-all">
+            <a href="#contact" class="px-8 py-4 border border-white/30 text-white font-medium hover:bg-white/10 transition-all" data-es="Contactar" data-en="Get in touch">
               Contactar
             </a>
           </div>
@@ -108,20 +116,20 @@ import '../styles/global.css';
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           <div class="text-center">
-            <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">3+</div>
-            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium">Años de experiencia</div>
+            <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">2+</div>
+            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium" data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</div>
           </div>
           <div class="text-center">
-            <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">20+</div>
-            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium">Proyectos</div>
+            <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">10+</div>
+            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium" data-es="Proyectos" data-en="Projects">Proyectos</div>
           </div>
           <div class="text-center">
             <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">5+</div>
-            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium">Tecnologías</div>
+            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium" data-es="Tecnologías" data-en="Technologies">Tecnologías</div>
           </div>
           <div class="text-center">
             <div class="text-5xl md:text-6xl font-light text-waystar-lime mb-2" style="font-family: 'Playfair Display', serif;">∞</div>
-            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium">Curiosidad</div>
+            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium" data-es="Curiosidad" data-en="Curiosity">Curiosidad</div>
           </div>
         </div>
       </div>
@@ -132,20 +140,20 @@ import '../styles/global.css';
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-20 items-start">
           <div>
-            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase">Sobre mí</p>
-            <h2 class="text-4xl md:text-5xl text-white mb-8 leading-tight" style="font-family: 'Playfair Display', serif;">
+            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase" data-es="Sobre mí" data-en="About me">Sobre mí</p>
+            <h2 class="text-4xl md:text-5xl text-white mb-8 leading-tight" style="font-family: 'Playfair Display', serif;" data-es="Código con propósito,<br/>datos con criterio" data-en="Code with purpose,<br/>data with meaning">
               Código con propósito,<br/>datos con criterio
             </h2>
           </div>
           
           <div class="space-y-6 text-white/80 text-lg leading-relaxed">
-            <p>
+            <p data-es="Soy un ingeniero en software que ve el código como una forma de crear impacto real. Me mueve la ciencia de datos, la inteligencia artificial y la visualización geoespacial — no solo por la técnica, sino por lo que pueden revelar del mundo." data-en="I'm a software engineer who sees code as a way to create real impact. I'm driven by data science, artificial intelligence, and geospatial visualization — not just for the technique, but for what they can reveal about the world.">
               Soy un ingeniero en software que ve el código como una forma de crear impacto real. Me mueve la ciencia de datos, la inteligencia artificial y la visualización geoespacial — no solo por la técnica, sino por lo que pueden revelar del mundo.
             </p>
-            <p>
+            <p data-es="He construido desde dashboards interactivos hasta plataformas web completas, pero más allá de las herramientas, me enfoco en diseñar sistemas que comuniquen, que transformen información en algo que la gente realmente pueda entender y usar." data-en="I've built everything from interactive dashboards to complete web platforms, but beyond the tools, I focus on designing systems that communicate, that transform information into something people can actually understand and use.">
               He construido desde dashboards interactivos hasta plataformas web completas, pero más allá de las herramientas, me enfoco en diseñar sistemas que comuniquen, que transformen información en algo que la gente realmente pueda entender y usar.
             </p>
-            <p>
+            <p data-es="Creo en unir la tecnología con la sensibilidad humana: escribir código con propósito, analizar datos con criterio y crear experiencias digitales que dejen huella." data-en="I believe in uniting technology with human sensibility: writing purposeful code, analyzing data with critical thinking, and creating digital experiences that leave a mark.">
               Creo en unir la tecnología con la sensibilidad humana: escribir código con propósito, analizar datos con criterio y crear experiencias digitales que dejen huella.
             </p>
           </div>
@@ -156,8 +164,8 @@ import '../styles/global.css';
     <!-- Skills Section -->
     <section class="py-32 bg-waystar-sand">
       <div class="max-w-6xl mx-auto px-6">
-        <p class="text-waystar-teal font-medium mb-4 tracking-widest text-sm uppercase">Expertise</p>
-        <h2 class="text-4xl md:text-5xl text-waystar-navy mb-16" style="font-family: 'Playfair Display', serif;">
+        <p class="text-waystar-teal font-medium mb-4 tracking-widest text-sm uppercase" data-es="Expertise" data-en="Expertise">Expertise</p>
+        <h2 class="text-4xl md:text-5xl text-waystar-navy mb-16" style="font-family: 'Playfair Display', serif;" data-es="Stack técnico" data-en="Tech stack">
           Stack técnico
         </h2>
         
@@ -192,7 +200,7 @@ import '../styles/global.css';
               <li>Python (Pandas, NumPy)</li>
               <li>Power BI</li>
               <li>ETL Pipelines</li>
-              <li>Análisis Geoespacial</li>
+              <li data-es="Análisis Geoespacial" data-en="Geospatial Analysis">Análisis Geoespacial</li>
             </ul>
           </div>
           
@@ -210,11 +218,11 @@ import '../styles/global.css';
           
           <!-- Gestión -->
           <div>
-            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime">Gestión & Procesos</h3>
+            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime" data-es="Gestión & Procesos" data-en="Management & Processes">Gestión & Procesos</h3>
             <ul class="space-y-3 text-waystar-teal">
               <li>BPMN & BCM</li>
               <li>AVARCIBER</li>
-              <li>Documentación técnica</li>
+              <li data-es="Documentación técnica" data-en="Technical documentation">Documentación técnica</li>
               <li>Bizagi & Draw.io</li>
             </ul>
           </div>
@@ -225,25 +233,25 @@ import '../styles/global.css';
     <!-- Experience Section -->
     <section id="experience" class="py-32 bg-waystar-teal">
       <div class="max-w-6xl mx-auto px-6">
-        <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase">Trayectoria</p>
-        <h2 class="text-4xl md:text-5xl text-white mb-16" style="font-family: 'Playfair Display', serif;">
+        <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase" data-es="Trayectoria" data-en="Career">Trayectoria</p>
+        <h2 class="text-4xl md:text-5xl text-white mb-16" style="font-family: 'Playfair Display', serif;" data-es="Experiencia profesional" data-en="Professional experience">
           Experiencia profesional
         </h2>
         
         <div class="space-y-12">
           <!-- Experience 1 -->
           <div class="grid md:grid-cols-[200px_1fr] gap-8 pb-12 border-b border-white/20">
-            <div class="text-waystar-lime text-sm font-medium">
+            <div class="text-waystar-lime text-sm font-medium" data-es="Oct 2023 — Presente" data-en="Oct 2023 — Present">
               Oct 2023 — Presente
             </div>
             <div>
               <h3 class="text-xl font-semibold text-white mb-1">Jr. Data Analyst & Web Developer</h3>
               <p class="text-waystar-sand font-medium mb-4">Primesys</p>
               <ul class="space-y-2 text-white/70">
-                <li>Desarrollo de dashboards y visualizaciones (Shiny, Power BI)</li>
-                <li>Análisis y procesamiento de datos con Python y R</li>
-                <li>Implementación de soluciones web y despliegue en Docker/CPanel</li>
-                <li>Construcción de prototipos tecnológicos para clientes iniciales</li>
+                <li data-es="Desarrollo de dashboards y visualizaciones (Shiny, Power BI)" data-en="Dashboard development and visualizations (Shiny, Power BI)">Desarrollo de dashboards y visualizaciones (Shiny, Power BI)</li>
+                <li data-es="Análisis y procesamiento de datos con Python y R" data-en="Data analysis and processing with Python and R">Análisis y procesamiento de datos con Python y R</li>
+                <li data-es="Implementación de soluciones web y despliegue en Docker/CPanel" data-en="Web solutions implementation and deployment on Docker/CPanel">Implementación de soluciones web y despliegue en Docker/CPanel</li>
+                <li data-es="Construcción de prototipos tecnológicos para clientes iniciales" data-en="Building technology prototypes for initial clients">Construcción de prototipos tecnológicos para clientes iniciales</li>
               </ul>
             </div>
           </div>
@@ -254,13 +262,13 @@ import '../styles/global.css';
               Jun — Sept 2024
             </div>
             <div>
-              <h3 class="text-xl font-semibold text-white mb-1">Pasante Analista en Sistemas de Información</h3>
-              <p class="text-waystar-sand font-medium mb-4">Ministerio del Ambiente, Agua y Transición Ecológica</p>
+              <h3 class="text-xl font-semibold text-white mb-1" data-es="Pasante Analista en Sistemas de Información" data-en="Information Systems Analyst Intern">Pasante Analista en Sistemas de Información</h3>
+              <p class="text-waystar-sand font-medium mb-4" data-es="Ministerio del Ambiente, Agua y Transición Ecológica" data-en="Ministry of Environment, Water and Ecological Transition">Ministerio del Ambiente, Agua y Transición Ecológica</p>
               <ul class="space-y-2 text-white/70">
-                <li>Dashboards interactivos en Power BI para indicadores ambientales</li>
-                <li>Pipelines de limpieza de datos con Python</li>
-                <li>Documentación técnica estandarizada</li>
-                <li>Soporte en protección y confidencialidad de datos</li>
+                <li data-es="Dashboards interactivos en Power BI para indicadores ambientales" data-en="Interactive Power BI dashboards for environmental indicators">Dashboards interactivos en Power BI para indicadores ambientales</li>
+                <li data-es="Pipelines de limpieza de datos con Python" data-en="Data cleaning pipelines with Python">Pipelines de limpieza de datos con Python</li>
+                <li data-es="Documentación técnica estandarizada" data-en="Standardized technical documentation">Documentación técnica estandarizada</li>
+                <li data-es="Soporte en protección y confidencialidad de datos" data-en="Support in data protection and confidentiality">Soporte en protección y confidencialidad de datos</li>
               </ul>
             </div>
           </div>
@@ -274,25 +282,25 @@ import '../styles/global.css';
               <h3 class="text-xl font-semibold text-white mb-1">Webmaster WordPress</h3>
               <p class="text-waystar-sand font-medium mb-4">LatinCrypt Event Ecuador</p>
               <ul class="space-y-2 text-white/70">
-                <li>Desarrollo y mejora de accesibilidad de la web del evento LatinCrypt 2023</li>
-                <li>Implementación de mejoras en usabilidad usando WordPress y JavaScript</li>
+                <li data-es="Desarrollo y mejora de accesibilidad de la web del evento LatinCrypt 2023" data-en="Development and accessibility improvement of the LatinCrypt 2023 event website">Desarrollo y mejora de accesibilidad de la web del evento LatinCrypt 2023</li>
+                <li data-es="Implementación de mejoras en usabilidad usando WordPress y JavaScript" data-en="Usability improvements implementation using WordPress and JavaScript">Implementación de mejoras en usabilidad usando WordPress y JavaScript</li>
               </ul>
             </div>
           </div>
 
           <!-- Experience 4 -->
           <div class="grid md:grid-cols-[200px_1fr] gap-8">
-            <div class="text-waystar-lime text-sm font-medium">
-              2020 — Presente
+            <div class="text-waystar-lime text-sm font-medium" data-es="2023 — Presente" data-en="2023 — Present">
+              2023 — Presente
             </div>
             <div>
               <h3 class="text-xl font-semibold text-white mb-1">Full Stack Developer</h3>
-              <p class="text-waystar-sand font-medium mb-4">Proyectos Independientes</p>
+              <p class="text-waystar-sand font-medium mb-4" data-es="Proyectos Independientes" data-en="Independent Projects">Proyectos Independientes</p>
               <ul class="space-y-2 text-white/70">
-                <li>Apps web con Astro, React y TypeScript</li>
-                <li>APIs REST & SOAP con Python, Node.js y ASP.NET Core</li>
-                <li>Bases de datos PostgreSQL, MySQL, SQL Server</li>
-                <li>Deploy en cloud (Vercel, AWS, Azure)</li>
+                <li data-es="Apps web con Astro, React y TypeScript" data-en="Web apps with Astro, React and TypeScript">Apps web con Astro, React y TypeScript</li>
+                <li data-es="APIs REST & SOAP con Python, Node.js y ASP.NET Core" data-en="REST & SOAP APIs with Python, Node.js and ASP.NET Core">APIs REST & SOAP con Python, Node.js y ASP.NET Core</li>
+                <li data-es="Bases de datos PostgreSQL, MySQL, SQL Server" data-en="PostgreSQL, MySQL, SQL Server databases">Bases de datos PostgreSQL, MySQL, SQL Server</li>
+                <li data-es="Deploy en cloud (Vercel, AWS, Azure)" data-en="Cloud deployment (Vercel, AWS, Azure)">Deploy en cloud (Vercel, AWS, Azure)</li>
               </ul>
             </div>
           </div>
@@ -305,22 +313,22 @@ import '../styles/global.css';
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-20">
           <div>
-            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase">Educación</p>
-            <h2 class="text-4xl md:text-5xl text-white mb-8" style="font-family: 'Playfair Display', serif;">
+            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase" data-es="Educación" data-en="Education">Educación</p>
+            <h2 class="text-4xl md:text-5xl text-white mb-8" style="font-family: 'Playfair Display', serif;" data-es="Formación académica" data-en="Academic background">
               Formación académica
             </h2>
             
             <div class="space-y-2">
-              <div class="inline-block px-3 py-1 bg-waystar-lime text-waystar-navy text-xs font-semibold">Graduado</div>
-              <h3 class="text-2xl font-semibold text-white">Ingeniería de Software</h3>
+              <div class="inline-block px-3 py-1 bg-waystar-lime text-waystar-navy text-xs font-semibold" data-es="Graduado" data-en="Graduate">Graduado</div>
+              <h3 class="text-2xl font-semibold text-white" data-es="Ingeniería de Software" data-en="Software Engineering">Ingeniería de Software</h3>
               <p class="text-waystar-sand font-medium">Universidad de las Fuerzas Armadas ESPE</p>
               <p class="text-white/50">2021 — 2025</p>
             </div>
           </div>
           
           <div>
-            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase">Certificaciones</p>
-            <h2 class="text-4xl md:text-5xl text-white mb-8" style="font-family: 'Playfair Display', serif;">
+            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase" data-es="Certificaciones" data-en="Certifications">Certificaciones</p>
+            <h2 class="text-4xl md:text-5xl text-white mb-8" style="font-family: 'Playfair Display', serif;" data-es="Desarrollo continuo" data-en="Continuous learning">
               Desarrollo continuo
             </h2>
             
@@ -354,8 +362,8 @@ import '../styles/global.css';
     <!-- Projects Section -->
     <section id="projects" class="py-32 bg-waystar-sand">
       <div class="max-w-6xl mx-auto px-6">
-        <p class="text-waystar-teal font-medium mb-4 tracking-widest text-sm uppercase">Portafolio</p>
-        <h2 class="text-4xl md:text-5xl text-waystar-navy mb-16" style="font-family: 'Playfair Display', serif;">
+        <p class="text-waystar-teal font-medium mb-4 tracking-widest text-sm uppercase" data-es="Portafolio" data-en="Portfolio">Portafolio</p>
+        <h2 class="text-4xl md:text-5xl text-waystar-navy mb-16" style="font-family: 'Playfair Display', serif;" data-es="Proyectos destacados" data-en="Featured projects">
           Proyectos destacados
         </h2>
         
@@ -363,13 +371,16 @@ import '../styles/global.css';
           <!-- Proyecto 1 -->
           <div class="group block bg-waystar-navy p-8 hover:bg-waystar-teal transition-all">
             <div class="flex justify-between items-start mb-6">
-              <span class="text-5xl">🌿</span>
-              <span class="text-white/40 text-sm group-hover:text-waystar-lime">En validación</span>
+              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+              </svg>
+              <span class="text-white/40 text-sm group-hover:text-waystar-lime" data-es="En validación" data-en="Under validation">En validación</span>
             </div>
-            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
+            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors" data-es="Gestión Indicadores Ambientales" data-en="Environmental Indicators Management">
               Gestión Indicadores Ambientales
             </h3>
-            <p class="text-white/60 mb-6">
+            <p class="text-white/60 mb-6" data-es="Prototipo para automatizar procesamiento y visualización de indicadores ambientales (Huella Humana, Bosques Riparios)." data-en="Prototype to automate processing and visualization of environmental indicators (Human Footprint, Riparian Forests).">
               Prototipo para automatizar procesamiento y visualización de indicadores ambientales (Huella Humana, Bosques Riparios).
             </p>
             <div class="flex flex-wrap gap-2">
@@ -386,13 +397,18 @@ import '../styles/global.css';
           <!-- Proyecto 2 -->
           <a href="https://www.primesys-ec.com/nuestro-trabajo" target="_blank" class="group block bg-waystar-blue p-8 hover:bg-waystar-teal transition-all">
             <div class="flex justify-between items-start mb-6">
-              <span class="text-5xl">📊</span>
-              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform">Ver →</span>
+              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"/>
+                <path d="M18 17V9"/>
+                <path d="M13 17V5"/>
+                <path d="M8 17v-3"/>
+              </svg>
+              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform" data-es="Ver →" data-en="View →">Ver →</span>
             </div>
-            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
+            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors" data-es="Dashboard Importaciones" data-en="Imports Dashboard">
               Dashboard Importaciones
             </h3>
-            <p class="text-white/60 mb-6">
+            <p class="text-white/60 mb-6" data-es="Análisis de importaciones bajo el régimen general en Ecuador." data-en="Analysis of imports under the general regime in Ecuador.">
               Análisis de importaciones bajo el régimen general en Ecuador.
             </p>
             <div class="flex flex-wrap gap-2">
@@ -405,13 +421,18 @@ import '../styles/global.css';
           <!-- Proyecto 3 -->
           <a href="https://kasaychi.org/" target="_blank" class="group block bg-waystar-teal p-8 hover:bg-waystar-blue transition-all">
             <div class="flex justify-between items-start mb-6">
-              <span class="text-5xl">🤝</span>
-              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform">Ver →</span>
+              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform" data-es="Ver →" data-en="View →">Ver →</span>
             </div>
             <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
               Kasaychi
             </h3>
-            <p class="text-white/60 mb-6">
+            <p class="text-white/60 mb-6" data-es="Plataforma de vinculación comunitaria con enfoque en desarrollo sostenible." data-en="Community engagement platform focused on sustainable development.">
               Plataforma de vinculación comunitaria con enfoque en desarrollo sostenible.
             </p>
             <div class="flex flex-wrap gap-2">
@@ -426,13 +447,20 @@ import '../styles/global.css';
           <!-- Proyecto 4 -->
           <div class="group block bg-waystar-navy p-8 hover:bg-waystar-teal transition-all">
             <div class="flex justify-between items-start mb-6">
-              <span class="text-5xl">🤖</span>
+              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 8V4H8"/>
+                <rect width="16" height="12" x="4" y="8" rx="2"/>
+                <path d="M2 14h2"/>
+                <path d="M20 14h2"/>
+                <path d="M15 13v2"/>
+                <path d="M9 13v2"/>
+              </svg>
               <span class="text-white/40 text-sm">GitHub</span>
             </div>
-            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
+            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors" data-es="Chatbot IA" data-en="AI Chatbot">
               Chatbot IA
             </h3>
-            <p class="text-white/60 mb-6">
+            <p class="text-white/60 mb-6" data-es="Sistema de chat con múltiples personalidades de superhéroes." data-en="Chat system with multiple superhero personalities.">
               Sistema de chat con múltiples personalidades de superhéroes.
             </p>
             <div class="flex flex-wrap gap-2">
@@ -445,13 +473,21 @@ import '../styles/global.css';
           <!-- Proyecto 5 -->
           <a href="https://prototipopoliticapublica-ecuador.streamlit.app/" target="_blank" class="group block bg-waystar-blue p-8 hover:bg-waystar-teal transition-all">
             <div class="flex justify-between items-start mb-6">
-              <span class="text-5xl">🧬</span>
-              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform">Ver →</span>
+              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 15c6.667-6 13.333 0 20-6"/>
+                <path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/>
+                <path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/>
+                <path d="m17 6-2.5-2.5"/>
+                <path d="m14 8-1-1"/>
+                <path d="m7 18 2.5 2.5"/>
+                <path d="m10 16 1 1"/>
+              </svg>
+              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform" data-es="Ver →" data-en="View →">Ver →</span>
             </div>
-            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
+            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors" data-es="Analítica Salud Ambiental" data-en="Environmental Health Analytics">
               Analítica Salud Ambiental
             </h3>
-            <p class="text-white/60 mb-6">
+            <p class="text-white/60 mb-6" data-es="Prototipo de investigación integrando datos INEC, MSP y MAATE para analizar patrones de salud en zonas petroleras." data-en="Research prototype integrating INEC, MSP, and MAATE data to analyze health patterns in oil-activity zones.">
               Prototipo de investigación integrando datos INEC, MSP y MAATE para analizar patrones de salud en zonas petroleras.
             </p>
             <div class="flex flex-wrap gap-2">
@@ -466,15 +502,19 @@ import '../styles/global.css';
           <!-- Proyecto 6 -->
           <a href="https://dcco.espe.edu.ec/" target="_blank" class="group block bg-waystar-teal p-8 hover:bg-waystar-blue transition-all relative">
             <div class="absolute top-4 right-4">
-              <span class="text-xs text-waystar-sand/60 bg-waystar-navy/30 px-2 py-1">Archivado</span>
+              <span class="text-xs text-waystar-sand/60 bg-waystar-navy/30 px-2 py-1" data-es="Archivado" data-en="Archived">Archivado</span>
             </div>
             <div class="flex justify-between items-start mb-6">
-              <span class="text-5xl">🌐</span>
+              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
             </div>
             <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
               Web DCCO ESPE
             </h3>
-            <p class="text-white/60 mb-6">
+            <p class="text-white/60 mb-6" data-es="Sitio oficial del DCCO usando WordPress." data-en="Official DCCO website using WordPress.">
               Sitio oficial del DCCO usando WordPress.
             </p>
             <div class="flex flex-wrap gap-2">
@@ -491,17 +531,17 @@ import '../styles/global.css';
     <section id="contact" class="py-32 bg-gradient-to-br from-waystar-navy via-waystar-teal to-waystar-blue">
       <div class="max-w-6xl mx-auto px-6">
         <div class="max-w-3xl">
-          <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase">Contacto</p>
-          <h2 class="text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight" style="font-family: 'Playfair Display', serif;">
+          <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase" data-es="Contacto" data-en="Contact">Contacto</p>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight" style="font-family: 'Playfair Display', serif;" data-es="¿Tienes un proyecto en mente?" data-en="Have a project in mind?">
             ¿Tienes un proyecto en mente?
           </h2>
-          <p class="text-xl text-white/60 mb-12">
+          <p class="text-xl text-white/60 mb-12" data-es="Disponible para proyectos freelance, colaboraciones y oportunidades full-time." data-en="Available for freelance projects, collaborations, and full-time opportunities.">
             Disponible para proyectos freelance, colaboraciones y oportunidades full-time.
           </p>
           
           <div class="flex flex-wrap gap-6">
             <a href="mailto:almeidaandres12@gmail.com" class="text-white hover:text-waystar-lime transition-colors">
-              almeidaandres12@gmail.com
+              Email
             </a>
             <span class="text-white/20">|</span>
             <a href="https://linkedin.com/in/andres-almeida-jara/" target="_blank" class="text-white hover:text-waystar-lime transition-colors">
@@ -529,8 +569,9 @@ import '../styles/global.css';
       </div>
     </footer>
 
-    <!-- Smooth Scrolling -->
+    <!-- Scripts -->
     <script>
+      // Smooth Scrolling
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -543,6 +584,35 @@ import '../styles/global.css';
           }
         });
       });
+
+      // Language Toggle
+      const langToggle = document.getElementById('lang-toggle');
+      const currentLangSpan = document.getElementById('current-lang');
+      let currentLang = localStorage.getItem('lang') || 'es';
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        currentLangSpan.textContent = lang.toUpperCase();
+        
+        document.querySelectorAll('[data-es][data-en]').forEach(el => {
+          const text = el.getAttribute(`data-${lang}`);
+          if (text) {
+            el.innerHTML = text;
+          }
+        });
+
+        // Update html lang attribute
+        document.documentElement.lang = lang;
+      }
+
+      langToggle.addEventListener('click', () => {
+        const newLang = currentLang === 'es' ? 'en' : 'es';
+        setLanguage(newLang);
+      });
+
+      // Set initial language
+      setLanguage(currentLang);
     </script>
   </body>
 </html>
