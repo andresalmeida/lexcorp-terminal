@@ -1,116 +1,155 @@
 ---
-import '@fontsource/ibm-plex-mono';
 ---
 
+<!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/lexcorp-logo.svg?v=1" />
-		<meta name="viewport" content="width=device-width" />
-		<title>404 - Página No Encontrada | Andrés Almeida</title>
-		<meta name="description" content="Error 404 - La página que buscas no existe. Regresa al terminal principal del portfolio de Andrés Almeida." />
-		<meta name="robots" content="noindex, nofollow" />
-		
-		<!-- Open Graph -->
-		<meta property="og:title" content="404 - Página No Encontrada" />
-		<meta property="og:description" content="Error 404 - La página solicitada no fue encontrada." />
-		<meta property="og:type" content="website" />
-		
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-	</head>
-	<body class="bg-gray-900 text-terminal-text font-mono min-h-screen">
-		<div class="min-h-screen p-4 flex flex-col max-w-7xl mx-auto">
-			<!-- Terminal Header -->
-			<div class="bg-gray-900 border-b border-retro-accent/30 p-4 flex justify-between items-center mb-6">
-				<div class="flex items-center space-x-3">
-					<div class="w-3 h-3 bg-red-500 rounded-full"></div>
-					<div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-					<div class="w-3 h-3 bg-green-500 rounded-full"></div>
-					<span class="ml-4 text-retro-accent font-semibold">ERROR TERMINAL</span>
-				</div>
-				<div class="flex items-center space-x-4">
-					<span class="text-retro-accent/80">Sistema v2.4.1</span>
-					<div class="bg-retro-accent/20 px-3 py-1 rounded border border-retro-accent/40">
-						<span id="error-time">--:--:--</span>
-					</div>
-				</div>
-			</div>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/lexcorp-logo.svg?v=1" />
+    <meta name="viewport" content="width=device-width" />
+    <title>404 - Page Not Found | Andrés Almeida</title>
+    <meta name="description" content="Error 404 - The page you're looking for doesn't exist. Return to the main portfolio." />
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="404 - Page Not Found" />
+    <meta property="og:description" content="Error 404 - The requested page was not found." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Fuentes Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-			<!-- 404 Content -->
-			<div class="flex-1 flex flex-col justify-center items-center text-center space-y-6">
-				<!-- ASCII Art -->
-				<div class="text-retro-accent text-xs font-mono leading-tight">
-					<pre>
- ██╗  ██╗ ██████╗ ██╗  ██╗
- ██║  ██║██╔═████╗██║  ██║
- ███████║██║██╔██║███████║
- ╚════██║████╔╝██║╚════██║
-      ██║╚██████╔╝     ██║
-      ╚═╝ ╚═════╝      ╚═╝
-					</pre>
-				</div>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-				<!-- Error Message -->
-				<div class="border border-retro-accent/30 bg-retro-accent/5 p-6 rounded max-w-2xl">
-					<div class="text-retro-accent text-xl font-semibold mb-4">
-						>> ERROR: PÁGINA NO ENCONTRADA
-					</div>
-					<div class="text-terminal-text/90 space-y-3">
-						<p>La página solicitada no existe en este sistema.</p>
-						<p>Verifica la URL o regresa al portfolio principal.</p>
-					</div>
-				</div>
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background: linear-gradient(135deg, #02416d 0%, #066699 100%);
+        color: #ffffff;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+      }
 
-				<!-- Terminal Output -->
-				<div class="bg-gray-900 border border-retro-accent/30 rounded p-4 max-w-2xl text-left">
-					<div class="text-retro-accent mb-2">
-						root@portafolio:~$ ls -la /pages/
-					</div>
-					<div class="text-terminal-text/80 text-sm space-y-1">
-						<div>total 1</div>
-						<div>drwxr-xr-x  2 andres andres 4096 Oct 17 2025 .</div>
-						<div>drwxr-xr-x  3 andres andres 4096 Oct 17 2025 ..</div>
-						<div>-rw-r--r--  1 andres andres 1024 Oct 17 2025 index.astro</div>
-					</div>
-					<div class="text-retro-accent mt-3">
-						root@portafolio:~$ <span class="animate-blink">█</span>
-					</div>
-				</div>
+      .container {
+        max-width: 42rem;
+        margin: 0 auto;
+        text-align: center;
+      }
 
-				<!-- Navigation Buttons -->
-				<div class="flex space-x-4">
-					<a href="/" 
-					   class="bg-retro-accent/20 border border-retro-accent/40 px-6 py-3 rounded hover:bg-retro-accent/30 transition-colors text-retro-accent font-semibold">
-						← Volver al Portfolio
-					</a>
-					<a href="/#contact" 
-					   class="bg-retro-accent/10 border border-retro-accent/30 px-6 py-3 rounded hover:bg-retro-accent/20 transition-colors text-terminal-text">
-						Contacto →
-					</a>
-				</div>
+      .error-code {
+        font-size: 9rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        opacity: 0.9;
+        line-height: 1;
+      }
 
-				<!-- Help Text -->
-				<div class="text-retro-accent/60 text-sm">
-					<p>Consejo: Navega a las secciones usando el menú principal del portfolio.</p>
-				</div>
-			</div>
-		</div>
+      .error-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
 
-		<script>
-			// Update time
-			function updateErrorTime() {
-				const now = new Date();
-				const timeString = now.toLocaleTimeString([], { hour12: false });
-				const timeElement = document.getElementById('error-time');
-				if (timeElement) {
-					timeElement.textContent = timeString;
-				}
-			}
+      .error-description {
+        font-size: 1.25rem;
+        opacity: 0.8;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
 
-			updateErrorTime();
-			setInterval(updateErrorTime, 1000);
-		</script>
-	</body>
-</html> 
+      .button-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 0.875rem 2rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 0.25rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background-color: #ffffff;
+        color: #02416d;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      .btn-primary:hover {
+        background-color: #f8f8ec;
+        transform: translateY(-1px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+      }
+
+      .btn-secondary:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        .error-code {
+          font-size: 6rem;
+        }
+
+        .error-title {
+          font-size: 1.5rem;
+        }
+
+        .error-description {
+          font-size: 1rem;
+        }
+
+        .button-group {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="container">
+      <!-- Error Code -->
+      <h1 class="error-code">404</h1>
+      
+      <!-- Message -->
+      <h2 class="error-title">Page Not Found</h2>
+      <p class="error-description">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+      
+      <!-- Navigation -->
+      <div class="button-group">
+        <a href="/" class="btn btn-primary">
+          Return Home
+        </a>
+        <a href="/#contact" class="btn btn-secondary">
+          Contact
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

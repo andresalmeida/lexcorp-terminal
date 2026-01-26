@@ -1,7 +1,5 @@
 ---
-// Importamos solo Space Mono para el body
-import '@fontsource/space-mono/400.css';
-import '@fontsource/space-mono/700.css';
+import '../styles/global.css';
 ---
 
 <!DOCTYPE html>
@@ -25,9 +23,6 @@ import '@fontsource/space-mono/700.css';
     <meta property="og:title" content="Andrés Almeida Jara | Developer | Data Analyst | Geospatial Explorer | Future Scientist" />
     <meta property="og:description" content="Desarrollo soluciones digitales basadas en datos, transformando información en decisiones efectivas." />
     <meta property="og:image" content="https://adaghost.me/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="Andrés Almeida Portfolio" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -36,14 +31,13 @@ import '@fontsource/space-mono/700.css';
     <meta property="twitter:description" content="Desarrollo soluciones digitales basadas en datos, transformando información en decisiones efectivas." />
     <meta property="twitter:image" content="https://adaghost.me/og-image.jpg" />
 
-    <!-- Additional Meta -->
-    <meta name="theme-color" content="#0A0A0A" />
+    <meta name="theme-color" content="#02416d" />
     <link rel="icon" type="image/svg+xml" href="/lexcorp-logo.svg?v=1" />
     
-    <!-- Fuentes Google Fonts - Street Style -->
+    <!-- Fuentes Google Fonts - Elegantes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -52,23 +46,8 @@ import '@fontsource/space-mono/700.css';
       "@type": "Person",
       "name": "Andrés Almeida Jara",
       "jobTitle": "Full Stack Developer & Data Analyst",
-      "description": "Especialización en desarrollo web full-stack y análisis de datos con experiencia en React, Python, R y tecnologías modernas.",
       "url": "https://adaghost.me",
       "email": "almeidaandres12@gmail.com",
-      "telephone": "+593990545539",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Quito",
-        "addressCountry": "Ecuador"
-      },
-      "alumniOf": {
-        "@type": "Organization",
-        "name": "Universidad de las Fuerzas Armadas ESPE"
-      },
-      "knowsAbout": [
-        "React", "Python", "R", "JavaScript", "Full Stack Development", 
-        "Data Analysis", "Shiny", "ETL", "Machine Learning", "Web Development"
-      ],
       "sameAs": [
         "https://github.com/andresalmeida",
         "https://linkedin.com/in/andres-almeida-jara/"
@@ -77,530 +56,294 @@ import '@fontsource/space-mono/700.css';
     </script>
   </head>
   
-  <body class="bg-street-black text-street-white font-body">
+  <body class="bg-waystar-navy text-white antialiased">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-street-black/95 backdrop-blur-md border-b-2 border-street-ferxxo/30">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-          <!-- Logo -->
-          <div class="flex items-center space-x-3 group">
-            <div class="text-street-ferxxo text-3xl group-hover:animate-street-float transition-all">👻</div>
-            <span class="text-street-white font-display text-2xl tracking-wider group-hover:text-street-ferxxo transition-colors duration-300">AdaGhost</span>
-          </div>
+    <nav class="fixed top-0 w-full z-50 bg-waystar-navy/90 backdrop-blur-lg border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between items-center h-16">
+          <a href="#" class="text-white font-medium tracking-tight">Andrés Almeida</a>
           
-          <!-- Navigation Links -->
-          <div class="hidden md:flex items-center space-x-8">
-            <a href="#about" class="text-street-white hover:text-street-ferxxo transition-colors duration-300 font-medium uppercase text-sm tracking-wide">Yo</a>
-            <a href="#skills" class="text-street-white hover:text-street-ferxxo transition-colors duration-300 font-medium uppercase text-sm tracking-wide">Skills</a>
-            <a href="#experience" class="text-street-white hover:text-street-purple transition-colors duration-300 font-medium uppercase text-sm tracking-wide">Xp</a>
-            <a href="#projects" class="text-street-white hover:text-street-purple transition-colors duration-300 font-medium uppercase text-sm tracking-wide">Proyectos</a>
-            <a href="#contact" class="px-6 py-2 bg-street-ferxxo/20 border-2 border-street-ferxxo text-street-ferxxo hover:bg-street-ferxxo hover:text-street-black transition-all duration-300 rounded font-bold uppercase text-sm">Hit Me</a>
+          <div class="hidden md:flex items-center space-x-10">
+            <a href="#about" class="text-white/60 hover:text-waystar-lime transition-colors text-sm">Sobre mí</a>
+            <a href="#experience" class="text-white/60 hover:text-waystar-lime transition-colors text-sm">Experiencia</a>
+            <a href="#projects" class="text-white/60 hover:text-waystar-lime transition-colors text-sm">Proyectos</a>
+            <a href="#contact" class="text-waystar-lime font-medium text-sm">Contacto</a>
           </div>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      <!-- Background Pattern Urbano -->
-      <div class="absolute inset-0 bg-street-gradient"></div>
-      <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, #39FF14 2px, #39FF14 4px); background-size: 100% 50px;"></div>
-      
-      <!-- Elementos Decorativos Urbanos -->
-      <div class="absolute top-40 right-20 text-street-ferxxo/20 text-9xl font-display animate-street-float">★</div>
-      <div class="absolute bottom-40 left-20 text-street-purple/20 text-7xl font-display animate-street-float" style="animation-delay: 1s;">✦</div>
-      <div class="absolute top-1/3 left-1/4 text-street-ferxxo/10 text-6xl font-graffiti animate-street-float" style="animation-delay: 2s;">~</div>
-      
-      <!-- Content -->
-      <div class="relative z-10 text-center max-w-6xl mx-auto px-4">
-        <!-- Etiqueta Superior -->
-        <div class="mb-6 inline-block">
-          <span class="px-4 py-2 bg-street-ferxxo/10 border-2 border-street-ferxxo text-street-ferxxo font-mono text-sm uppercase tracking-widest">
-            🇪🇨 Quito, Ecuador
-          </span>
-        </div>
-        
-        <!-- Nombre Principal -->
-        <div class="mb-8">
-          <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-street-white mb-4 leading-none">
-            ANDRÉS
-          </h1>
-          <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display mb-6 leading-none bg-neon-gradient bg-clip-text text-transparent animate-neon-pulse opacity-75">
-            ALMEIDA
+    <section class="min-h-screen flex items-center relative bg-gradient-to-br from-waystar-navy via-waystar-teal to-waystar-blue">
+      <div class="max-w-6xl mx-auto px-6 py-32">
+        <div class="max-w-4xl">
+          <p class="text-waystar-lime font-medium mb-8 tracking-widest text-sm uppercase">Quito, Ecuador</p>
+          
+          <h1 class="text-6xl md:text-7xl lg:text-8xl text-white mb-8 leading-[0.9] tracking-tight" style="font-family: 'Playfair Display', serif;">
+            Andrés<br/>Almeida
           </h1>
           
-          <!-- Subtítulo Street -->
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <span class="text-2xl md:text-3xl font-graffiti text-street-ferxxo">Full Stack Dev</span>
-            <span class="text-street-ferxxo text-3xl hidden sm:block">×</span>
-            <span class="text-2xl md:text-3xl font-graffiti text-street-purple">Data Analyst</span>
-          </div>
-          
-          <!-- Tags de Skills -->
-          <div class="flex flex-wrap justify-center gap-3 mb-10">
-            <span class="px-4 py-2 bg-street-surface border-2 border-street-ferxxo/50 text-street-ferxxo font-mono text-xs uppercase hover:bg-street-ferxxo/20 transition-all">React</span>
-            <span class="px-4 py-2 bg-street-surface border-2 border-street-purple/50 text-street-purple font-mono text-xs uppercase hover:bg-street-purple/20 transition-all">Python</span>
-            <span class="px-4 py-2 bg-street-surface border-2 border-street-ferxxo/50 text-street-ferxxo font-mono text-xs uppercase hover:bg-street-ferxxo/20 transition-all">Astro</span>
-            <span class="px-4 py-2 bg-street-surface border-2 border-street-purple/50 text-street-purple font-mono text-xs uppercase hover:bg-street-purple/20 transition-all">R</span>
-            <span class="px-4 py-2 bg-street-surface border-2 border-street-ferxxo/50 text-street-ferxxo font-mono text-xs uppercase hover:bg-street-ferxxo/20 transition-all">Node.js</span>
-          </div>
-        </div>
-        
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#projects" class="group px-10 py-4 bg-street-ferxxo text-street-black font-display text-xl uppercase tracking-wider hover:shadow-neon-green transition-all duration-300 relative overflow-hidden">
-            <span class="relative z-10">Ver Proyectos</span>
-            <div class="absolute inset-0 bg-street-purple transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-          </a>
-          <a href="#contact" class="px-10 py-4 border-3 border-street-purple text-street-purple font-display text-xl uppercase tracking-wider hover:bg-street-purple hover:text-street-black transition-all duration-300">
-            Hablemos
-          </a>
-        </div>
-        
-        <!-- Quote Street -->
-        <div class="mt-12">
-          <p class="text-street-white/60 font-mono text-sm italic">
-            "Tech with feeling, data with meaning." 💻✨
+          <p class="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl leading-relaxed font-light">
+            Full Stack Developer & Data Analyst.<br/>
+            Transformo datos en decisiones, código en impacto.
           </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href="#projects" class="px-8 py-4 bg-waystar-lime text-waystar-navy font-semibold hover:bg-white transition-all">
+              Ver proyectos
+            </a>
+            <a href="#contact" class="px-8 py-4 border border-white/30 text-white font-medium hover:bg-white/10 transition-all">
+              Contactar
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Decorative element -->
+      <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-waystar-sand to-transparent"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-waystar-sand">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">3+</div>
+            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium">Años de experiencia</div>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">20+</div>
+            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium">Proyectos</div>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">5+</div>
+            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium">Tecnologías</div>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-light text-waystar-lime mb-2" style="font-family: 'Playfair Display', serif;">∞</div>
+            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium">Curiosidad</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-street-surface/50 border-t-2 border-street-ferxxo/20">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-5xl md:text-6xl font-display text-street-white mb-4 text-center uppercase">
-          Quién Soy
-        </h2>
-        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-12"></div>
-        
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-			<!-- Text Content -->
-			<div class="space-y-6">
-            <p class="text-lg text-street-white/90 leading-relaxed">
-              Soy un ingeniero en software que ve el código como una forma de crear impacto real. Me mueve la ciencia de datos, la inteligencia artificial y la visualización geoespacial — no solo por la técnica, sino por lo que pueden revelar del mundo.
-              He construido desde dashboards interactivos hasta plataformas web completas, pero más allá de las herramientas, me enfoco en diseñar sistemas que comuniquen, que transformen información en algo que la gente realmente pueda entender y usar.
-            </p>
-            <p class="text-lg text-street-white/90 leading-relaxed">
-              Creo en unir la tecnología con la sensibilidad humana: escribir código con propósito, analizar datos con criterio y crear experiencias digitales que dejen huella.
-            </p>
-  
-            <!-- Stats -->
-            <div class="grid grid-cols-3 gap-4 mt-8">
-              <div class="text-center p-4 bg-street-black border-2 border-street-ferxxo/30 hover:border-street-ferxxo transition-all">
-                <div class="text-4xl font-display text-street-ferxxo mb-2">3+</div>
-                <div class="text-xs text-street-white/70 uppercase font-mono">Años XP</div>
-              </div>
-              <div class="text-center p-4 bg-street-black border-2 border-street-purple/30 hover:border-street-purple transition-all">
-                <div class="text-4xl font-display text-street-purple mb-2">20+</div>
-                <div class="text-xs text-street-white/70 uppercase font-mono">Proyectos</div>
-              </div>
-              <div class="text-center p-4 bg-street-black border-2 border-street-ferxxo/30 hover:border-street-ferxxo transition-all">
-                <div class="text-4xl font-display text-street-ferxxo mb-2">5+</div>
-                <div class="text-xs text-street-white/70 uppercase font-mono">Tecnologías</div>
-              </div>
-            </div>
+    <section id="about" class="py-32 bg-waystar-blue">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-start">
+          <div>
+            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase">Sobre mí</p>
+            <h2 class="text-4xl md:text-5xl text-white mb-8 leading-tight" style="font-family: 'Playfair Display', serif;">
+              Código con propósito,<br/>datos con criterio
+            </h2>
           </div>
           
-          <!-- Visual Element -->
-          <div class="relative">
-            <div class="w-80 h-80 mx-auto relative">
-              <!-- Círculo exterior con efecto neón -->
-              <div class="absolute inset-0 bg-purple-gradient rounded-full animate-pulse opacity-30 blur-xl"></div>
-              <div class="absolute inset-0 border-4 border-street-ferxxo rounded-full"></div>
-              <div class="absolute inset-4 border-4 border-street-purple rounded-full"></div>
-              <div class="absolute inset-8 bg-street-black rounded-full flex items-center justify-center">
-                <div class="text-7xl animate-street-float">💀</div>
-              </div>
-              <!-- Decoración adicional -->
-              <div class="absolute -top-4 -right-4 text-street-ferxxo text-4xl font-display">★</div>
-              <div class="absolute -bottom-4 -left-4 text-street-purple text-4xl font-display">✦</div>
-            </div>
+          <div class="space-y-6 text-white/80 text-lg leading-relaxed">
+            <p>
+              Soy un ingeniero en software que ve el código como una forma de crear impacto real. Me mueve la ciencia de datos, la inteligencia artificial y la visualización geoespacial — no solo por la técnica, sino por lo que pueden revelar del mundo.
+            </p>
+            <p>
+              He construido desde dashboards interactivos hasta plataformas web completas, pero más allá de las herramientas, me enfoco en diseñar sistemas que comuniquen, que transformen información en algo que la gente realmente pueda entender y usar.
+            </p>
+            <p>
+              Creo en unir la tecnología con la sensibilidad humana: escribir código con propósito, analizar datos con criterio y crear experiencias digitales que dejen huella.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-street-black">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-5xl md:text-6xl font-display text-street-white mb-4 text-center uppercase">
-          Skills
+    <section class="py-32 bg-waystar-sand">
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="text-waystar-teal font-medium mb-4 tracking-widest text-sm uppercase">Expertise</p>
+        <h2 class="text-4xl md:text-5xl text-waystar-navy mb-16" style="font-family: 'Playfair Display', serif;">
+          Stack técnico
         </h2>
-        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-12"></div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
           <!-- Frontend -->
-          <div class="group bg-street-surface p-6 border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300">
-            <div class="text-4xl mb-4 group-hover:animate-bounce">🎨</div>
-            <h3 class="text-2xl font-display text-street-ferxxo mb-4 uppercase">Frontend</h3>
-            <ul class="space-y-2 text-street-white/80 font-mono text-sm">
-              <li>→ React & Astro</li>
-              <li>→ TypeScript & JavaScript</li>
-              <li>→ Tailwind CSS</li>
-              <li>→ ASP.NET Core</li>
+          <div>
+            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime">Frontend</h3>
+            <ul class="space-y-3 text-waystar-teal">
+              <li>React & Astro</li>
+              <li>TypeScript & JavaScript</li>
+              <li>Tailwind CSS</li>
+              <li>ASP.NET Core</li>
             </ul>
           </div>
           
           <!-- Backend -->
-          <div class="group bg-street-surface p-6 border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300">
-            <div class="text-4xl mb-4 group-hover:animate-bounce">⚙️</div>
-            <h3 class="text-2xl font-display text-street-purple mb-4 uppercase">Backend</h3>
-            <ul class="space-y-2 text-street-white/80 font-mono text-sm">
-              <li>→ Python & FastAPI</li>
-              <li>→ Node.js & Express</li>
-              <li>→ PostgreSQL, MySQL, SQL Server</li>
-              <li>→ RESTful & SOAP APIs</li>
+          <div>
+            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime">Backend</h3>
+            <ul class="space-y-3 text-waystar-teal">
+              <li>Python & FastAPI</li>
+              <li>Node.js & Express</li>
+              <li>PostgreSQL, MySQL, SQL Server</li>
+              <li>RESTful & SOAP APIs</li>
             </ul>
           </div>
           
           <!-- Data Science -->
-          <div class="group bg-street-surface p-6 border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300">
-            <div class="text-4xl mb-4 group-hover:animate-bounce">📊</div>
-            <h3 class="text-2xl font-display text-street-ferxxo mb-4 uppercase">Data Science</h3>
-            <ul class="space-y-2 text-street-white/80 font-mono text-sm">
-              <li>→ R & Shiny</li>
-              <li>→ Python</li>
-              <li>→ SQL</li>
-              <li>→ Power BI</li>
-              <li>→ ETL Pipelines</li>
-              <li>→ Análisis Geoespacial</li>
+          <div>
+            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime">Data Science</h3>
+            <ul class="space-y-3 text-waystar-teal">
+              <li>R & Shiny</li>
+              <li>Python (Pandas, NumPy)</li>
+              <li>Power BI</li>
+              <li>ETL Pipelines</li>
+              <li>Análisis Geoespacial</li>
             </ul>
           </div>
           
-		    <!-- Cloud -->
-          <div class="group bg-street-surface p-6 border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300">
-            <div class="text-4xl mb-4 group-hover:animate-bounce">☁️</div>
-            <h3 class="text-2xl font-display text-street-purple mb-4 uppercase">Cloud</h3>
-            <ul class="space-y-2 text-street-white/80 font-mono text-sm">
-              <li>→ Docker</li>
-              <li>→ Vercel & Firebase</li>
-              <li>→ AWS (RDS, S3, EC2)</li>
-              <li>→ Azure</li>
-              <li>→ GitHub Actions</li>
-				</ul>
-			  </div>
-		  
-          <!-- Gestión & Marcos de Referencia -->
-          <div class="group bg-street-surface p-6 border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300">
-            <div class="text-4xl mb-4 group-hover:animate-bounce">📋</div>
-            <h3 class="text-2xl font-display text-street-ferxxo mb-4 uppercase">Gestión y Marcos de Referencia</h3>
-            <ul class="space-y-2 text-street-white/80 font-mono text-sm">
-              <li>→ BPMN & BCM</li>
-              <li>→ AVARCIBER</li>
-              <li>→ Análisis de procesos</li>
-              <li>→ Documentación técnica</li>
-              <li>→ Mejora continua</li>
-              <li>→ Bizagi & Draw.io</li>
-				</ul>
-			  </div>
+          <!-- Cloud -->
+          <div>
+            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime">Cloud & DevOps</h3>
+            <ul class="space-y-3 text-waystar-teal">
+              <li>Docker</li>
+              <li>AWS (RDS, S3, EC2)</li>
+              <li>Azure</li>
+              <li>Vercel & Firebase</li>
+              <li>GitHub Actions</li>
+            </ul>
+          </div>
+          
+          <!-- Gestión -->
+          <div>
+            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime">Gestión & Procesos</h3>
+            <ul class="space-y-3 text-waystar-teal">
+              <li>BPMN & BCM</li>
+              <li>AVARCIBER</li>
+              <li>Documentación técnica</li>
+              <li>Bizagi & Draw.io</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-street-surface/50 border-t-2 border-street-purple/20">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-5xl md:text-6xl font-display text-street-white mb-4 text-center uppercase">
-          Experiencia
+    <section id="experience" class="py-32 bg-waystar-teal">
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase">Trayectoria</p>
+        <h2 class="text-4xl md:text-5xl text-white mb-16" style="font-family: 'Playfair Display', serif;">
+          Experiencia profesional
         </h2>
-        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-12"></div>
         
-        <div class="space-y-6">
-          <!-- Experience 1 - Primesys (Actual) -->
-          <div class="group bg-street-black p-8 border-l-4 border-street-ferxxo hover:border-l-8 transition-all duration-300">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <h3 class="text-2xl font-display text-street-white mb-2">JR. DATA ANALYST & WEB DEVELOPER</h3>
-                <p class="text-street-ferxxo font-bold text-lg">Primesys 📊</p>
-              </div>
-              <div class="text-street-white/70 font-mono text-sm bg-street-ferxxo/20 px-4 py-2 mt-2 md:mt-0">Oct 2023 - Presente</div>
+        <div class="space-y-12">
+          <!-- Experience 1 -->
+          <div class="grid md:grid-cols-[200px_1fr] gap-8 pb-12 border-b border-white/20">
+            <div class="text-waystar-lime text-sm font-medium">
+              Oct 2023 — Presente
             </div>
-            <ul class="space-y-2 text-street-white/80 text-sm">
-              <li>→ Desarrollo de dashboards y visualizaciones (Shiny, Power BI)</li>
-              <li>→ Análisis y procesamiento de datos con Python y R</li>
-              <li>→ Implementación de soluciones web y despliegue en Docker/CPanel</li>
-              <li>→ Construcción de prototipos tecnológicos para clientes iniciales</li>
-            </ul>
-          </div>
-
-          <!-- Experience 2 - MAATE -->
-          <div class="group bg-street-black p-8 border-l-4 border-street-purple hover:border-l-8 transition-all duration-300">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <h3 class="text-2xl font-display text-street-white mb-2">PASANTE ANALISTA EN SISTEMAS DE INFORMACIÓN</h3>
-                <p class="text-street-purple font-bold text-lg">Ministerio del Ambiente, Agua y Transición Ecológica 🇪🇨</p>
-              </div>
-              <div class="text-street-white/70 font-mono text-sm bg-street-purple/20 px-4 py-2 mt-2 md:mt-0">Jun 2024 - Sept 2024</div>
-            </div>
-            <ul class="space-y-2 text-street-white/80 text-sm">
-              <li>→ Dashboards interactivos en Power BI para indicadores ambientales</li>
-              <li>→ Pipelines de limpieza de datos con Python</li>
-              <li>→ Documentación técnica estandarizada</li>
-              <li>→ Soporte en protección y confidencialidad de datos adoptados por la institución</li>
-            </ul>
-          </div>
-
-          <!-- Experience 3 - LatinCrypt -->
-          <div class="group bg-street-black p-8 border-l-4 border-street-ferxxo hover:border-l-8 transition-all duration-300">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <h3 class="text-2xl font-display text-street-white mb-2">WEBMASTER WORDPRESS</h3>
-                <p class="text-street-ferxxo font-bold text-lg">LatinCrypt Event Ecuador 🔐</p>
-              </div>
-              <div class="text-street-white/70 font-mono text-sm bg-street-ferxxo/20 px-4 py-2 mt-2 md:mt-0">Sept 2023 - Oct 2023</div>
-            </div>
-            <ul class="space-y-2 text-street-white/80 text-sm">
-              <li>→ Desarrollo, actualización y mejora de accesibilidad de la web del evento LatinCrypt 2023</li>
-              <li>→ Implementación de mejoras en accesibilidad y usabilidad usando WordPress y JavaScript</li>
-            </ul>
-          </div>
-
-          <!-- Experience 4 - Proyectos Independientes -->
-          <div class="group bg-street-black p-8 border-l-4 border-street-purple hover:border-l-8 transition-all duration-300">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <h3 class="text-2xl font-display text-street-white mb-2">FULL STACK DEVELOPER</h3>
-                <p class="text-street-purple font-bold text-lg">Proyectos Independientes 💻</p>
-              </div>
-              <div class="text-street-white/70 font-mono text-sm bg-street-purple/20 px-4 py-2 mt-2 md:mt-0">2020 - Presente</div>
-            </div>
-            <ul class="space-y-2 text-street-white/80 text-sm">
-              <li>→ Apps web con Astro, React y TypeScript</li>
-              <li>→ APIs REST & SOAP con Python, Node.js y ASP.NET Core</li>
-              <li>→ Bases de datos PostgreSQL, MySQL, SQL Server</li>
-              <li>→ Deploy en cloud (Vercel, AWS, Azure)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-street-black">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-5xl md:text-6xl font-display text-street-white mb-4 text-center uppercase">
-          Proyectos
-        </h2>
-        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-4"></div>
-        <p class="text-center text-street-white/60 font-mono text-sm mb-12">{"// Cosas que he construido"}</p>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Proyecto 1 - Gestión Ambiental-->
-          <div class="group bg-street-surface border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300 overflow-hidden">
-            <div class="h-48 bg-street-gradient relative overflow-hidden">
-              <div class="absolute inset-0 bg-street-ferxxo/10 group-hover:bg-street-ferxxo/20 transition-all"></div>
-			  <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-6xl group-hover:scale-110 transition-transform">🌿</div>
-			  </div>
-			</div>
-			<div class="p-6">
-              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Gestión Indicadores Ambientales</h3>
-              <p class="text-street-white/70 mb-4 text-sm">
-                Prototipo para automatizar procesamiento y visualización de indicadores ambientales (Huella Humana, Bosques Riparios).
-			  </p>
-			  <div class="flex gap-2 flex-wrap mb-4">
-                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Python</span>
-                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">R</span>
-                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Shiny</span>
-                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">React</span>
-			  </div>
-              <div class="pt-3 border-t border-street-ferxxo/20">
-                <span class="text-street-white/50 text-xs font-mono italic">
-                  🏛️ Siendo validado por los top globales del Ministerio
-                </span>
-              </div>
-			</div>
-		  </div>
-		  
-          
-          <!-- Proyecto 2 - Dashboard -->
-          <div class="group bg-street-surface border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300 overflow-hidden">
-            <div class="h-48 bg-purple-gradient relative overflow-hidden">
-              <div class="absolute inset-0 bg-street-purple/10 group-hover:bg-street-purple/20 transition-all"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-6xl group-hover:scale-110 transition-transform">📊</div>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Dashboard Importaciones</h3>
-              <p class="text-street-white/70 mb-4 text-sm">
-                Análisis de importaciones bajo el régimen general en Ecuador.
-              </p>
-              <div class="flex gap-2 mb-4">
-                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">SQL</span>
-                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">Power BI</span>
-              </div>
-              <div class="pt-3 border-t border-street-purple/20">
-                <a href="https://www.primesys-ec.com/nuestro-trabajo" target="_blank" rel="noopener noreferrer" 
-                   class="inline-flex items-center gap-2 text-street-purple hover:text-street-white text-xs font-mono transition-colors group">
-                  <span>Ver en Primesys</span>
-                  <span class="group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Proyecto 3 - Kasaychi -->
-          <div class="group bg-street-surface border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300 overflow-hidden">
-            <div class="h-48 bg-street-gradient relative overflow-hidden">
-              <div class="absolute inset-0 bg-street-ferxxo/10 group-hover:bg-street-ferxxo/20 transition-all"></div>
-			  <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-6xl group-hover:scale-110 transition-transform">🤝</div>
-			  </div>
-			</div>
-			<div class="p-6">
-              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Kasaychi</h3>
-              <p class="text-street-white/70 mb-4 text-sm">
-                Plataforma de vinculación comunitaria con enfoque en desarrollo sostenible.
-			  </p>
-			  <div class="flex gap-2 flex-wrap mb-4">
-                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">React</span>
-                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Node.js</span>
-                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Firebase</span>
-			  </div>
-              <div class="pt-3 border-t border-street-ferxxo/20">
-                <a href="https://kasaychi.org/" target="_blank" rel="noopener noreferrer" 
-                   class="inline-flex items-center gap-2 text-street-ferxxo hover:text-street-white text-xs font-mono transition-colors group">
-                  <span>Visitar Kasaychi</span>
-                  <span class="group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-              </div>
-			</div>
-		  </div>		  
-
-          <!-- Proyecto 4 - Chat IA -->
-          <div class="group bg-street-surface border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300 overflow-hidden">
-            <div class="h-48 bg-purple-gradient relative overflow-hidden">
-              <div class="absolute inset-0 bg-street-purple/10 group-hover:bg-street-purple/20 transition-all"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-6xl group-hover:scale-110 transition-transform">🤖</div>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Chatbot IA</h3>
-              <p class="text-street-white/70 mb-4 text-sm">
-                Sistema de chat con múltiples personalidades de superhéroes.
-              </p>
-              <div class="flex gap-2 mb-4">
-                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">Gemini AI</span>
-                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">Astro</span>
-              </div>
-              <div class="pt-3 border-t border-street-purple/20">
-                <span class="text-street-white/50 text-xs font-mono italic">
-                  💾 Check it on GitHub
-                </span>
-              </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Jr. Data Analyst & Web Developer</h3>
+              <p class="text-waystar-sand font-medium mb-4">Primesys</p>
+              <ul class="space-y-2 text-white/70">
+                <li>Desarrollo de dashboards y visualizaciones (Shiny, Power BI)</li>
+                <li>Análisis y procesamiento de datos con Python y R</li>
+                <li>Implementación de soluciones web y despliegue en Docker/CPanel</li>
+                <li>Construcción de prototipos tecnológicos para clientes iniciales</li>
+              </ul>
             </div>
           </div>
 
-          <!-- Proyecto 5 - Apps Móviles -->
-          <div class="group bg-street-surface border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300 overflow-hidden">
-            <div class="h-48 bg-street-gradient relative overflow-hidden">
-              <div class="absolute inset-0 bg-street-ferxxo/10 group-hover:bg-street-ferxxo/20 transition-all"></div>
-			  <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-6xl group-hover:scale-110 transition-transform">📱</div>
-			  </div>
-			</div>
-			<div class="p-6">
-              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Apps Móviles</h3>
-              <p class="text-street-white/70 mb-4 text-sm">
-                Desarrollo de apps multiplataforma con enfoque en usabilidad.
-              </p>
-              <div class="flex gap-2 mb-4">
-                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Flutter</span>
-                <span class="px-2 py-1 bg-street-ferxxo/20 text-street-ferxxo text-xs font-mono">Mobile Dev</span>
-			  </div>
-              <div class="pt-3 border-t border-street-ferxxo/20">
-                <span class="text-street-white/50 text-xs font-mono italic">
-                  💾 Check it on GitHub
-                </span>
-              </div>
-			</div>
-		  </div>				
-
-          <!-- Proyecto 6 - DCCO Web -->
-          <div class="group bg-street-surface border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300 overflow-hidden relative">
-            <!-- Badge Archivado -->
-            <div class="absolute top-3 right-3 z-10">
-              <span class="px-3 py-1 bg-street-white/90 text-street-black font-display text-xs uppercase backdrop-blur-sm">
-                ⊗ Archivado
-              </span>
+          <!-- Experience 2 -->
+          <div class="grid md:grid-cols-[200px_1fr] gap-8 pb-12 border-b border-white/20">
+            <div class="text-waystar-lime text-sm font-medium">
+              Jun — Sept 2024
             </div>
-            
-            <div class="h-48 bg-purple-gradient relative overflow-hidden">
-              <div class="absolute inset-0 bg-street-purple/10 group-hover:bg-street-purple/20 transition-all"></div>
-			  <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-6xl group-hover:scale-110 transition-transform">🌐</div>
-			  </div>
-			</div>
-			<div class="p-6">
-              <h3 class="text-xl font-display text-street-white mb-3 uppercase">Web DCCO ESPE</h3>
-              <p class="text-street-white/70 mb-4 text-sm">
-                Sitio oficial del DCCO usando WordPress.
-              </p>
-              <div class="flex gap-2 mb-4">
-                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">WordPress</span>
-                <span class="px-2 py-1 bg-street-purple/20 text-street-purple text-xs font-mono">CMS</span>
-			  </div>
-              <div class="pt-3 border-t border-street-purple/20">
-                <a href="https://dcco.espe.edu.ec/" target="_blank" rel="noopener noreferrer" 
-                   class="inline-flex items-center gap-2 text-street-purple hover:text-street-white text-xs font-mono transition-colors group">
-                  <span>Visitar sitio</span>
-                  <span class="group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-              </div>
-			</div>
-		  </div>		  
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Pasante Analista en Sistemas de Información</h3>
+              <p class="text-waystar-sand font-medium mb-4">Ministerio del Ambiente, Agua y Transición Ecológica</p>
+              <ul class="space-y-2 text-white/70">
+                <li>Dashboards interactivos en Power BI para indicadores ambientales</li>
+                <li>Pipelines de limpieza de datos con Python</li>
+                <li>Documentación técnica estandarizada</li>
+                <li>Soporte en protección y confidencialidad de datos</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="grid md:grid-cols-[200px_1fr] gap-8 pb-12 border-b border-white/20">
+            <div class="text-waystar-lime text-sm font-medium">
+              Sept — Oct 2023
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Webmaster WordPress</h3>
+              <p class="text-waystar-sand font-medium mb-4">LatinCrypt Event Ecuador</p>
+              <ul class="space-y-2 text-white/70">
+                <li>Desarrollo y mejora de accesibilidad de la web del evento LatinCrypt 2023</li>
+                <li>Implementación de mejoras en usabilidad usando WordPress y JavaScript</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 4 -->
+          <div class="grid md:grid-cols-[200px_1fr] gap-8">
+            <div class="text-waystar-lime text-sm font-medium">
+              2020 — Presente
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Full Stack Developer</h3>
+              <p class="text-waystar-sand font-medium mb-4">Proyectos Independientes</p>
+              <ul class="space-y-2 text-white/70">
+                <li>Apps web con Astro, React y TypeScript</li>
+                <li>APIs REST & SOAP con Python, Node.js y ASP.NET Core</li>
+                <li>Bases de datos PostgreSQL, MySQL, SQL Server</li>
+                <li>Deploy en cloud (Vercel, AWS, Azure)</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-20 bg-street-surface/50 border-t-2 border-street-ferxxo/20">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-5xl md:text-6xl font-display text-street-white mb-4 text-center uppercase">
-          Educación
-        </h2>
-        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-12"></div>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Education -->
-          <div class="bg-street-black p-8 border-2 border-street-ferxxo/30 hover:border-street-ferxxo transition-all duration-300 relative overflow-hidden">
-            <!-- Badge Graduado -->
-            <div class="absolute top-4 right-4">
-              <span class="px-3 py-1 bg-street-ferxxo text-street-black font-display text-xs uppercase animate-pulse">
-                ✓ Graduado
-              </span>
-            </div>
+    <section class="py-32 bg-waystar-navy">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-20">
+          <div>
+            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase">Educación</p>
+            <h2 class="text-4xl md:text-5xl text-white mb-8" style="font-family: 'Playfair Display', serif;">
+              Formación académica
+            </h2>
             
-            <div class="flex items-center mb-6">
-              <div class="text-5xl mr-4">🎓</div>
-              <div>
-                <h3 class="text-2xl font-display text-street-white uppercase">Ingeniería de Software</h3>
-                <p class="text-street-ferxxo font-bold">Universidad ESPE 🇪🇨</p>
-                <p class="text-street-white/70 font-mono text-sm">2021 - 2025</p>
-              </div>
+            <div class="space-y-2">
+              <div class="inline-block px-3 py-1 bg-waystar-lime text-waystar-navy text-xs font-semibold">Graduado</div>
+              <h3 class="text-2xl font-semibold text-white">Ingeniería de Software</h3>
+              <p class="text-waystar-sand font-medium">Universidad de las Fuerzas Armadas ESPE</p>
+              <p class="text-white/50">2021 — 2025</p>
             </div>
-            <p class="text-street-white/80 text-sm leading-relaxed">
-              Formación integral en desarrollo de software, análisis de datos, y metodologías ágiles. 
-              Experiencia en proyectos de automatización, visualización de indicadores, gestión de procesos y desarrollo full-stack.
-            </p>
           </div>
-
-          <!-- Certifications -->
-          <div class="bg-street-black p-8 border-2 border-street-purple/30 hover:border-street-purple transition-all duration-300">
-            <div class="flex items-center mb-6">
-              <div class="text-5xl mr-4">📜</div>
-              <div>
-                <h3 class="text-2xl font-display text-street-white uppercase">Certificaciones</h3>
-                <p class="text-street-purple font-bold">Desarrollo Continuo</p>
-              </div>
-            </div>
-            <ul class="space-y-3 text-street-white/80 text-sm">
-              <li class="flex items-center">
-                <span class="text-street-ferxxo mr-2">→</span>
-                Digital Transformation - Santander Open Academy
+          
+          <div>
+            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase">Certificaciones</p>
+            <h2 class="text-4xl md:text-5xl text-white mb-8" style="font-family: 'Playfair Display', serif;">
+              Desarrollo continuo
+            </h2>
+            
+            <ul class="space-y-4 text-white/70">
+              <li class="flex items-start gap-3">
+                <span class="text-waystar-lime">—</span>
+                <span>Digital Transformation — Santander Open Academy</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-waystar-lime">—</span>
+                <span>Scrum Fundamentals — Scrum Inc</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-waystar-lime">—</span>
+                <span>Cloud Foundations — AWS Academy Graduate</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-waystar-lime">—</span>
+                <span>NASA Open Science 101 — NASA</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-waystar-lime">—</span>
+                <span>Introduction to CIP — OPSWAT Academy</span>
               </li>
             </ul>
           </div>
@@ -608,73 +351,186 @@ import '@fontsource/space-mono/700.css';
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-street-black relative overflow-hidden">
-      <!-- Elementos decorativos -->
-      <div class="absolute top-10 right-10 text-street-ferxxo/10 text-9xl font-display">@</div>
-      <div class="absolute bottom-10 left-10 text-street-purple/10 text-8xl font-display">#</div>
-      
-      <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-        <h2 class="text-5xl md:text-7xl font-display text-street-white mb-6 uppercase">
-          Hablemos
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 bg-waystar-sand">
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="text-waystar-teal font-medium mb-4 tracking-widest text-sm uppercase">Portafolio</p>
+        <h2 class="text-4xl md:text-5xl text-waystar-navy mb-16" style="font-family: 'Playfair Display', serif;">
+          Proyectos destacados
         </h2>
-        <div class="w-32 h-1 bg-neon-gradient mx-auto mb-8"></div>
         
-        <p class="text-xl text-street-white/80 mb-12 font-graffiti">
-          Disponible para proyectos y colaboraciones 🚀
-        </p>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <!-- Email -->
-          <a href="mailto:almeidaandres12@gmail.com" class="group bg-street-surface p-6 border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300">
-            <div class="text-4xl mb-3 group-hover:animate-bounce">📧</div>
-            <div class="text-street-white font-display text-sm uppercase">Email</div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Proyecto 1 -->
+          <div class="group block bg-waystar-navy p-8 hover:bg-waystar-teal transition-all">
+            <div class="flex justify-between items-start mb-6">
+              <span class="text-5xl">🌿</span>
+              <span class="text-white/40 text-sm group-hover:text-waystar-lime">En validación</span>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
+              Gestión Indicadores Ambientales
+            </h3>
+            <p class="text-white/60 mb-6">
+              Prototipo para automatizar procesamiento y visualización de indicadores ambientales (Huella Humana, Bosques Riparios).
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs text-waystar-lime/80">Python</span>
+              <span class="text-white/30">·</span>
+              <span class="text-xs text-waystar-lime/80">R</span>
+              <span class="text-white/30">·</span>
+              <span class="text-xs text-waystar-lime/80">Shiny</span>
+              <span class="text-white/30">·</span>
+              <span class="text-xs text-waystar-lime/80">React</span>
+            </div>
+          </div>
+
+          <!-- Proyecto 2 -->
+          <a href="https://www.primesys-ec.com/nuestro-trabajo" target="_blank" class="group block bg-waystar-blue p-8 hover:bg-waystar-teal transition-all">
+            <div class="flex justify-between items-start mb-6">
+              <span class="text-5xl">📊</span>
+              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform">Ver →</span>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
+              Dashboard Importaciones
+            </h3>
+            <p class="text-white/60 mb-6">
+              Análisis de importaciones bajo el régimen general en Ecuador.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs text-waystar-lime/80">SQL</span>
+              <span class="text-white/30">·</span>
+              <span class="text-xs text-waystar-lime/80">Power BI</span>
+            </div>
           </a>
-          
-          <!-- WhatsApp -->
-          <a href="https://wa.me/593990545539" target="_blank" class="group bg-street-surface p-6 border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300">
-            <div class="text-4xl mb-3 group-hover:animate-bounce">📱</div>
-            <div class="text-street-white font-display text-sm uppercase">WhatsApp</div>
+
+          <!-- Proyecto 3 -->
+          <a href="https://kasaychi.org/" target="_blank" class="group block bg-waystar-teal p-8 hover:bg-waystar-blue transition-all">
+            <div class="flex justify-between items-start mb-6">
+              <span class="text-5xl">🤝</span>
+              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform">Ver →</span>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
+              Kasaychi
+            </h3>
+            <p class="text-white/60 mb-6">
+              Plataforma de vinculación comunitaria con enfoque en desarrollo sostenible.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs text-waystar-lime/80">React</span>
+              <span class="text-white/30">·</span>
+              <span class="text-xs text-waystar-lime/80">Node.js</span>
+              <span class="text-white/30">·</span>
+              <span class="text-xs text-waystar-lime/80">Firebase</span>
+            </div>
           </a>
-          
-          <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/andres-almeida-jara/" target="_blank" class="group bg-street-surface p-6 border-2 border-street-ferxxo/30 hover:border-street-ferxxo hover:shadow-neon-green transition-all duration-300">
-            <div class="text-4xl mb-3 group-hover:animate-bounce">💼</div>
-            <div class="text-street-white font-display text-sm uppercase">LinkedIn</div>
+
+          <!-- Proyecto 4 -->
+          <div class="group block bg-waystar-navy p-8 hover:bg-waystar-teal transition-all">
+            <div class="flex justify-between items-start mb-6">
+              <span class="text-5xl">🤖</span>
+              <span class="text-white/40 text-sm">GitHub</span>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
+              Chatbot IA
+            </h3>
+            <p class="text-white/60 mb-6">
+              Sistema de chat con múltiples personalidades de superhéroes.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs text-waystar-lime/80">Gemini AI</span>
+              <span class="text-white/30">·</span>
+              <span class="text-xs text-waystar-lime/80">Astro</span>
+            </div>
+          </div>
+
+          <!-- Proyecto 5 -->
+          <a href="https://prototipopoliticapublica-ecuador.streamlit.app/" target="_blank" class="group block bg-waystar-blue p-8 hover:bg-waystar-teal transition-all">
+            <div class="flex justify-between items-start mb-6">
+              <span class="text-5xl">🧬</span>
+              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform">Ver →</span>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
+              Analítica Salud Ambiental
+            </h3>
+            <p class="text-white/60 mb-6">
+              Prototipo de investigación integrando datos INEC, MSP y MAATE para analizar patrones de salud en zonas petroleras.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs text-waystar-lime/80">Python</span>
+              <span class="text-white/30">·</span>
+              <span class="text-xs text-waystar-lime/80">PostGIS</span>
+              <span class="text-white/30">·</span>
+              <span class="text-xs text-waystar-lime/80">Streamlit</span>
+            </div>
           </a>
-          
-          <!-- GitHub -->
-          <a href="https://github.com/andresalmeida" target="_blank" class="group bg-street-surface p-6 border-2 border-street-purple/30 hover:border-street-purple hover:shadow-neon-purple transition-all duration-300">
-            <div class="text-4xl mb-3 group-hover:animate-bounce">💻</div>
-            <div class="text-street-white font-display text-sm uppercase">GitHub</div>
+
+          <!-- Proyecto 6 -->
+          <a href="https://dcco.espe.edu.ec/" target="_blank" class="group block bg-waystar-teal p-8 hover:bg-waystar-blue transition-all relative">
+            <div class="absolute top-4 right-4">
+              <span class="text-xs text-waystar-sand/60 bg-waystar-navy/30 px-2 py-1">Archivado</span>
+            </div>
+            <div class="flex justify-between items-start mb-6">
+              <span class="text-5xl">🌐</span>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
+              Web DCCO ESPE
+            </h3>
+            <p class="text-white/60 mb-6">
+              Sitio oficial del DCCO usando WordPress.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs text-waystar-lime/80">WordPress</span>
+              <span class="text-white/30">·</span>
+              <span class="text-xs text-waystar-lime/80">CMS</span>
+            </div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 bg-street-surface border-t-2 border-street-ferxxo/20">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="flex items-center space-x-3 mb-4 md:mb-0">
-            <div class="text-street-ferxxo text-3xl">👻</div>
-            <span class="text-street-white font-display text-xl tracking-wider">ANDRÉS ALMEIDA</span>
-          </div>
-          <p class="text-street-white/60 font-mono text-sm">
-            Esto no es un footer, es el after. 💥
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-gradient-to-br from-waystar-navy via-waystar-teal to-waystar-blue">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-3xl">
+          <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase">Contacto</p>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight" style="font-family: 'Playfair Display', serif;">
+            ¿Tienes un proyecto en mente?
+          </h2>
+          <p class="text-xl text-white/60 mb-12">
+            Disponible para proyectos freelance, colaboraciones y oportunidades full-time.
           </p>
+          
+          <div class="flex flex-wrap gap-6">
+            <a href="mailto:almeidaandres12@gmail.com" class="text-white hover:text-waystar-lime transition-colors">
+              almeidaandres12@gmail.com
+            </a>
+            <span class="text-white/20">|</span>
+            <a href="https://linkedin.com/in/andres-almeida-jara/" target="_blank" class="text-white hover:text-waystar-lime transition-colors">
+              LinkedIn
+            </a>
+            <span class="text-white/20">|</span>
+            <a href="https://github.com/andresalmeida" target="_blank" class="text-white hover:text-waystar-lime transition-colors">
+              GitHub
+            </a>
+            <span class="text-white/20">|</span>
+            <a href="https://wa.me/593990545539" target="_blank" class="text-white hover:text-waystar-lime transition-colors">
+              WhatsApp
+            </a>
+          </div>
         </div>
-        <div class="mt-6 pt-6 border-t border-street-white/10 text-center">
-          <p class="text-street-white/40 font-mono text-xs">
-            © 2025 Andrés Almeida Jara. All rights reserved.
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-waystar-navy border-t border-white/5">
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="text-white/30 text-sm text-center">
+          © 2025 Andrés Almeida Jara
         </p>
-        </div>
       </div>
     </footer>
 
     <!-- Smooth Scrolling -->
     <script>
-      // Smooth scrolling for navigation links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -689,4 +545,4 @@ import '@fontsource/space-mono/700.css';
       });
     </script>
   </body>
-</html> 
+</html>
