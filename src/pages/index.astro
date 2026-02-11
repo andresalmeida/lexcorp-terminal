@@ -1,618 +1,594 @@
 ---
 import '../styles/global.css';
+
+const experiences = [
+  {
+    date: 'Oct 2023 — Presente',
+    role: 'Jr. Data Analyst & Web Developer',
+    org: 'Primesys',
+    desc: 'Dashboards interactivos con Shiny y Power BI, analisis de datos con Python y R, desarrollo de prototipos web y despliegues productivos.',
+  },
+  {
+    date: 'Jun 2024 — Sept 2024',
+    role: 'Pasante Analista en Sistemas de Informacion',
+    org: 'MAATE',
+    desc: 'Gestion de indicadores ambientales, pipelines de limpieza de datos y documentacion tecnica estandarizada para proyectos de transicion ecologica.',
+  },
+  {
+    date: 'Sept 2023 — Oct 2023',
+    role: 'Webmaster WordPress',
+    org: 'LatinCrypt Ecuador',
+    desc: 'Mejora de accesibilidad, usabilidad y calidad de experiencia para el sitio web del evento de criptografia.',
+  },
+  {
+    date: '2023 — Presente',
+    role: 'Full Stack Developer',
+    org: 'Proyectos Independientes',
+    desc: 'Aplicaciones web con Astro y React, APIs REST en Python y Node.js, bases de datos SQL y despliegues en cloud.',
+  },
+];
+
+const projects = [
+  {
+    id: 'indicadores',
+    name: 'Gestion Indicadores Ambientales',
+    desc: 'Prototipo para automatizar procesamiento y visualizacion de indicadores ambientales como huella humana y bosques riparios.',
+    longDesc: 'Sistema completo para el procesamiento automatizado de indicadores ambientales criticos para Ecuador. Incluye pipelines de datos, visualizaciones interactivas y reportes automatizados.',
+    tags: ['Python', 'R', 'Shiny', 'React'],
+    status: 'En validacion',
+    features: ['Pipeline ETL automatizado', 'Dashboards interactivos', 'Reportes PDF automatizados', 'Validacion de datos'],
+    challenges: 'Integrar fuentes de datos heterogeneas con formatos inconsistentes.',
+    results: 'Reduccion del 70% en tiempo de procesamiento de datos.',
+    year: '2024',
+  },
+  {
+    id: 'importaciones',
+    name: 'Dashboard Importaciones',
+    desc: 'Analisis completo de importaciones bajo el regimen general en Ecuador con visualizaciones interactivas.',
+    longDesc: 'Dashboard empresarial para analisis de importaciones ecuatorianas. Procesa millones de registros aduaneros para identificar patrones y oportunidades de negocio.',
+    tags: ['SQL', 'Power BI'],
+    status: 'Publicado',
+    features: ['Visualizaciones de series temporales', 'Filtros dinamicos', 'Exportacion de reportes', 'Analisis por pais/producto'],
+    challenges: 'Optimizar consultas SQL para millones de registros sin afectar performance.',
+    results: 'Implementado en produccion con actualizaciones mensuales.',
+    year: '2024',
+    externalUrl: 'https://www.primesys-ec.com/nuestro-trabajo',
+  },
+  {
+    id: 'kasaychi',
+    name: 'Kasaychi',
+    desc: 'Plataforma de vinculacion comunitaria con enfoque en desarrollo sostenible y participacion ciudadana.',
+    longDesc: 'Plataforma web que conecta comunidades con proyectos de desarrollo sostenible. Sistema de gestion de proyectos, voluntariado y seguimiento de impacto.',
+    tags: ['React', 'Node.js', 'Firebase'],
+    status: 'Publicado',
+    features: ['Sistema de autenticacion', 'Gestor de proyectos', 'Matching comunidad-proyecto', 'Panel de administracion'],
+    challenges: 'Disenar UX accesible para usuarios con baja alfabetizacion digital.',
+    results: '200+ usuarios activos, 15 proyectos gestionados.',
+    year: '2023',
+    externalUrl: 'https://kasaychi.org/',
+  },
+  {
+    id: 'chatbot',
+    name: 'Chatbot IA',
+    desc: 'Sistema de chat con multiples personalidades de superheroes usando Gemini AI.',
+    longDesc: 'Aplicacion de chat experimental que permite conversar con diferentes personalidades de superheroes usando la API de Gemini. Cada personaje tiene su propio contexto y estilo de respuesta.',
+    tags: ['Gemini AI', 'Astro'],
+    status: 'Privado',
+    features: ['Multi-personalidades', 'Contexto persistente', 'Streaming de respuestas', 'Tematizacion por heroe'],
+    challenges: 'Manejar rate limits de la API manteniendo fluidez en conversaciones.',
+    results: 'Proyecto experimental - repositorio privado.',
+    year: '2024',
+  },
+  {
+    id: 'salud',
+    name: 'Analitica Salud Ambiental',
+    desc: 'Prototipo de investigacion integrando datos INEC, MSP y MAATE para analizar patrones de salud en zonas petroleras.',
+    longDesc: 'Investigacion academica que integra datos de salud publica, censos y variables ambientales para analizar correlaciones entre exposicion a petroleo y salud poblacional.',
+    tags: ['Python', 'PostGIS', 'Streamlit'],
+    status: 'Publicado',
+    features: ['Analisis espacial con PostGIS', 'Correlacion estadistica', 'Mapas de calor', 'Dashboard interactivo'],
+    challenges: 'Normalizar datasets con diferentes granularidades geograficas y temporales.',
+    results: 'Publicado como app Streamlit, citado en investigaciones academicas.',
+    year: '2024',
+    externalUrl: 'https://prototipo-politica-publica.vercel.app/',
+  },
+  {
+    id: 'dcco',
+    name: 'Web DCCO ESPE',
+    desc: 'Sitio institucional en WordPress para el departamento DCCO de la ESPE.',
+    longDesc: 'Rediseno completo del sitio institucional del Departamento de Ciencias de la Computacion. Migracion desde un sitio obsoleto a WordPress moderno.',
+    tags: ['WordPress', 'CMS'],
+    status: 'Archivado',
+    features: ['Theme customizado', 'Sistema de noticias', 'Directorio de profesores', 'Gestion de eventos'],
+    challenges: 'Migrar contenido legacy sin perder SEO ni links rotos.',
+    results: 'Sitio archivado tras cambio de gestion departamental.',
+    year: '2023',
+    externalUrl: 'https://dcco.espe.edu.ec/',
+  },
+];
+
+const skills = [
+  {
+    category: 'Lenguajes',
+    items: [
+      { name: 'Python', icon: 'python' },
+      { name: 'TypeScript', icon: 'typescript' },
+      { name: 'JavaScript', icon: 'javascript' },
+      { name: 'R', icon: 'r' },
+      { name: 'SQL', icon: 'postgresql' },
+    ],
+  },
+  {
+    category: 'Frontend',
+    items: [
+      { name: 'Astro', icon: 'astro' },
+      { name: 'React', icon: 'react' },
+      { name: 'Tailwind', icon: 'tailwindcss' },
+      { name: 'WordPress', icon: 'wordpress' },
+    ],
+  },
+  {
+    category: 'Backend & Data',
+    items: [
+      { name: 'FastAPI', icon: 'fastapi' },
+      { name: 'Node.js', icon: 'nodedotjs' },
+      { name: 'PostGIS', icon: 'postgresql' },
+      { name: 'PostgreSQL', icon: 'postgresql' },
+    ],
+  },
+  {
+    category: 'Herramientas',
+    items: [
+      { name: 'Docker', icon: 'docker' },
+      { name: 'Git', icon: 'git' },
+      { name: 'Power BI', icon: 'powerbi' },
+      { name: 'Linux', icon: 'linux' },
+    ],
+  },
+];
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Andrés Almeida Jara | Developer & Data Analyst</title>
-    <meta name="title" content="Andrés Almeida Jara | Developer | Data Analyst | Geospatial Explorer | Future Scientist" />
-    <meta name="description" content="Andrés Almeida Jara | Developer & Data Analyst. Desarrollo soluciones digitales basadas en datos, transformando información en decisiones efectivas." />
-    <meta name="keywords" content="Full Stack Developer, Data Analyst, React, Python, R, Shiny, Portfolio, Ecuador, Quito, Desarrollador, Ciencia de Datos, Geospatial, GIS" />
-    <meta name="author" content="Andrés Almeida Jara" />
-    <meta name="robots" content="index, follow" />
+    <title>AdaGhost | Software Engineer</title>
+    <meta name="description" content="Ingeniero de software. Datos, geoespacial y sistemas con criterio. Quito, Ecuador." />
+    <meta name="author" content="Andres Almeida Jara" />
+    <meta name="theme-color" content="#0a0a0a" />
     <link rel="canonical" href="https://adaghost.me/" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://adaghost.me/" />
-    <meta property="og:title" content="Andrés Almeida Jara | Developer | Data Analyst | Geospatial Explorer | Future Scientist" />
-    <meta property="og:description" content="Desarrollo soluciones digitales basadas en datos, transformando información en decisiones efectivas." />
-    <meta property="og:image" content="https://adaghost.me/og-image.jpg" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://adaghost.me/" />
-    <meta property="twitter:title" content="Andrés Almeida Jara | Developer | Data Analyst | Geospatial Explorer | Future Scientist" />
-    <meta property="twitter:description" content="Desarrollo soluciones digitales basadas en datos, transformando información en decisiones efectivas." />
-    <meta property="twitter:image" content="https://adaghost.me/og-image.jpg" />
-
-    <meta name="theme-color" content="#02416d" />
-    <link rel="icon" type="image/svg+xml" href="/lexcorp-logo.svg?v=1" />
-    
-    <!-- Fuentes Google Fonts - Elegantes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Andrés Almeida Jara",
-      "jobTitle": "Full Stack Developer & Data Analyst",
-      "url": "https://adaghost.me",
-      "email": "almeidaandres12@gmail.com",
-      "sameAs": [
-        "https://github.com/andresalmeida",
-        "https://linkedin.com/in/andres-almeida-jara/"
-      ]
-    }
-    </script>
+    <link rel="icon" type="image/svg+xml" href="/lexcorp-logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-  
-  <body class="bg-waystar-navy text-white antialiased">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-waystar-navy/90 backdrop-blur-lg border-b border-white/10">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="flex justify-between items-center h-16">
-          <a href="#" class="text-white font-medium tracking-tight">Andrés Almeida Jara</a>
-          
-          <div class="hidden md:flex items-center space-x-10">
-            <a href="#about" class="text-white/60 hover:text-waystar-lime transition-colors text-sm" data-es="Sobre mí" data-en="About">Sobre mí</a>
-            <a href="#experience" class="text-white/60 hover:text-waystar-lime transition-colors text-sm" data-es="Experiencia" data-en="Experience">Experiencia</a>
-            <a href="#projects" class="text-white/60 hover:text-waystar-lime transition-colors text-sm" data-es="Proyectos" data-en="Projects">Proyectos</a>
-            <a href="#contact" class="text-waystar-lime font-medium text-sm" data-es="Contacto" data-en="Contact">Contacto</a>
-            
-            <!-- Language Toggle -->
-            <button id="lang-toggle" class="text-white/60 hover:text-waystar-lime transition-colors text-sm font-medium flex items-center gap-1">
-              <span id="current-lang">ES</span>
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m5 8 6 6 6-6"/>
-              </svg>
-            </button>
+
+  <body>
+    <!-- CRT Effects -->
+    <div class="crt-overlay"></div>
+    <div class="scanline"></div>
+
+    <!-- Project Terminal Modal -->
+    <div class="project-modal" id="projectModal">
+      <div class="project-modal-content">
+        <div class="project-modal-header">
+          <div class="modal-controls">
+            <span class="modal-dot red"></span>
+            <span class="modal-dot yellow"></span>
+            <span class="modal-dot green"></span>
           </div>
+          <span class="modal-title" id="modalTitle">project_details.sh</span>
+          <button class="modal-close" id="modalClose">x</button>
+        </div>
+        <div class="project-modal-body" id="modalBody">
+          <!-- Content injected via JS -->
         </div>
       </div>
-    </nav>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center relative bg-gradient-to-br from-waystar-navy via-waystar-teal to-waystar-blue">
-      <div class="max-w-6xl mx-auto px-6 py-32">
-        <div class="max-w-4xl">
-          <p class="text-waystar-lime font-medium mb-8 tracking-widest text-sm uppercase">Quito, Ecuador</p>
-          
-          <h1 class="text-6xl md:text-7xl lg:text-8xl text-white mb-8 leading-[0.9] tracking-tight" style="font-family: 'Playfair Display', serif;">
-            Andrés<br/>Almeida
-          </h1>
-          
-          <p class="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl leading-relaxed font-light" data-es="Full Stack Developer & Data Analyst.<br/>Transformo datos en decisiones, código en impacto." data-en="Full Stack Developer & Data Analyst.<br/>Transforming data into decisions, code into impact.">
-            Full Stack Developer & Data Analyst.<br/>
-            Transformo datos en decisiones, código en impacto.
-          </p>
-          
-          <div class="flex flex-wrap gap-4">
-            <a href="#projects" class="px-8 py-4 bg-waystar-lime text-waystar-navy font-semibold hover:bg-white transition-all" data-es="Ver proyectos" data-en="View projects">
-              Ver proyectos
-            </a>
-            <a href="#contact" class="px-8 py-4 border border-white/30 text-white font-medium hover:bg-white/10 transition-all" data-es="Contactar" data-en="Get in touch">
-              Contactar
-            </a>
-          </div>
-        </div>
+    <!-- Header -->
+    <header class="main-header">
+      <div class="header-inner">
+        <a href="#" class="logo-box">
+          AdaGhost<span class="logo-cursor"></span>
+        </a>
+        <nav class="nav-links">
+          <a href="#about">about</a>
+          <a href="#experience">experience</a>
+          <a href="#work">work</a>
+          <a href="#contact">contact</a>
+        </nav>
       </div>
-      
-      <!-- Decorative element -->
-      <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-waystar-sand to-transparent"></div>
-    </section>
+    </header>
 
-    <!-- Stats Section -->
-    <section class="py-20 bg-waystar-sand">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-          <div class="text-center">
-            <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">2+</div>
-            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium" data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</div>
-          </div>
-          <div class="text-center">
-            <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">10+</div>
-            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium" data-es="Proyectos" data-en="Projects">Proyectos</div>
-          </div>
-          <div class="text-center">
-            <div class="text-5xl md:text-6xl font-light text-waystar-navy mb-2" style="font-family: 'Playfair Display', serif;">5+</div>
-            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium" data-es="Tecnologías" data-en="Technologies">Tecnologías</div>
-          </div>
-          <div class="text-center">
-            <div class="text-5xl md:text-6xl font-light text-waystar-lime mb-2" style="font-family: 'Playfair Display', serif;">∞</div>
-            <div class="text-waystar-teal text-sm tracking-wide uppercase font-medium" data-es="Curiosidad" data-en="Curiosity">Curiosidad</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-32 bg-waystar-blue">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-20 items-start">
-          <div>
-            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase" data-es="Sobre mí" data-en="About me">Sobre mí</p>
-            <h2 class="text-4xl md:text-5xl text-white mb-8 leading-tight" style="font-family: 'Playfair Display', serif;" data-es="Código con propósito,<br/>datos con criterio" data-en="Code with purpose,<br/>data with meaning">
-              Código con propósito,<br/>datos con criterio
-            </h2>
-          </div>
-          
-          <div class="space-y-6 text-white/80 text-lg leading-relaxed">
-            <p data-es="Soy un ingeniero en software que ve el código como una forma de crear impacto real. Me mueve la ciencia de datos, la inteligencia artificial y la visualización geoespacial — no solo por la técnica, sino por lo que pueden revelar del mundo." data-en="I'm a software engineer who sees code as a way to create real impact. I'm driven by data science, artificial intelligence, and geospatial visualization — not just for the technique, but for what they can reveal about the world.">
-              Soy un ingeniero en software que ve el código como una forma de crear impacto real. Me mueve la ciencia de datos, la inteligencia artificial y la visualización geoespacial — no solo por la técnica, sino por lo que pueden revelar del mundo.
-            </p>
-            <p data-es="He construido desde dashboards interactivos hasta plataformas web completas, pero más allá de las herramientas, me enfoco en diseñar sistemas que comuniquen, que transformen información en algo que la gente realmente pueda entender y usar." data-en="I've built everything from interactive dashboards to complete web platforms, but beyond the tools, I focus on designing systems that communicate, that transform information into something people can actually understand and use.">
-              He construido desde dashboards interactivos hasta plataformas web completas, pero más allá de las herramientas, me enfoco en diseñar sistemas que comuniquen, que transformen información en algo que la gente realmente pueda entender y usar.
-            </p>
-            <p data-es="Creo en unir la tecnología con la sensibilidad humana: escribir código con propósito, analizar datos con criterio y crear experiencias digitales que dejen huella." data-en="I believe in uniting technology with human sensibility: writing purposeful code, analyzing data with critical thinking, and creating digital experiences that leave a mark.">
-              Creo en unir la tecnología con la sensibilidad humana: escribir código con propósito, analizar datos con criterio y crear experiencias digitales que dejen huella.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="py-32 bg-waystar-sand">
-      <div class="max-w-6xl mx-auto px-6">
-        <p class="text-waystar-teal font-medium mb-4 tracking-widest text-sm uppercase" data-es="Expertise" data-en="Expertise">Expertise</p>
-        <h2 class="text-4xl md:text-5xl text-waystar-navy mb-16" style="font-family: 'Playfair Display', serif;" data-es="Stack técnico" data-en="Tech stack">
-          Stack técnico
-        </h2>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="terminal-bg" id="terminalBg"></div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
-          <!-- Frontend -->
-          <div>
-            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime">Frontend</h3>
-            <ul class="space-y-3 text-waystar-teal">
-              <li>React & Astro</li>
-              <li>TypeScript & JavaScript</li>
-              <li>Tailwind CSS</li>
-              <li>ASP.NET Core</li>
-            </ul>
-          </div>
-          
-          <!-- Backend -->
-          <div>
-            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime">Backend</h3>
-            <ul class="space-y-3 text-waystar-teal">
-              <li>Python & FastAPI</li>
-              <li>Node.js & Express</li>
-              <li>PostgreSQL, MySQL, SQL Server</li>
-              <li>RESTful & SOAP APIs</li>
-            </ul>
-          </div>
-          
-          <!-- Data Science -->
-          <div>
-            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime">Data Science</h3>
-            <ul class="space-y-3 text-waystar-teal">
-              <li>R & Shiny</li>
-              <li>Python (Pandas, NumPy)</li>
-              <li>Power BI</li>
-              <li>ETL Pipelines</li>
-              <li data-es="Análisis Geoespacial" data-en="Geospatial Analysis">Análisis Geoespacial</li>
-            </ul>
-          </div>
-          
-          <!-- Cloud -->
-          <div>
-            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime">Cloud & DevOps</h3>
-            <ul class="space-y-3 text-waystar-teal">
-              <li>Docker</li>
-              <li>AWS (RDS, S3, EC2)</li>
-              <li>Azure</li>
-              <li>Vercel & Firebase</li>
-              <li>GitHub Actions</li>
-            </ul>
-          </div>
-          
-          <!-- Gestión -->
-          <div>
-            <h3 class="text-lg font-semibold text-waystar-navy mb-6 pb-4 border-b-2 border-waystar-lime" data-es="Gestión & Procesos" data-en="Management & Processes">Gestión & Procesos</h3>
-            <ul class="space-y-3 text-waystar-teal">
-              <li>BPMN & BCM</li>
-              <li>AVARCIBER</li>
-              <li data-es="Documentación técnica" data-en="Technical documentation">Documentación técnica</li>
-              <li>Bizagi & Draw.io</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-32 bg-waystar-teal">
-      <div class="max-w-6xl mx-auto px-6">
-        <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase" data-es="Trayectoria" data-en="Career">Trayectoria</p>
-        <h2 class="text-4xl md:text-5xl text-white mb-16" style="font-family: 'Playfair Display', serif;" data-es="Experiencia profesional" data-en="Professional experience">
-          Experiencia profesional
-        </h2>
-        
-        <div class="space-y-12">
-          <!-- Experience 1 -->
-          <div class="grid md:grid-cols-[200px_1fr] gap-8 pb-12 border-b border-white/20">
-            <div class="text-waystar-lime text-sm font-medium" data-es="Oct 2023 — Presente" data-en="Oct 2023 — Present">
-              Oct 2023 — Presente
+        <div class="hero-grid" style="grid-template-columns: 1fr; position: relative; z-index: 2;">
+          <div class="hero-content reveal" style="max-width: 800px;">
+            <p class="hero-prompt">whoami</p>
+            <h1 class="hero-title">
+              Software engineer building <span class="highlight">systems with sense</span>
+            </h1>
+            <p class="hero-desc">
+              Me muevo entre datos, geoespacial e IA aplicada. 
+              Construyo herramientas que comunican y transforman 
+              informacion en decisiones. Basado en Quito, Ecuador.
+            </p>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="hero-stat-value">2+</span>
+                <span class="hero-stat-label">years</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value">6</span>
+                <span class="hero-stat-label">projects</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value"></span>
+                <span class="hero-stat-label">curiosity</span>
+              </div>
             </div>
-            <div>
-              <h3 class="text-xl font-semibold text-white mb-1">Jr. Data Analyst & Web Developer</h3>
-              <p class="text-waystar-sand font-medium mb-4">Primesys</p>
-              <ul class="space-y-2 text-white/70">
-                <li data-es="Desarrollo de dashboards y visualizaciones (Shiny, Power BI)" data-en="Dashboard development and visualizations (Shiny, Power BI)">Desarrollo de dashboards y visualizaciones (Shiny, Power BI)</li>
-                <li data-es="Análisis y procesamiento de datos con Python y R" data-en="Data analysis and processing with Python and R">Análisis y procesamiento de datos con Python y R</li>
-                <li data-es="Implementación de soluciones web y despliegue en Docker/CPanel" data-en="Web solutions implementation and deployment on Docker/CPanel">Implementación de soluciones web y despliegue en Docker/CPanel</li>
-                <li data-es="Construcción de prototipos tecnológicos para clientes iniciales" data-en="Building technology prototypes for initial clients">Construcción de prototipos tecnológicos para clientes iniciales</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Experience 2 -->
-          <div class="grid md:grid-cols-[200px_1fr] gap-8 pb-12 border-b border-white/20">
-            <div class="text-waystar-lime text-sm font-medium">
-              Jun — Sept 2024
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-white mb-1" data-es="Pasante Analista en Sistemas de Información" data-en="Information Systems Analyst Intern">Pasante Analista en Sistemas de Información</h3>
-              <p class="text-waystar-sand font-medium mb-4" data-es="Ministerio del Ambiente, Agua y Transición Ecológica" data-en="Ministry of Environment, Water and Ecological Transition">Ministerio del Ambiente, Agua y Transición Ecológica</p>
-              <ul class="space-y-2 text-white/70">
-                <li data-es="Dashboards interactivos en Power BI para indicadores ambientales" data-en="Interactive Power BI dashboards for environmental indicators">Dashboards interactivos en Power BI para indicadores ambientales</li>
-                <li data-es="Pipelines de limpieza de datos con Python" data-en="Data cleaning pipelines with Python">Pipelines de limpieza de datos con Python</li>
-                <li data-es="Documentación técnica estandarizada" data-en="Standardized technical documentation">Documentación técnica estandarizada</li>
-                <li data-es="Soporte en protección y confidencialidad de datos" data-en="Support in data protection and confidentiality">Soporte en protección y confidencialidad de datos</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Experience 3 -->
-          <div class="grid md:grid-cols-[200px_1fr] gap-8 pb-12 border-b border-white/20">
-            <div class="text-waystar-lime text-sm font-medium">
-              Sept — Oct 2023
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-white mb-1">Webmaster WordPress</h3>
-              <p class="text-waystar-sand font-medium mb-4">LatinCrypt Event Ecuador</p>
-              <ul class="space-y-2 text-white/70">
-                <li data-es="Desarrollo y mejora de accesibilidad de la web del evento LatinCrypt 2023" data-en="Development and accessibility improvement of the LatinCrypt 2023 event website">Desarrollo y mejora de accesibilidad de la web del evento LatinCrypt 2023</li>
-                <li data-es="Implementación de mejoras en usabilidad usando WordPress y JavaScript" data-en="Usability improvements implementation using WordPress and JavaScript">Implementación de mejoras en usabilidad usando WordPress y JavaScript</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Experience 4 -->
-          <div class="grid md:grid-cols-[200px_1fr] gap-8">
-            <div class="text-waystar-lime text-sm font-medium" data-es="2023 — Presente" data-en="2023 — Present">
-              2023 — Presente
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-white mb-1">Full Stack Developer</h3>
-              <p class="text-waystar-sand font-medium mb-4" data-es="Proyectos Independientes" data-en="Independent Projects">Proyectos Independientes</p>
-              <ul class="space-y-2 text-white/70">
-                <li data-es="Apps web con Astro, React y TypeScript" data-en="Web apps with Astro, React and TypeScript">Apps web con Astro, React y TypeScript</li>
-                <li data-es="APIs REST & SOAP con Python, Node.js y ASP.NET Core" data-en="REST & SOAP APIs with Python, Node.js and ASP.NET Core">APIs REST & SOAP con Python, Node.js y ASP.NET Core</li>
-                <li data-es="Bases de datos PostgreSQL, MySQL, SQL Server" data-en="PostgreSQL, MySQL, SQL Server databases">Bases de datos PostgreSQL, MySQL, SQL Server</li>
-                <li data-es="Deploy en cloud (Vercel, AWS, Azure)" data-en="Cloud deployment (Vercel, AWS, Azure)">Deploy en cloud (Vercel, AWS, Azure)</li>
-              </ul>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="#work" class="btn">[ ver_proyectos ]</a>
+              <a href="#contact" class="btn btn-secondary">[ contactar ]</a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Education Section -->
-    <section class="py-32 bg-waystar-navy">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-20">
-          <div>
-            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase" data-es="Educación" data-en="Education">Educación</p>
-            <h2 class="text-4xl md:text-5xl text-white mb-8" style="font-family: 'Playfair Display', serif;" data-es="Formación académica" data-en="Academic background">
-              Formación académica
-            </h2>
-            
-            <div class="space-y-2">
-              <div class="inline-block px-3 py-1 bg-waystar-lime text-waystar-navy text-xs font-semibold" data-es="Graduado" data-en="Graduate">Graduado</div>
-              <h3 class="text-2xl font-semibold text-white" data-es="Ingeniería de Software" data-en="Software Engineering">Ingeniería de Software</h3>
-              <p class="text-waystar-sand font-medium">Universidad de las Fuerzas Armadas ESPE</p>
-              <p class="text-white/50">2021 — 2025</p>
-            </div>
+      <!-- About Section -->
+      <section id="about" class="section">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <p class="section-prompt">$ cat about.txt</p>
+            <h2 class="section-title">Mas que codigo</h2>
           </div>
-          
-          <div>
-            <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase" data-es="Certificaciones" data-en="Certifications">Certificaciones</p>
-            <h2 class="text-4xl md:text-5xl text-white mb-8" style="font-family: 'Playfair Display', serif;" data-es="Desarrollo continuo" data-en="Continuous learning">
-              Desarrollo continuo
-            </h2>
-            
-            <ul class="space-y-4 text-white/70">
-              <li class="flex items-start gap-3">
-                <span class="text-waystar-lime">—</span>
-                <span>Digital Transformation — Santander Open Academy</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-waystar-lime">—</span>
-                <span>Scrum Fundamentals — Scrum Inc</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-waystar-lime">—</span>
-                <span>Cloud Foundations — AWS Academy Graduate</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-waystar-lime">—</span>
-                <span>NASA Open Science 101 — NASA</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-waystar-lime">—</span>
-                <span>Introduction to CIP — OPSWAT Academy</span>
-              </li>
+
+          <div class="about-content reveal">
+            <p>
+              Me interesa la tecnologia no solo por lo que puede hacer, sino por el 
+              <span class="text-green">impacto social</span> que puede generar cuando se 
+              aplica con proposito. Creo en construir herramientas que resuelvan 
+              problemas reales de personas reales.
+            </p>
+            <p>
+              Actualmente estoy yendo <em>deeper</em> en:
+            </p>
+            <ul class="interest-list">
+              <li>Quantum Computing</li>
+              <li>Frameworks de gestion de riesgos</li>
+              <li>Inteligencia Artificial aplicada</li>
+              <li>Sistemas geoespaciales</li>
             </ul>
+            <p>
+              Cuando no estoy codeando, probablemente estoy viendo 
+              <span class="text-amber">peliculas o series</span> — es lo segundo que mas disfruto 
+              despues de construir cosas.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-32 bg-waystar-sand">
-      <div class="max-w-6xl mx-auto px-6">
-        <p class="text-waystar-teal font-medium mb-4 tracking-widest text-sm uppercase" data-es="Portafolio" data-en="Portfolio">Portafolio</p>
-        <h2 class="text-4xl md:text-5xl text-waystar-navy mb-16" style="font-family: 'Playfair Display', serif;" data-es="Proyectos destacados" data-en="Featured projects">
-          Proyectos destacados
-        </h2>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-          <!-- Proyecto 1 -->
-          <div class="group block bg-waystar-navy p-8 hover:bg-waystar-teal transition-all">
-            <div class="flex justify-between items-start mb-6">
-              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
-                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
-              </svg>
-              <span class="text-white/40 text-sm group-hover:text-waystar-lime" data-es="En validación" data-en="Under validation">En validación</span>
-            </div>
-            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors" data-es="Gestión Indicadores Ambientales" data-en="Environmental Indicators Management">
-              Gestión Indicadores Ambientales
-            </h3>
-            <p class="text-white/60 mb-6" data-es="Prototipo para automatizar procesamiento y visualización de indicadores ambientales (Huella Humana, Bosques Riparios)." data-en="Prototype to automate processing and visualization of environmental indicators (Human Footprint, Riparian Forests).">
-              Prototipo para automatizar procesamiento y visualización de indicadores ambientales (Huella Humana, Bosques Riparios).
+      <!-- Skills Section -->
+      <section class="section section-alt">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <p class="section-prompt">$ cat skills.txt</p>
+            <h2 class="section-title">Stack Tecnico</h2>
+            <p class="section-desc">
+              Herramientas que uso para construir. Me interesa la interseccion entre 
+              datos, geoespacial e inteligencia artificial aplicada.
             </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs text-waystar-lime/80">Python</span>
-              <span class="text-white/30">·</span>
-              <span class="text-xs text-waystar-lime/80">R</span>
-              <span class="text-white/30">·</span>
-              <span class="text-xs text-waystar-lime/80">Shiny</span>
-              <span class="text-white/30">·</span>
-              <span class="text-xs text-waystar-lime/80">React</span>
-            </div>
           </div>
 
-          <!-- Proyecto 2 -->
-          <a href="https://www.primesys-ec.com/nuestro-trabajo" target="_blank" class="group block bg-waystar-blue p-8 hover:bg-waystar-teal transition-all">
-            <div class="flex justify-between items-start mb-6">
-              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 3v18h18"/>
-                <path d="M18 17V9"/>
-                <path d="M13 17V5"/>
-                <path d="M8 17v-3"/>
-              </svg>
-              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform" data-es="Ver →" data-en="View →">Ver →</span>
-            </div>
-            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors" data-es="Dashboard Importaciones" data-en="Imports Dashboard">
-              Dashboard Importaciones
-            </h3>
-            <p class="text-white/60 mb-6" data-es="Análisis de importaciones bajo el régimen general en Ecuador." data-en="Analysis of imports under the general regime in Ecuador.">
-              Análisis de importaciones bajo el régimen general en Ecuador.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs text-waystar-lime/80">SQL</span>
-              <span class="text-white/30">·</span>
-              <span class="text-xs text-waystar-lime/80">Power BI</span>
-            </div>
-          </a>
-
-          <!-- Proyecto 3 -->
-          <a href="https://kasaychi.org/" target="_blank" class="group block bg-waystar-teal p-8 hover:bg-waystar-blue transition-all">
-            <div class="flex justify-between items-start mb-6">
-              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform" data-es="Ver →" data-en="View →">Ver →</span>
-            </div>
-            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
-              Kasaychi
-            </h3>
-            <p class="text-white/60 mb-6" data-es="Plataforma de vinculación comunitaria con enfoque en desarrollo sostenible." data-en="Community engagement platform focused on sustainable development.">
-              Plataforma de vinculación comunitaria con enfoque en desarrollo sostenible.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs text-waystar-lime/80">React</span>
-              <span class="text-white/30">·</span>
-              <span class="text-xs text-waystar-lime/80">Node.js</span>
-              <span class="text-white/30">·</span>
-              <span class="text-xs text-waystar-lime/80">Firebase</span>
-            </div>
-          </a>
-
-          <!-- Proyecto 4 -->
-          <div class="group block bg-waystar-navy p-8 hover:bg-waystar-teal transition-all">
-            <div class="flex justify-between items-start mb-6">
-              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 8V4H8"/>
-                <rect width="16" height="12" x="4" y="8" rx="2"/>
-                <path d="M2 14h2"/>
-                <path d="M20 14h2"/>
-                <path d="M15 13v2"/>
-                <path d="M9 13v2"/>
-              </svg>
-              <span class="text-white/40 text-sm">GitHub</span>
-            </div>
-            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors" data-es="Chatbot IA" data-en="AI Chatbot">
-              Chatbot IA
-            </h3>
-            <p class="text-white/60 mb-6" data-es="Sistema de chat con múltiples personalidades de superhéroes." data-en="Chat system with multiple superhero personalities.">
-              Sistema de chat con múltiples personalidades de superhéroes.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs text-waystar-lime/80">Gemini AI</span>
-              <span class="text-white/30">·</span>
-              <span class="text-xs text-waystar-lime/80">Astro</span>
-            </div>
-          </div>
-
-          <!-- Proyecto 5 -->
-          <a href="https://prototipopoliticapublica-ecuador.streamlit.app/" target="_blank" class="group block bg-waystar-blue p-8 hover:bg-waystar-teal transition-all">
-            <div class="flex justify-between items-start mb-6">
-              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 15c6.667-6 13.333 0 20-6"/>
-                <path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/>
-                <path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/>
-                <path d="m17 6-2.5-2.5"/>
-                <path d="m14 8-1-1"/>
-                <path d="m7 18 2.5 2.5"/>
-                <path d="m10 16 1 1"/>
-              </svg>
-              <span class="text-waystar-lime text-sm group-hover:translate-x-1 transition-transform" data-es="Ver →" data-en="View →">Ver →</span>
-            </div>
-            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors" data-es="Analítica Salud Ambiental" data-en="Environmental Health Analytics">
-              Analítica Salud Ambiental
-            </h3>
-            <p class="text-white/60 mb-6" data-es="Prototipo de investigación integrando datos INEC, MSP y MAATE para analizar patrones de salud en zonas petroleras." data-en="Research prototype integrating INEC, MSP, and MAATE data to analyze health patterns in oil-activity zones.">
-              Prototipo de investigación integrando datos INEC, MSP y MAATE para analizar patrones de salud en zonas petroleras.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs text-waystar-lime/80">Python</span>
-              <span class="text-white/30">·</span>
-              <span class="text-xs text-waystar-lime/80">PostGIS</span>
-              <span class="text-white/30">·</span>
-              <span class="text-xs text-waystar-lime/80">Streamlit</span>
-            </div>
-          </a>
-
-          <!-- Proyecto 6 -->
-          <a href="https://dcco.espe.edu.ec/" target="_blank" class="group block bg-waystar-teal p-8 hover:bg-waystar-blue transition-all relative">
-            <div class="absolute top-4 right-4">
-              <span class="text-xs text-waystar-sand/60 bg-waystar-navy/30 px-2 py-1" data-es="Archivado" data-en="Archived">Archivado</span>
-            </div>
-            <div class="flex justify-between items-start mb-6">
-              <svg class="w-12 h-12 text-waystar-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
-                <path d="M2 12h20"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-waystar-lime transition-colors">
-              Web DCCO ESPE
-            </h3>
-            <p class="text-white/60 mb-6" data-es="Sitio oficial del DCCO usando WordPress." data-en="Official DCCO website using WordPress.">
-              Sitio oficial del DCCO usando WordPress.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs text-waystar-lime/80">WordPress</span>
-              <span class="text-white/30">·</span>
-              <span class="text-xs text-waystar-lime/80">CMS</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-32 bg-gradient-to-br from-waystar-navy via-waystar-teal to-waystar-blue">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="max-w-3xl">
-          <p class="text-waystar-lime font-medium mb-4 tracking-widest text-sm uppercase" data-es="Contacto" data-en="Contact">Contacto</p>
-          <h2 class="text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight" style="font-family: 'Playfair Display', serif;" data-es="¿Tienes un proyecto en mente?" data-en="Have a project in mind?">
-            ¿Tienes un proyecto en mente?
-          </h2>
-          <p class="text-xl text-white/60 mb-12" data-es="Disponible para proyectos freelance, colaboraciones y oportunidades full-time." data-en="Available for freelance projects, collaborations, and full-time opportunities.">
-            Disponible para proyectos freelance, colaboraciones y oportunidades full-time.
-          </p>
-          
-          <div class="flex flex-wrap gap-6">
-            <a href="mailto:almeidaandres12@gmail.com" class="text-white hover:text-waystar-lime transition-colors">
-              Email
-            </a>
-            <span class="text-white/20">|</span>
-            <a href="https://linkedin.com/in/andres-almeida-jara/" target="_blank" class="text-white hover:text-waystar-lime transition-colors">
-              LinkedIn
-            </a>
-            <span class="text-white/20">|</span>
-            <a href="https://github.com/andresalmeida" target="_blank" class="text-white hover:text-waystar-lime transition-colors">
-              GitHub
-            </a>
-            <span class="text-white/20">|</span>
-            <a href="https://wa.me/593990545539" target="_blank" class="text-white hover:text-waystar-lime transition-colors">
-              WhatsApp
-            </a>
+          <div class="skills-grid reveal">
+            {skills.map((skill) => (
+              <div class="skill-category">
+                <h4>{skill.category}</h4>
+                <div class="skill-list">
+                  {skill.items.map((item) => (
+                    <div class="skill-item-with-icon">
+                      <img 
+                        src={`https://cdn.simpleicons.org/${item.icon}/00FF41`}
+                        alt={item.name}
+                        class="skill-icon"
+                        loading="lazy"
+                        onerror="this.style.display='none'"
+                      />
+                      <span>{item.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Experience with Starlink Constellation -->
+      <section id="experience" class="section constellation-section">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <p class="section-prompt">$ ./deploy_constellation.sh</p>
+            <h2 class="section-title">Experiencia Profesional</h2>
+            <p class="section-desc">
+              Cada posicion es un nodo en la red. Todos conectados, 
+              todos transmitiendo conocimiento.
+            </p>
+          </div>
+
+          <div class="constellation-container reveal">
+            <!-- SVG Constellation Lines -->
+            <svg class="constellation-lines" viewBox="0 0 1000 400" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#00FF41;stop-opacity:0.1" />
+                  <stop offset="50%" style="stop-color:#00FF41;stop-opacity:0.3" />
+                  <stop offset="100%" style="stop-color:#00FF41;stop-opacity:0.1" />
+                </linearGradient>
+              </defs>
+              <line class="constellation-line" x1="150" y1="200" x2="350" y2="150" />
+              <line class="constellation-line" x1="350" y1="150" x2="600" y2="180" />
+              <line class="constellation-line" x1="600" y1="180" x2="850" y2="120" />
+              <line class="constellation-line" x1="150" y1="200" x2="600" y2="180" />
+              <line class="constellation-line" x1="350" y1="150" x2="850" y2="120" />
+            </svg>
+
+            <!-- Satellite Nodes -->
+            <div class="satellite-nodes">
+              {experiences.map((exp, index) => (
+                <div class={`satellite-node satellite-pos-${index}`} data-index={index}>
+                  <div class="satellite-core"></div>
+                  <div class="satellite-ring ring-1"></div>
+                  <div class="satellite-ring ring-2"></div>
+                  <div class="satellite-label">
+                    <span class="satellite-date">{exp.date}</span>
+                    <span class="satellite-role">{exp.role}</span>
+                    <span class="satellite-org">@ {exp.org}</span>
+                  </div>
+                  <div class="satellite-pulse"></div>
+                </div>
+              ))}
+            </div>
+
+            <!-- Experience Cards that appear on hover -->
+            <div class="constellation-cards">
+              {experiences.map((exp, index) => (
+                <div class="constellation-card" data-card={index}>
+                  <div class="card-header">
+                    <span class="card-date">{exp.date}</span>
+                    <span class="card-signal">...</span>
+                  </div>
+                  <h3>{exp.role}</h3>
+                  <p class="card-org">@ {exp.org}</p>
+                  <p class="card-desc">{exp.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="work" class="section section-alt">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <p class="section-prompt">$ ls projects/</p>
+            <h2 class="section-title">Proyectos Construidos</h2>
+            <p class="section-desc">
+              Cosas que he desarrollado. Algunas en produccion, otras en desarrollo, 
+              todas con aprendizajes valiosos.
+            </p>
+          </div>
+
+          <div class="projects-grid-two reveal">
+            {projects.map((proj) => (
+              <article class="project-card">
+                <div class="project-card-header">
+                  <h3>{proj.name}</h3>
+                  <span class={`project-status-badge ${proj.status === 'Archivado' ? 'archived' : proj.status === 'En validacion' ? 'wip' : proj.status === 'Publicado' ? 'live' : ''}`}>
+                    {proj.status}
+                  </span>
+                </div>
+                <p class="project-card-desc">{proj.desc}</p>
+                <div class="project-card-tags">
+                  {proj.tags.map((tag) => (
+                    <span class="project-tag-small">{tag}</span>
+                  ))}
+                </div>
+                {proj.externalUrl ? (
+                  <a href={proj.externalUrl} target="_blank" rel="noreferrer" class="project-card-link">Ver proyecto →</a>
+                ) : null}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="section-inner">
+          <div class="section-header reveal" style="text-align: center;">
+            <p class="section-prompt">$ ping adaghost</p>
+            <h2 class="section-title">Conectemos</h2>
+            <p class="section-desc" style="margin: 0 auto;">
+              Si tienes un proyecto interesante, necesitas ayuda con datos, 
+              o simplemente quieres conversar sobre tecnologia.
+            </p>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;" class="reveal">
+            <a href="mailto:almeidaandres12@gmail.com" class="btn">[ email ]</a>
+            <a href="https://github.com/andresalmeida" target="_blank" class="btn btn-secondary">[ github ]</a>
+            <a href="https://linkedin.com/in/andres-almeida-jara/" target="_blank" class="btn btn-secondary">[ linkedin ]</a>
+            <a href="https://wa.me/593990545539" target="_blank" class="btn btn-secondary">[ whatsapp ]</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="py-8 bg-waystar-navy border-t border-white/5">
-      <div class="max-w-6xl mx-auto px-6">
-        <p class="text-white/30 text-sm text-center">
-          © 2025 Andrés Almeida Jara
-        </p>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">AdaGhost_</span>
+          <p class="footer-desc">
+            Ingeniero de software. Datos, geoespacial y sistemas con criterio. 
+            Basado en Quito, Ecuador.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>navegar</h5>
+            <a href="#about">about</a>
+            <a href="#experience">experience</a>
+            <a href="#work">work</a>
+            <a href="#contact">contact</a>
+          </div>
+          <div class="footer-col">
+            <h5>social</h5>
+            <a href="https://github.com/andresalmeida" target="_blank">github</a>
+            <a href="https://linkedin.com/in/andres-almeida-jara/" target="_blank">linkedin</a>
+          </div>
+          <div class="footer-col">
+            <h5>contacto</h5>
+            <a href="mailto:almeidaandres12@gmail.com">email</a>
+            <a href="https://wa.me/593990545539">whatsapp</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span> 2026 AdaGhost // Andres Almeida Jara</span>
+          <span>echo "Built with Astro + caffeine"</span>
+        </div>
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-      // Smooth Scrolling
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    <script is:inline>
+      // Reveal on scroll
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      reveals.forEach((el) => observer.observe(el));
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', (e) => {
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
+          const target = document.querySelector(anchor.getAttribute('href'));
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
         });
       });
 
-      // Language Toggle
-      const langToggle = document.getElementById('lang-toggle');
-      const currentLangSpan = document.getElementById('current-lang');
-      let currentLang = localStorage.getItem('lang') || 'es';
+      // Terminal Background Animation
+      const terminalBg = document.getElementById('terminalBg');
+      const terminalLines = [
+        '$ npm run build',
+        '> Building project...',
+        '> Optimizing modules...',
+        '> Success! Build completed.',
+        '$ git commit -m "feat: add new feature"',
+        '[main 7a8f9d2] feat: add new feature',
+        ' 3 files changed, 127 insertions(+)',
+        '$ docker-compose up -d',
+        'Creating network "app_default"...',
+        'Creating container... done',
+        '$ psql -d database -c "SELECT * FROM users"',
+        ' id | name | email',
+        '----+------+-------',
+        '  1 | ada  | ada@ghost.dev',
+        '$ python manage.py migrate',
+        'Operations to perform:',
+        '  Apply all migrations... done',
+        '$ curl -X POST api/data',
+        '{"status": "success", "data": [...]}',
+        '$ ./deploy.sh production',
+        '> Deploying to production...',
+        '> - Deployment successful',
+        '$ ssh server "uptime"',
+        ' 14:32:10 up 45 days, 3 users',
+        '$ systemctl status app',
+        '- app.service - Active (running)',
+        '$ tail -f logs/app.log',
+        '[INFO] Server started on port 3000',
+        '[INFO] Database connected',
+        '[INFO] Cache warmed up',
+        '$ npm test',
+        'PASS  src/tests/feature.test.js',
+        'Tests: 24 passed, 24 total',
+      ];
 
-      function setLanguage(lang) {
-        currentLang = lang;
-        localStorage.setItem('lang', lang);
-        currentLangSpan.textContent = lang.toUpperCase();
-        
-        document.querySelectorAll('[data-es][data-en]').forEach(el => {
-          const text = el.getAttribute(`data-${lang}`);
-          if (text) {
-            el.innerHTML = text;
-          }
-        });
-
-        // Update html lang attribute
-        document.documentElement.lang = lang;
+      function generateTerminalBg() {
+        let html = '';
+        for (let i = 0; i < 30; i++) {
+          const line = terminalLines[Math.floor(Math.random() * terminalLines.length)];
+          const delay = Math.random() * 3;
+          const opacity = 0.3 + Math.random() * 0.5;
+          html += '<span class="terminal-line-bg" style="animation-delay: ' + delay + 's; opacity: ' + opacity + ';">' + line + '</span>';
+        }
+        terminalBg.innerHTML = html;
       }
+      generateTerminalBg();
+      
+      setInterval(() => {
+        const lines = terminalBg.querySelectorAll('.terminal-line-bg');
+        lines.forEach(line => {
+          if (Math.random() > 0.95) {
+            line.textContent = terminalLines[Math.floor(Math.random() * terminalLines.length)];
+          }
+        });
+      }, 2000);
 
-      langToggle.addEventListener('click', () => {
-        const newLang = currentLang === 'es' ? 'en' : 'es';
-        setLanguage(newLang);
+      // Constellation Interaction - Click to show card
+      const satelliteNodes = document.querySelectorAll('.satellite-node');
+      const constellationCards = document.querySelectorAll('.constellation-card');
+      let activeCardIndex = null;
+      
+      satelliteNodes.forEach((node, index) => {
+        node.addEventListener('click', (e) => {
+          e.stopPropagation();
+          
+          // Toggle: if clicking same node, close it
+          if (activeCardIndex === index) {
+            constellationCards.forEach(card => card.classList.remove('active'));
+            satelliteNodes.forEach(n => n.style.filter = '');
+            activeCardIndex = null;
+            return;
+          }
+          
+          // Close all cards first
+          constellationCards.forEach(card => card.classList.remove('active'));
+          satelliteNodes.forEach(n => n.style.filter = '');
+          
+          // Open clicked card
+          const card = document.querySelector('[data-card="' + index + '"]');
+          if (card) {
+            card.classList.add('active');
+            node.style.filter = 'drop-shadow(0 0 15px #00FF41)';
+            activeCardIndex = index;
+          }
+        });
+      });
+      
+      // Click anywhere else to close
+      document.addEventListener('click', () => {
+        constellationCards.forEach(card => card.classList.remove('active'));
+        satelliteNodes.forEach(n => n.style.filter = '');
+        activeCardIndex = null;
       });
 
-      // Set initial language
-      setLanguage(currentLang);
     </script>
   </body>
 </html>
